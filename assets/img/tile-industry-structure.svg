@@ -10,10 +10,10 @@
   </g>
   <!-- centre -->
   <rect x="570" y="438" width="460" height="324" rx="20" fill="#1a1a18" filter="url(#s)"/>
-  <text x="800" y="504" font-size="26" font-weight="700" letter-spacing="3" fill="#c99a5c">MASS TIMBER INDUSTRY</text>
+  <text x="800" y="492" font-size="24" font-weight="700" letter-spacing="3" fill="#c99a5c">MASS TIMBER INDUSTRY</text><text x="800" y="524" font-size="24" font-weight="700" letter-spacing="3" fill="#c99a5c">INTERMEDIATING FORCES</text>
   <g font-size="36" font-weight="500" fill="#f7f6f3">
-    <text x="800" y="566">Rivalries</text><text x="800" y="612">Collaborations</text><text x="800" y="658">Concentrations</text>
-    <text x="800" y="704" font-size="33">Regulators · Economy</text>
+    <text x="800" y="586">Rivalries</text><text x="800" y="630">Collaborations</text><text x="800" y="674">Concentrations</text>
+    <text x="800" y="718" font-size="33">Regulators · Economy</text>
   </g>
   <!-- outer cards -->
   <g filter="url(#s)" fill="#ffffff" stroke="#e2ded6" stroke-width="2">
@@ -26,7 +26,7 @@
     <text x="800" y="200">Substitutes</text><text x="800" y="950">Future entrants</text>
     <text x="266" y="574">Suppliers</text><text x="1334" y="574">Buyers</text>
   </g>
-  <g font-size="30" font-weight="700" letter-spacing="2.5">
-<g transform="translate(800,274)"><text x="-70" y="10" fill="#8f6a32">HIGH</text><g transform="translate(20,-12)"><rect x="0" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="44" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="88" width="36" height="24" rx="5" fill="#a67c3d"/></g></g><g transform="translate(800,1024)"><text x="-70" y="10" fill="#8f6a32">LOW</text><g transform="translate(20,-12)"><rect x="0" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="44" width="36" height="24" rx="5" fill="#e2ded6"/><rect x="88" width="36" height="24" rx="5" fill="#e2ded6"/></g></g><g transform="translate(266,648)"><text x="-70" y="10" fill="#8f6a32">MEDIUM</text><g transform="translate(20,-12)"><rect x="0" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="44" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="88" width="36" height="24" rx="5" fill="#e2ded6"/></g></g><g transform="translate(1334,648)"><text x="-70" y="10" fill="#8f6a32">HIGH</text><g transform="translate(20,-12)"><rect x="0" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="44" width="36" height="24" rx="5" fill="#a67c3d"/><rect x="88" width="36" height="24" rx="5" fill="#a67c3d"/></g></g>
+  <g font-size="34" font-weight="700" letter-spacing="3" fill="#8f6a32">
+<text x="800" y="286">HIGH</text><text x="800" y="1036">LOW</text><text x="266" y="660">MEDIUM</text><text x="1334" y="660">HIGH</text>
   </g>
 </svg>
