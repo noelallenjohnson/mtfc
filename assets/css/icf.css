@@ -135,3 +135,6 @@
 .icf .sl span b { color: var(--ink); }
 .icf .sliders[hidden], .icf .btn[hidden] { display: none; }
 @media (max-width: 860px) { .icf .sl { grid-template-columns: 104px 1fr 84px; } }
+.icf .callout ul { margin: 8px 0 0; padding-left: 20px; }
+.icf .callout li { font-size: 15px; line-height: 1.6; margin-bottom: 6px; }
+.icf .callout li:last-child { margin-bottom: 0; }
