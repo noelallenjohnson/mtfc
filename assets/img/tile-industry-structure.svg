@@ -10,11 +10,10 @@
   </g>
   <!-- centre -->
   <rect x="570" y="438" width="460" height="324" rx="20" fill="#1a1a18" filter="url(#s)"/>
-  <text x="800" y="492" font-size="24" font-weight="700" letter-spacing="3" fill="#c99a5c">MASS TIMBER INDUSTRY</text><text x="800" y="524" font-size="24" font-weight="700" letter-spacing="3" fill="#c99a5c">INTERMEDIATING FORCES</text>
-  <g font-size="36" font-weight="500" fill="#f7f6f3">
-    <text x="800" y="586">Rivalries</text><text x="800" y="630">Collaborations</text><text x="800" y="674">Concentrations</text>
-    <text x="800" y="718" font-size="33">Regulators · Economy</text>
+  <g font-weight="700" fill="#f7f6f3" font-size="50">
+    <text x="800" y="542">Mass Timber</text><text x="800" y="604">Industry</text>
   </g>
+  <text x="800" y="670" font-size="34" font-weight="600" letter-spacing="2" fill="#c99a5c">INTERMEDIATING</text><text x="800" y="712" font-size="34" font-weight="600" letter-spacing="2" fill="#c99a5c">FORCES</text>
   <!-- outer cards -->
   <g filter="url(#s)" fill="#ffffff" stroke="#e2ded6" stroke-width="2">
     <rect x="570" y="112" width="460" height="226" rx="20"/>
@@ -22,11 +21,11 @@
     <rect x="96" y="474" width="340" height="252" rx="20"/>
     <rect x="1164" y="474" width="340" height="252" rx="20"/>
   </g>
-  <g fill="#1a1a18" font-weight="600" font-size="48">
+  <g fill="#1a1a18" font-weight="600" font-size="54">
     <text x="800" y="200">Substitutes</text><text x="800" y="950">Future entrants</text>
     <text x="266" y="574">Suppliers</text><text x="1334" y="574">Buyers</text>
   </g>
-  <g font-size="34" font-weight="700" letter-spacing="3" fill="#8f6a32">
-<text x="800" y="286">HIGH</text><text x="800" y="1036">LOW</text><text x="266" y="660">MEDIUM</text><text x="1334" y="660">HIGH</text>
+  <g font-size="40" font-weight="700" letter-spacing="3" fill="#8f6a32">
+<text x="800" y="290">HIGH</text><text x="800" y="1040">LOW</text><text x="266" y="664">MEDIUM</text><text x="1334" y="664">HIGH</text>
   </g>
 </svg>
