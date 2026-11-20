@@ -1,4 +1,4 @@
-/* Industry Capital Flows Structure page (Learn / Baseline / Test). Loaded only on that page. */
+/* Industry Structure page (Learn / Baseline / Test). Loaded only on that page. */
 /* Layout: MTFC house style (warm paper, gold accent, Inter) with a three-part segmented control — Learn / Baseline / Test — and one animated map that moves between the Baseline and Test parts. */
   .icf { --bg: #faf8f4; --paper: #ffffff; --ink: #1a1a18; --muted: #666460; --line: #e2ded6; --soft: #f7f6f3; --gold: #a67c3d; --gold-d: #8f6a32; --dark: #1a1a18; --dark-ink: #f7f6f3; --dark-muted: #d9d4c7;
     --sup: #4cc9ff; --dem: #4cff88; --sub: #ff9f5a; --ent: #c58cff; --core: #ffd166; --pull-bg: #e8f4ea; --pull-fg: #2f6b3d; --push-bg: #fdeee3; --push-fg: #9a4a12; --ctl-bg: #e9eef7; --ctl-fg: #2d4a7a; --unc-bg: #f3e9f9; --unc-fg: #6a3a8a; }

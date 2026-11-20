@@ -9,7 +9,7 @@ GitHub rebuilds the site automatically a minute or so after any change is saved 
 |---|---|
 | Home page text | `index.html` |
 | Any other page | the file with the page's name in `pages/` |
-| Scenario and force text on the Industry Capital Flows page | `assets/js/icf-data.js` |
+| Scenario and force text on the Industry Structure page | `assets/js/icf-data.js` |
 | The rotating tagline on the home page | `assets/js/site.js` |
 | The menu | `_includes/nav.html` |
 | The footer | `_includes/footer.html` |

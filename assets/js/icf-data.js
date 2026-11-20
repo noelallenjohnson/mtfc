@@ -1,4 +1,4 @@
-/* Industry Capital Flows Structure — the content of the interactive.
+/* Industry Structure — the content of the interactive.
    forces:    the five forces, their Phase 1 level (0-100) and description
    scenarios: the what-ifs; "d" is the shift applied to each force, "m/w/c" are the three reading paragraphs
    nodes:     the tooltip text for each dot on the map

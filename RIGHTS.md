@@ -12,7 +12,7 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 | Site design, layout, stylesheets, scripts | whole repository | Originally built on Webflow, rebuilt here November 2026 |
 | MTFC name, logo and mark | `assets/img/mtfc-*.svg`, favicons and icons | Brand kit created for MTFC |
 | Home, Mission & Vision, Illustrations and initiative page text | `index.html`, `pages/` | |
-| Industry Capital Flows Structure interactive (map, scenarios, diagram) | `pages/industry-capital-flows-structure.html`, `assets/js/icf*.js` | Adaptation, characterization and scenarios by Noel Johnson; framework credit below |
+| Industry Structure interactive (map, scenarios, diagram) | `pages/industry-capital-flows-structure.html`, `assets/js/icf*.js` | Adaptation, characterization and scenarios by Noel Johnson; framework credit below |
 | Rocking CLT wall icon | `assets/img/rocking-clt-wall.svg` | *to confirm origin* |
 
 ## 2. Authored works published under licence from their authors
@@ -26,7 +26,7 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 
 | Element | File | Source / owner | Terms |
 |---|---|---|---|
-| Porter's Five Forces base framework | Industry Capital Flows Structure page | Michael E. Porter (1979); diagram per Institute for Strategy and Competitiveness, Harvard Business School | Base diagram CC0 / public domain; redrawn, not reproduced |
+| Porter's Five Forces base framework | Industry Structure page | Michael E. Porter (1979); diagram per Institute for Strategy and Competitiveness, Harvard Business School | Base diagram CC0 / public domain; redrawn, not reproduced |
 | Hero image (timber interior) | `assets/img/hero-timber-interior.jpg` | AI-generated image | *to confirm tool and terms* |
 | Home tile images | `assets/img/tile-*.{avif,jpg,webp}` | *to confirm* (Webflow template stock, project photography, author diagrams) | *to confirm* |
 | Ascent MKE | `assets/img/illus-ascent-mke.jpg` | *to confirm photographer / owner* | *to confirm* |

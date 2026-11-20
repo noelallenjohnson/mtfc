@@ -1,4 +1,4 @@
-/* Industry Capital Flows Structure — map animation and the Learn / Baseline / Test controls. Content lives in icf-data.js. */
+/* Industry Structure — map animation and the Learn / Baseline / Test controls. Content lives in icf-data.js. */
 (function(){
 var D=window.MTU_DATA,stage=document.getElementById('stage'),cv=document.getElementById('canvas'),ctx=cv.getContext('2d'),tip=document.getElementById('tip'),map=document.getElementById('map');
 var W=0,H=0,CX=0,CY=0,S=1,DPR=Math.min(window.devicePixelRatio||1,2),TILT=.42,RM=1,mobile=false;
