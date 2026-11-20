@@ -11,6 +11,7 @@ owner: "Old i, LLC"
 contact_email: "curator@masstimberfinanceconsumer.org"
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 exclude:
   - README.md
   - RIGHTS.md
