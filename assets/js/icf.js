@@ -53,7 +53,7 @@ window.addEventListener('hashchange',function(){var h=location.hash.replace('#',
 
 /* ---------- B: baseline cards ---------- */
 var bForces=document.getElementById('b-forces'),bl=document.getElementById('b-plbl'),bt=document.getElementById('b-ptitle'),bb=document.getElementById('b-pbody'),cards={};
-D.forces.forEach(function(f){var b=document.createElement('button');b.className='fcard';b.type='button';b.innerHTML='<small>'+f.sub+'</small><strong>'+f.name+'</strong><div class="bar"><i style="width:'+f.level+'%"></i></div><em>Power: <b>'+lvl(f.level)+'</b> ('+f.level+')</em>';b.onclick=function(){D.forces.forEach(function(x){cards[x.id].classList.toggle('on',x.id===f.id)});bl.textContent=f.sub;bt.textContent=f.name+' — Phase 1 characterization';bb.innerHTML=f.desc};bForces.appendChild(b);cards[f.id]=b});
+D.forces.forEach(function(f){var b=document.createElement('button');b.className='fcard';b.type='button';b.innerHTML='<small>'+f.sub+'</small><strong>'+f.name+'</strong><div class="bar"><i style="width:'+f.level+'%"></i></div><em>Power: <b>'+lvl(f.level)+'</b> ('+f.level+')</em>';b.onclick=function(){D.forces.forEach(function(x){cards[x.id].classList.toggle('on',x.id===f.id)});bl.textContent=f.sub;bt.textContent=f.name+' — baseline assessment';bb.innerHTML=f.desc};bForces.appendChild(b);cards[f.id]=b});
 
 /* ---------- C: scenarios ---------- */
 var groups=document.getElementById('c-groups'),read=document.getElementById('c-read'),empty=document.getElementById('c-empty'),meter=document.getElementById('meter'),attrEl=document.getElementById('attr'),dEl=document.getElementById('attr-delta'),slEl=document.getElementById('c-sliders'),sliders={},chips=[];

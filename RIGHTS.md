@@ -20,16 +20,24 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 |---|---|---|---|
 | Underwriting Mass Timber Apartments (working paper, Nov 2026) | Noel A. Johnson, Justin Angle, Talia Esarey | `assets/files/MTFC_Underwriting_Mass_Timber_Rentals_Working_Paper_Nov2026.pdf` | *to confirm: publication licence from authors* |
 
-## 2a. Work produced under the Oregon State University contract (Tech Hub, Phase 1)
+## 2a. Earlier work prepared for the Pacific Northwest Mass Timber Tech Hub
 
-Noel Johnson's Personal Services Contract with Oregon State University (TallWood Design Institute), signed July 2025 and running to August 1, 2026, states that all work products resulting from the contract are the exclusive property of the Institution. The contract is with Noel Johnson as an individual, not with Old i, LLC. Work delivered under it is therefore **owned by OSU**, and appears on this site by permission still to be documented.
+Under a Personal Services Contract with Oregon State University (TallWood Design Institute), July 2025 to August 1, 2026, Noel Johnson delivered three items to the Tech Hub. The contract makes work product resulting from it the property of the Institution. These items are **not published on this site**; the site credits and links to them.
 
-| Element | File | Status |
+| Tech Hub item | Where it lives | How this site treats it |
 |---|---|---|
-| Phase 1 industry characterization (five-forces ratings, ecosystem mapping) underlying the Industry Structure page | `pages/industry-structure.html`, `assets/js/icf-data.js` | Phase 1 content: OSU-owned. *To obtain: written permission or licence from OSU to publish and adapt.* The web edition, scenarios and animation were made after the contract period; their status as a derivative work depends on that permission |
-| Listening to Institutional Investors (discussion draft, Fall 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Fall2026_web.pdf` | Interviews conducted in 2025 under the contract. *To confirm with OSU: ownership of the draft and permission to publish* |
+| Mass Timber Industry Characterization | pnwmasstimbertechhub.org/capital-access | Credited and linked from the Industry Structure page |
+| Mass Timber Capital Flows Characterization | pnwmasstimbertechhub.org/capital-access | To be credited and linked from the forthcoming capital flows page |
+| Capital Access questions (draft for discussion, marked "Proprietary & Private") | Delivered to the Tech Hub; not public | Not posted. *To confirm with the Tech Hub before linking or publishing* |
 
-Federal terms also apply to this work: the awarding agency (U.S. EDA) holds a royalty-free, nonexclusive, irrevocable licence to use federally funded work for federal purposes.
+**Author's position (Noel Johnson, November 2026):** the MTFC pages are separate work, resting on the author's research and practice before the engagement and on further study after it, and are not built on the items delivered to the Tech Hub. MTFC pages are owned by Old i, LLC (*to document: assignment from Noel Johnson to Old i, LLC*).
+
+*Open item:* the Industry Structure baseline (Part B) and the Listening to Institutional Investors draft use wording and interview material that overlap with what was delivered. A short written acknowledgement from the Tech Hub / OSU of the line described above would settle this.
+
+| MTFC work | File |
+|---|---|
+| Industry Structure (framework, baseline, scenarios, animation) | `pages/industry-structure.html`, `assets/js/icf*.js` |
+| Listening to Institutional Investors (discussion draft, Fall 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Fall2026_web.pdf` |
 
 ## 3. Third-party material
 

@@ -1,18 +1,18 @@
 /* Industry Structure — the content of the interactive.
-   forces:    the five forces, their Phase 1 level (0-100) and description
+   forces:    the five forces, their baseline level (0-100) and description
    scenarios: the what-ifs; "d" is the shift applied to each force, "m/w/c" are the three reading paragraphs
    nodes:     the tooltip text for each dot on the map
    Edit text between the quotes; write an apostrophe as \' */
 window.MTU_DATA={
 forces:[
  {id:'dem',name:'Buyers',sub:'Demand side: investors, end users, political',level:80,
-  desc:'<p><b>Initial characterization: High.</b> The demand side is collectively much larger than the suppliers serving it. Products are comparatively undifferentiated yet a material cost consideration; switching costs across suppliers are low; substitutes are easily accepted; and the product\'s value proposition is not understood and often confused. Buyer power decides where value is captured, which is not the same as where it is created.</p>'},
+  desc:'<p><b>Baseline assessment: High.</b> The demand side is collectively much larger than the suppliers serving it. Products are comparatively undifferentiated yet a material cost consideration; switching costs across suppliers are low; substitutes are easily accepted; and the product\'s value proposition is not understood and often confused. Buyer power decides where value is captured, which is not the same as where it is created.</p>'},
  {id:'sup',name:'Suppliers',sub:'Supply side: producers, fiber, general inputs',level:55,
-  desc:'<p><b>Initial characterization: Medium, varying by sub-group.</b> General inputs (energy, adhesives, labor, real estate) hold strong power. Wood inputs (fiber, mills, lumber) hold medium power. Product-specific firms (factories, fabricators, on-site crews) hold low power. Value capture is therefore not evenly shared across the supply side, absent non-market forces such as collaboration or regulation.</p>'},
+  desc:'<p><b>Baseline assessment: Medium, varying by sub-group.</b> General inputs (energy, adhesives, labor, real estate) hold strong power. Wood inputs (fiber, mills, lumber) hold medium power. Product-specific firms (factories, fabricators, on-site crews) hold low power. Value capture is therefore not evenly shared across the supply side, absent non-market forces such as collaboration or regulation.</p>'},
  {id:'sub',name:'Substitutes',sub:'Traditional means: concrete & steel',level:80,
-  desc:'<p><b>Initial characterization: High.</b> Concrete and steel structures carry attractive pricing, risks that are known and accepted, and buyers who can switch to them without friction. They set the price and the expectations that every mass timber proposal is measured against.</p>'},
+  desc:'<p><b>Baseline assessment: High.</b> Concrete and steel structures carry attractive pricing, risks that are known and accepted, and buyers who can switch to them without friction. They set the price and the expectations that every mass timber proposal is measured against.</p>'},
  {id:'ent',name:'Future entrants',sub:'Novel building means',level:25,
-  desc:'<p><b>Initial characterization: Low.</b> Low-carbon concrete and steel, plastics and polymers and other novel means currently carry unattractive costs and unknown risks, and buyers cannot easily switch to them. Their power is latent: it grows as they prove out.</p>'},
+  desc:'<p><b>Baseline assessment: Low.</b> Low-carbon concrete and steel, plastics and polymers and other novel means currently carry unattractive costs and unknown risks, and buyers cannot easily switch to them. Their power is latent: it grows as they prove out.</p>'},
  {id:'core',name:'Shared forces',sub:'Rivalry, collaboration, concentration, regulators, economy',level:75,
   desc:'<p><b>Rivalry and collaboration: to be determined.</b> Traditional means are highly centralized; mass timber\'s supply and demand forces are new, and competition, partnership and merger activity is fast and ongoing.</p><p><b>Regulators and the economy: High.</b> Building codes, tariffs and similar actions have increasingly large impacts, and economic and real estate cycles are hugely influential.</p>'}
 ],

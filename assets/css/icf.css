@@ -127,3 +127,5 @@
   }
  @media (prefers-reduced-motion: reduce) { .seg button, .chip, .fcard, .meter i, .fcard .bar i { transition: none; } }
 @media (max-width: 700px) { .icf { padding-top: 140px; } }
+.icf .origins-text { font-size: 14px; line-height: 1.7; color: var(--muted); margin: 0; max-width: 72ch; }
+.icf .origins-text a { font-weight: 600; }

@@ -5,7 +5,7 @@ redirect_from: ["/industry-capital-flows-structure"]
 title: "Industry Structure — Mass Timber Finance & Consumer"
 description: "How the mass timber industry is organized, who holds bargaining power within it, and what that means for capital flows: Porter's Five Forces adapted to mass timber, a baseline assessment, and fifteen what-if scenarios to test."
 og_title: "Industry Structure (MTFC)"
-og_description: "Learn the industry's structure, review the Phase 1 baseline assessment, and test future scenarios on an animated map of the mass timber ecosystem."
+og_description: "Learn the industry's structure, review the baseline assessment, and test future scenarios on an animated map of the mass timber ecosystem."
 og_image: "tile-industry-forces.webp"
 styles: ["/assets/css/icf.css"]
 scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
@@ -15,14 +15,14 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
   <a href="/" class="icf-back">← Back to Homepage</a>
   <p class="cat">Capital Markets</p>
   <h1>Industry Structure</h1>
-  <span class="status">Status: Phase 1 characterization · Request for comment</span>
+  <span class="status">Status: Working edition · Request for comment</span>
   <p class="lede">How the mass timber industry is organized, who holds bargaining power within it, and what that means for the flow of capital into it — mapped with Michael Porter's Five Forces and drawn as a moving ecosystem.</p>
-  <p class="meta"><b>Author:</b> Noel A. Johnson, Conrad / Old i, LLC<br><b>Supported, in part, by</b> the U.S. Economic Development Administration, Regional Technology and Innovation Hubs program, Pacific NW Mass Timber Tech Hub Accelerator Award<br><b>First issue:</b> August 2025 as a draft for comment via the PNW Tech Hub<br><b>Second issue:</b> November 2026 as the operationalized website for public benefit</p>
+  <p class="meta"><b>Author:</b> Noel A. Johnson, Conrad / Old i, LLC<br><b>Published:</b> November 2026, Mass Timber Finance &amp; Consumer</p>
 
   <nav class="seg" aria-label="Page parts">
     <div class="seg-row">
       <button type="button" data-part="learn" class="on"><span class="k">A</span><span class="t">Learn the industry's structure</span><span class="d">Porter's five forces, adapted to mass timber, and what they imply</span></button>
-      <button type="button" data-part="baseline"><span class="k">B</span><span class="t">Review the baseline assessment</span><span class="d">Conrad's Phase 1 characterization of each force, on the moving map</span></button>
+      <button type="button" data-part="baseline"><span class="k">B</span><span class="t">Review the baseline assessment</span><span class="d">The author's assessment of each force, on the moving map</span></button>
       <button type="button" data-part="test"><span class="k">C</span><span class="t">Test future scenarios</span><span class="d">Fifteen what-ifs, or your own, and what each means for capital</span></button>
     </div>
   </nav>
@@ -89,9 +89,9 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
   <!-- ================= B. BASELINE ================= -->
   <section class="part" id="part-baseline">
     <p class="lbl">Part B</p>
-    <h2>The baseline: Conrad's Phase 1 assessment</h2>
+    <h2>The baseline: the author's assessment</h2>
     <div class="narrow body">
-      <p>The map shows the industry as it was characterized in August 2025, from interviews, industry engagement and the author's development experience. Supply clusters orbit on the left, demand on the right; concrete and steel press from above, novel means from below; the shared forces sit at the centre. The brighter a body's halo and the heavier its stream toward the centre, the more bargaining power it holds over the industry's firms. Hover or tap a dot to see who it is, and pick a force card to read its characterization.</p>
+      <p>The map shows the author's baseline reading of the industry, drawn from his development practice, research and industry engagement. Supply clusters orbit on the left, demand on the right; concrete and steel press from above, novel means from below; the shared forces sit at the centre. The brighter a body's halo and the heavier its stream toward the centre, the more bargaining power it holds over the industry's firms. Hover or tap a dot to see who it is, and pick a force card to read its characterization.</p>
     </div>
     <div class="mapslot" id="slot-b"></div>
     <div class="forces" id="b-forces"></div>
@@ -118,7 +118,7 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
     <p class="lbl">Part C</p>
     <h2>Test future scenarios</h2>
     <div class="narrow body">
-      <p>Pick a what-if under any force and watch the balance shift from the Phase 1 baseline. Each scenario names what changes, who gains power, and what it means for the flow of capital — tagged by whether it works through demand pull or supply push, and whether the industry can control it. Combine the sliders to build a scenario of your own.</p>
+      <p>Pick a what-if under any force and watch the balance shift from the baseline. Each scenario names what changes, who gains power, and what it means for the flow of capital — tagged by whether it works through demand pull or supply push, and whether the industry can control it. Combine the sliders to build a scenario of your own.</p>
     </div>
     <div class="mapslot" id="slot-c"></div>
     <div class="sgroups" id="c-groups"></div>
@@ -126,15 +126,15 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
       <div class="read" id="c-read"></div>
       <div id="c-empty"><p class="lbl">Reading</p><p style="margin:0">Choose a what-if above. The map, the force levels and the attractiveness meter update together, and the reading appears here.</p></div>
       <div class="sliders" id="c-sliders"><p class="lbl">Build your own scenario</p></div>
-      <div class="toolbar"><button type="button" class="btn ghost" id="c-reset">Reset to Phase 1 baseline</button><a class="btn ghost" href="https://www.pnwmasstimbertechhub.org/capital-access" target="_blank" rel="noopener">Propose a scenario ↗</a></div>
-      <p class="note">Force levels are the author's Phase 1 characterization (August 2025) on a 0–100 scale; scenario shifts are illustrative directions, not measurements. "Attractiveness" is the simple inverse of the five forces — Porter's point that strong forces leave less value for the industry's firms to capture.</p>
+      <div class="toolbar"><button type="button" class="btn ghost" id="c-reset">Reset to baseline</button><a class="btn ghost" href="mailto:{{ site.contact_email }}?subject=Industry%20Structure%20scenario">Propose a scenario</a></div>
+      <p class="note">Force levels are the author's baseline assessment on a 0–100 scale; scenario shifts are illustrative directions, not measurements. "Attractiveness" is the simple inverse of the five forces — Porter's point that strong forces leave less value for the industry's firms to capture.</p>
     </div>
   </section>
 
   <div class="rfc">
     <h2>What do you think?</h2>
-    <p>This is a Phase 1 characterization issued for comment. Where would you move a force, and why? Which scenario is missing? Contributions from investors, developers, producers, researchers and policymakers all help sharpen the map.</p>
-    <div class="row"><a class="btn" href="https://www.pnwmasstimbertechhub.org/capital-access" target="_blank" rel="noopener">Comment via the Tech Hub discussion page →</a><a class="btn ghost" href="/#Contact">Contact the curator</a></div>
+    <p>This is a working edition issued for comment. Where would you move a force, and why? Which scenario is missing? Contributions from investors, developers, producers, researchers and policymakers all help sharpen the map.</p>
+    <div class="row"><a class="btn" href="mailto:{{ site.contact_email }}?subject=Industry%20Structure%20comment">Send a comment to the curator →</a></div>
   </div>
   <div class="related">
     <p class="lbl">Related research</p>
@@ -146,7 +146,11 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
       <li><a href="/capital-creation">Capital Creation</a> — operating and growth capital requirements of the supply side.</li>
     </ul>
   </div>
-  <p class="credits">Framework: Michael E. Porter, "How Competitive Forces Shape Strategy," Harvard Business Review, 1979. Base diagram per the Institute for Strategy and Competitiveness, Harvard Business School, accessed August 8, 2025 (Creative Commons CC0 / public domain). Adaptation to the mass timber industry, Phase 1 characterization, scenarios and animation by Noel Johnson for the Pacific Northwest Mass Timber Tech Hub; all rights reserved. Scenario levels are illustrative and carry no claim of measurement.</p>
+  <div class="related origins">
+    <p class="lbl">Earlier work and credit</p>
+    <p class="origins-text">In 2025 the author prepared an initial <a href="https://www.pnwmasstimbertechhub.org/capital-access" target="_blank" rel="noopener">Mass Timber Industry Characterization</a> for the Pacific Northwest Mass Timber Tech Hub, supported by the U.S. Economic Development Administration's Regional Technology and Innovation Hubs program, to open public discussion. That characterization is the Tech Hub's and remains on its site, with the comments it received. The work on this page is separate: it rests on the author's own research and practice before that engagement and on further study since, and is published by Mass Timber Finance &amp; Consumer.</p>
+  </div>
+  <p class="credits">Framework: Michael E. Porter, "How Competitive Forces Shape Strategy," Harvard Business Review, 1979. Base diagram per the Institute for Strategy and Competitiveness, Harvard Business School, accessed August 8, 2025 (Creative Commons CC0 / public domain). Adaptation to the mass timber industry, assessment, scenarios and animation by Noel Johnson. Scenario levels are illustrative and carry no claim of measurement.</p>
 </div>
 
 <!-- the one map, moved between Part B and Part C -->
