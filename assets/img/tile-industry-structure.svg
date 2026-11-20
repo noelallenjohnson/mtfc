@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200" font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a67c3d"/></marker>
+    <filter id="s" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1a1a18" flood-opacity=".07"/></filter>
+  </defs>
+  <rect width="1600" height="1200" fill="#f4f1ea"/>
+  <!-- arrows -->
+  <g stroke="#a67c3d" stroke-width="7" fill="none" marker-end="url(#a)" stroke-linecap="round">
+    <path d="M800,352 L800,424"/><path d="M800,848 L800,776"/><path d="M448,600 L556,600"/><path d="M1152,600 L1044,600"/>
+  </g>
+  <!-- centre -->
+  <rect x="570" y="438" width="460" height="324" rx="20" fill="#1a1a18" filter="url(#s)"/>
+  <text x="800" y="500" font-size="22" font-weight="600" letter-spacing="3" fill="#c99a5c">MASS TIMBER INDUSTRY</text>
+  <g font-size="33" font-weight="500" fill="#f7f6f3">
+    <text x="800" y="566">Rivalries</text><text x="800" y="612">Collaborations</text><text x="800" y="658">Concentrations</text>
+    <text x="800" y="704" font-size="30">Regulators · Economy</text>
+  </g>
+  <!-- outer cards -->
+  <g filter="url(#s)" fill="#ffffff" stroke="#e2ded6" stroke-width="2">
+    <rect x="570" y="112" width="460" height="226" rx="20"/>
+    <rect x="570" y="862" width="460" height="226" rx="20"/>
+    <rect x="96" y="474" width="340" height="252" rx="20"/>
+    <rect x="1164" y="474" width="340" height="252" rx="20"/>
+  </g>
+  <g fill="#1a1a18" font-weight="600" font-size="40">
+    <text x="800" y="186">Substitutes</text><text x="800" y="936">Future entrants</text>
+    <text x="266" y="556">Suppliers</text><text x="1334" y="556">Buyers</text>
+  </g>
+  <g fill="#666460" font-size="25">
+    <text x="800" y="226">Concrete &amp; steel</text><text x="800" y="976">Novel building means</text>
+    <text x="266" y="596">Producers · fiber · inputs</text><text x="1334" y="596">Investors · end users</text>
+  </g>
+  <!-- power chips: label + three-step meter -->
+  <g font-size="21" font-weight="600" letter-spacing="2">
+    <g transform="translate(800,282)"><text x="-58" y="8" fill="#8f6a32">POWER · HIGH</text><g transform="translate(62,-9)"><rect width="26" height="18" rx="4" fill="#a67c3d"/><rect x="32" width="26" height="18" rx="4" fill="#a67c3d"/><rect x="64" width="26" height="18" rx="4" fill="#a67c3d"/></g></g>
+    <g transform="translate(800,1032)"><text x="-58" y="8" fill="#8f6a32">POWER · LOW</text><g transform="translate(56,-9)"><rect width="26" height="18" rx="4" fill="#a67c3d"/><rect x="32" width="26" height="18" rx="4" fill="#e2ded6"/><rect x="64" width="26" height="18" rx="4" fill="#e2ded6"/></g></g>
+    <g transform="translate(256,664)"><text x="-52" y="8" fill="#8f6a32">POWER · MEDIUM</text><g transform="translate(74,-9)"><rect width="26" height="18" rx="4" fill="#a67c3d"/><rect x="32" width="26" height="18" rx="4" fill="#a67c3d"/><rect x="64" width="26" height="18" rx="4" fill="#e2ded6"/></g></g>
+    <g transform="translate(1334,664)"><text x="-58" y="8" fill="#8f6a32">POWER · HIGH</text><g transform="translate(62,-9)"><rect width="26" height="18" rx="4" fill="#a67c3d"/><rect x="32" width="26" height="18" rx="4" fill="#a67c3d"/><rect x="64" width="26" height="18" rx="4" fill="#a67c3d"/></g></g>
+  </g>
+</svg>

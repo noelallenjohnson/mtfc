@@ -12,6 +12,7 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 | Site design, layout, stylesheets, scripts | whole repository | Originally built on Webflow, rebuilt here November 2026 |
 | MTFC name, logo and mark | `assets/img/mtfc-*.svg`, favicons and icons | Brand kit created for MTFC |
 | Home, Mission & Vision, Illustrations and initiative page text | `index.html`, `pages/` | |
+| Industry Structure tile diagram | `assets/img/tile-industry-structure.{svg,webp,jpg}` | Drawn for MTFC, November 2026 |
 | Rocking CLT wall icon | `assets/img/rocking-clt-wall.svg` | *to confirm origin* |
 
 ## 2. Authored works published under licence from their authors
