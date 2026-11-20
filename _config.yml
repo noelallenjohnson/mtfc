@@ -1,0 +1,23 @@
+# Mass Timber Finance & Consumer — site settings
+title: "Mass Timber Finance & Consumer"
+description: "A research-driven working group on the economics, investment and consumer demand for mass timber."
+url: "https://www.masstimberfinanceconsumer.org"
+
+# STAGING: while the site is reviewed at noelallenjohnson.github.io/mtfc this stays "/mtfc".
+# AT LAUNCH (when www.masstimberfinanceconsumer.org points at GitHub): change to "" and add the CNAME file.
+baseurl: "/mtfc"
+
+owner: "Old i, LLC"
+contact_email: "curator@masstimberfinanceconsumer.org"
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - RIGHTS.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+defaults:
+  - scope: {path: ""}
+    values: {layout: "default"}
