@@ -55,18 +55,29 @@ window.addEventListener('hashchange',function(){var h=location.hash.replace('#',
 var bForces=document.getElementById('b-forces'),bl=document.getElementById('b-plbl'),bt=document.getElementById('b-ptitle'),bb=document.getElementById('b-pbody'),cards={};
 D.forces.forEach(function(f){var b=document.createElement('button');b.className='fcard';b.type='button';b.innerHTML='<small>'+f.sub+'</small><strong>'+f.name+'</strong><div class="bar"><i style="width:'+f.level+'%"></i></div><em>Power: <b>'+lvl(f.level)+'</b> ('+f.level+')</em>';b.onclick=function(){D.forces.forEach(function(x){cards[x.id].classList.toggle('on',x.id===f.id)});bl.textContent=f.sub;bt.textContent=f.name+' — baseline assessment';bb.innerHTML=f.desc};bForces.appendChild(b);cards[f.id]=b});
 
-/* ---------- C: scenarios ---------- */
-var groups=document.getElementById('c-groups'),read=document.getElementById('c-read'),empty=document.getElementById('c-empty'),meter=document.getElementById('meter'),attrEl=document.getElementById('attr'),dEl=document.getElementById('attr-delta'),slEl=document.getElementById('c-sliders'),sliders={},chips=[];
+/* ---------- C: scenarios ----------
+   Choosing a scenario applies its proposed shifts; the reader can then tune each shift. */
+var groups=document.getElementById('c-groups'),read=document.getElementById('c-read'),empty=document.getElementById('c-empty'),meter=document.getElementById('meter'),attrEl=document.getElementById('attr'),dEl=document.getElementById('attr-delta'),slEl=document.getElementById('c-sliders'),presetBtn=document.getElementById('c-preset'),sliders={},chips=[],cur=null,shift={};
 var base=Math.round(100-D.forces.reduce(function(s,f){return s+f.level},0)/5);
-D.forces.forEach(function(f){var g=document.createElement('div');g.className='sgroup';g.innerHTML='<div class="name">'+f.name+'<small>'+f.sub+'</small></div><div class="chips"></div>';var ch=g.querySelector('.chips');D.scenarios.filter(function(s){return s.f===f.id}).forEach(function(s){var c=document.createElement('button');c.type='button';c.className='chip';c.textContent=s.t;c.onclick=function(){apply(s,c)};ch.appendChild(c);chips.push(c)});groups.appendChild(g);
- var row=document.createElement('div');row.className='sl';row.innerHTML='<label for="s-'+f.id+'">'+f.name+'</label><input id="s-'+f.id+'" type="range" min="0" max="100" value="'+f.level+'"><span></span>';slEl.appendChild(row);var inp=row.querySelector('input');sliders[f.id]={inp:inp,out:row.querySelector('span')};inp.oninput=function(){target[f.id]=+inp.value;chips.forEach(function(c){c.classList.remove('on')});read.className='read';empty.hidden=false;refresh()}});
-function refresh(){var at=Math.round(100-Object.keys(target).reduce(function(s,k){return s+target[k]},0)/5);meter.style.width=at+'%';attrEl.textContent=at+' · '+(at<40?'Moderate–low':at<55?'Moderate':'High');var d=at-base;dEl.textContent=d?('('+(d>0?'+':'')+d+' vs. baseline)'):'(baseline)';D.forces.forEach(function(f){var v=Math.round(target[f.id]);sliders[f.id].inp.value=v;sliders[f.id].out.textContent=v;cards[f.id].querySelector('.bar i').style.width=v+'%';cards[f.id].querySelector('em').innerHTML='Power: <b>'+lvl(v)+'</b> ('+v+')'})}
-var names={sub:'Substitutes',dem:'Buyers',core:'Shared forces',sup:'Suppliers',ent:'Future entrants'},tagNames={pull:'Demand pull',push:'Supply push',ctl:'Controllable risk',unc:'Uncontrollable risk'};
-function apply(s,chip){chips.forEach(function(c){c.classList.remove('on')});chip.classList.add('on');D.forces.forEach(function(f){target[f.id]=f.level});Object.keys(s.d).forEach(function(k){target[k]=Math.max(0,Math.min(100,target[k]+s.d[k]))});
- var delta=Object.keys(s.d).map(function(k){return '<b>'+names[k]+'</b> '+(s.d[k]>0?'+':'')+s.d[k]}).join(' · ');
- read.innerHTML='<div class="tags">'+s.tags.map(function(t){return '<span class="tag '+t+'">'+tagNames[t]+'</span>'}).join('')+'</div><h4>What if '+s.t.charAt(0).toLowerCase()+s.t.slice(1)+'?</h4><p class="delta">Force shifts from baseline: '+delta+'</p><p class="lbl">What changes</p><p>'+s.m+'</p><p class="lbl">Who gains power</p><p>'+s.w+'</p><p class="lbl">What it means for capital flows</p><p>'+s.c+'</p>';
- read.className='read show';empty.hidden=true;refresh()}
-document.getElementById('c-reset').onclick=function(){D.forces.forEach(function(f){target[f.id]=f.level});chips.forEach(function(c){c.classList.remove('on')});read.className='read';empty.hidden=false;refresh()};
+function sign(v){return (v>0?'+':v<0?'−':'')+Math.abs(v)}
+D.forces.forEach(function(f){shift[f.id]=0;
+ var g=document.createElement('div');g.className='sgroup';g.innerHTML='<div class="name">'+f.name+'<small>'+f.sub+'</small></div><div class="chips"></div>';var ch=g.querySelector('.chips');
+ D.scenarios.filter(function(s){return s.f===f.id}).forEach(function(s){var c=document.createElement('button');c.type='button';c.className='chip';c.textContent=s.t;c.onclick=function(){apply(s,c)};ch.appendChild(c);chips.push(c)});groups.appendChild(g);
+ var row=document.createElement('div');row.className='sl';row.innerHTML='<label for="s-'+f.id+'">'+f.name+'</label><input id="s-'+f.id+'" type="range" min="-100" max="100" step="5" value="0"><span></span>';slEl.appendChild(row);
+ var inp=row.querySelector('input');sliders[f.id]={inp:inp,out:row.querySelector('span')};
+ inp.oninput=function(){shift[f.id]=+inp.value;refresh()}});
+function refresh(){D.forces.forEach(function(f){target[f.id]=Math.max(0,Math.min(100,f.level+shift[f.id]))});
+ var at=Math.round(100-Object.keys(target).reduce(function(s,k){return s+target[k]},0)/5);meter.style.width=at+'%';attrEl.textContent=at+' · '+(at<40?'Moderate–low':at<55?'Moderate':'High');var d=at-base;dEl.textContent=d?('('+sign(d)+' vs. baseline)'):'(baseline)';
+ var tuned=false;
+ D.forces.forEach(function(f){var v=Math.round(target[f.id]);sliders[f.id].inp.value=shift[f.id];sliders[f.id].out.innerHTML='<b>'+sign(shift[f.id])+'</b> → '+v;cards[f.id].querySelector('.bar i').style.width=v+'%';cards[f.id].querySelector('em').innerHTML='Power: <b>'+lvl(v)+'</b> ('+v+')';if(cur&&shift[f.id]!==(cur.d[f.id]||0))tuned=true});
+ presetBtn.hidden=!(cur&&tuned)}
+function setShifts(d){D.forces.forEach(function(f){shift[f.id]=(d&&d[f.id])||0})}
+function apply(s,chip){chips.forEach(function(c){c.classList.remove('on')});chip.classList.add('on');cur=s;setShifts(s.d);
+ var prop=D.forces.filter(function(f){return s.d[f.id]}).map(function(f){return '<b>'+f.name+'</b> '+sign(s.d[f.id])}).join(' · ');
+ read.innerHTML='<p class="lbl">Scenario</p><h4>'+s.t+'</h4><p class="inshort">'+s.s+'</p><p class="delta">Proposed shifts from baseline: '+prop+'</p><p>'+s.m+'</p>';
+ read.className='read show';empty.hidden=true;slEl.hidden=false;refresh()}
+presetBtn.onclick=function(){if(cur){setShifts(cur.d);refresh()}};
+document.getElementById('c-reset').onclick=function(){cur=null;setShifts(null);chips.forEach(function(c){c.classList.remove('on')});read.className='read';read.innerHTML='';empty.hidden=false;slEl.hidden=true;refresh()};
 refresh();
 var h=location.hash.replace('#','');show(PARTS.indexOf(h)>=0?h:'learn');
 })();
