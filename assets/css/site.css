@@ -313,3 +313,8 @@ html { scroll-padding-top: 100px; }
 .site-footer a { color: #8f6a32; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 .site-footer-note { font-size: 12px; }
+
+/* Long email addresses wrap instead of widening the page on phones */
+a[href^="mailto:"] { overflow-wrap: anywhere; }
+.mv-email { color: inherit; text-decoration: none; }
+.mv-email:hover { color: #8f6a32; text-decoration: underline; }
