@@ -38,7 +38,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | MTFC work | File |
 |---|---|
 | Industry Structure (framework, baseline, scenarios, animation) | `pages/industry-structure.html`, `assets/js/icf*.js` |
-| Listening to Institutional Investors (discussion draft, Fall 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Fall2026_web.pdf` |
+| Listening to Institutional Investors (discussion draft, Nov. 20 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Nov2026_web.pdf` |
 
 ## 3. Third-party material
 
