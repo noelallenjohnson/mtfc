@@ -152,3 +152,5 @@
 .icf .callout.how { max-width: none; margin: 14px 0 0; }
 .icf .sliders:not([hidden]) { border-top: 1px solid var(--line); }
 .icf .toolbar .btn[hidden] { display: none; }
+.icf .read .scn + .scn { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; }
+.icf .delta.combined { font-size: 14px; color: var(--ink); background: var(--soft); border-radius: 6px; padding: 8px 12px; margin-bottom: 14px; }

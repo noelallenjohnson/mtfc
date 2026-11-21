@@ -21,8 +21,9 @@ if(!W){requestAnimationFrame(frame);return}
 ctx.clearRect(0,0,W,H);var A=anchors(),at=attract();
 var seen={};objs.forEach(function(o){if(seen[o.r])return;seen[o.r]=1;ctx.beginPath();ctx.ellipse(CX,CY,o.r*S*RM,o.r*S*RM*TILT,0,0,Math.PI*2);ctx.strokeStyle='rgba(17,138,178,.18)';ctx.lineWidth=1;ctx.stroke()});
 parts.forEach(function(p){var id=ids[p.k%4],a=A[id],pw=F[id]/100;p.t+=(0.0025+pw*0.009)*(0.7+p.j*.6);if(p.t>1)p.t-=1;var x=a.x+(CX-a.x)*p.t,y=a.y+(CY-a.y)*p.t,sp=(1-p.t)*8*S;x+=Math.sin(p.j*20+tt*.02)*sp;y+=Math.cos(p.j*17+tt*.02)*sp*.6;if(p.j>pw+.15)return;ctx.globalAlpha=.75*(1-p.t)*(.3+pw);ctx.fillStyle=cols[id];ctx.beginPath();ctx.arc(x,y,1.6*S+1,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1});
-var coreR=(28+at*.35)*S;halo(CX,CY,coreR*3.2,'#ffd166',.08+at/400);halo(CX,CY,coreR*1.8,'#ffd166',.18+at/300);ctx.beginPath();ctx.arc(CX,CY,coreR,0,Math.PI*2);ctx.fillStyle='#001d3d';ctx.fill();ctx.beginPath();ctx.arc(CX,CY,coreR*.62,0,Math.PI*2);ctx.fillStyle='#000814';ctx.fill();ctx.strokeStyle='rgba(255,209,102,'+(.35+at/200)+')';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(CX,CY,coreR,0,Math.PI*2);ctx.stroke();
-text('COMMON,',CX,CY-11*S,Math.max(7.5,9*S),'#ffd166','center','middle','600');text('CENTRAL',CX,CY,Math.max(7.5,9*S),'#ffd166','center','middle','600');text('FORCES',CX,CY+11*S,Math.max(7.5,9*S),'#ffd166','center','middle','600');if(!mobile){['Rivalries / Collaborations','Concentrations / Econ. Trends','Regulator / Policy'].forEach(function(l,i){text(l,CX,CY+coreR+14*S+i*14*S,Math.max(9,10.5*S),'rgba(230,246,255,.82)')})}
+var coreR=mobile?(28+at*.35)*S:94*S;halo(CX,CY,coreR*(mobile?3.2:1.9),'#ffd166',.08+at/400);halo(CX,CY,coreR*(mobile?1.8:1.35),'#ffd166',.18+at/300);ctx.beginPath();ctx.arc(CX,CY,coreR,0,Math.PI*2);ctx.fillStyle='#000c1f';ctx.fill();ctx.strokeStyle='rgba(255,209,102,'+(.35+at/200)+')';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(CX,CY,coreR,0,Math.PI*2);ctx.stroke();
+if(mobile){text('COMMON,',CX,CY-11*S,Math.max(7.5,9*S),'#ffd166','center','middle','600');text('CENTRAL',CX,CY,Math.max(7.5,9*S),'#ffd166','center','middle','600');text('FORCES',CX,CY+11*S,Math.max(7.5,9*S),'#ffd166','center','middle','600')}
+else{var ts=Math.max(9.5,12*S),ls=Math.max(8.5,10.5*S);text('COMMON, CENTRAL',CX,CY-42*S,ts,'#ffd166','center','middle','700');text('FORCES',CX,CY-27*S,ts,'#ffd166','center','middle','700');['Rivalries / Collaborations','Concentrations / Econ. Trends','Regulator / Policy'].forEach(function(l,i){text(l,CX,CY-3*S+i*17*S,ls,'#e6f6ff')})}
 [['sub','Substitutes','Traditional means · concrete & steel',-1],['ent','Future entrants','Novel building means',1]].forEach(function(b){var a=A[b[0]],pw=F[b[0]]/100,R=(14+pw*22)*S;halo(a.x,a.y,R*2.6,cols[b[0]],.12+pw*.25);ctx.beginPath();ctx.arc(a.x,a.y,R*.55,0,Math.PI*2);ctx.fillStyle=cols[b[0]];ctx.shadowColor=cols[b[0]];ctx.shadowBlur=14;ctx.fill();ctx.shadowBlur=0;var ty=b[3]<0?a.y-R*.55-(mobile?26:30)*S:a.y+R*.55+(mobile?18:22)*S;text(b[1].toUpperCase(),a.x,ty,Math.max(11,(mobile?15:20)*S),'#fff','center','middle','600');text((mobile?'':b[2]+' · ')+lvl(F[b[0]]).toUpperCase(),a.x,ty+(mobile?15:20)*S,Math.max(9,(mobile?10:12)*S),'#cfe6ff')});
 var byC={producers:[],fiber:[],inputs:[],demand:[]};objs.forEach(function(o){o.a+=0.0002*(o.side===-1?-1:1);var p=pos(o.a,o.r,o.side);o.x=p.x;o.y=p.y;byC[o.cid].push(p)});
 function bubble(pts,col,pw){if(!pts.length)return null;var mnx=1e9,mxx=-1e9,mny=1e9,mxy=-1e9;pts.forEach(function(p){mnx=Math.min(mnx,p.x);mxx=Math.max(mxx,p.x);mny=Math.min(mny,p.y);mxy=Math.max(mxy,p.y)});var cx=(mnx+mxx)/2,cy=(mny+mxy)/2,rx=Math.max((mxx-mnx)/2+26*S,24*S),ry=Math.max((mxy-mny)/2+20*S,18*S);ctx.save();ctx.globalAlpha=.1+pw*.12;ctx.fillStyle=col;ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,0,0,Math.PI*2);ctx.fill();ctx.restore();return{cx:cx,cy:cy,rx:rx,ry:ry}}
@@ -58,7 +59,7 @@ D.forces.forEach(function(f){var b=document.createElement('button');b.className=
 /* ---------- C: scenarios ----------
    Choosing a scenario applies its proposed shifts; the reader can then tune each shift.
    The radar shows the scenario's shape over the shaded baseline. Part B's map stays at the baseline. */
-var groups=document.getElementById('c-groups'),read=document.getElementById('c-read'),slEl=document.getElementById('c-sliders'),presetBtn=document.getElementById('c-preset'),resetBtn=document.getElementById('c-reset'),radarBox=document.getElementById('slot-c'),sliders={},chips=[],cur=null,shift={},now={},goal={};
+var groups=document.getElementById('c-groups'),read=document.getElementById('c-read'),slEl=document.getElementById('c-sliders'),presetBtn=document.getElementById('c-preset'),resetBtn=document.getElementById('c-reset'),radarBox=document.getElementById('slot-c'),sliders={},chips=[],sel=[],shift={},now={},goal={};
 var base=Math.round(100-D.forces.reduce(function(s,f){return s+f.level},0)/5);
 (function(){var m=document.getElementById('meter');if(m){m.style.width=base+'%';document.getElementById('attr').textContent=base+' · '+(base<40?'Moderate–low':base<55?'Moderate':'High')}})();
 var COL={dem:'#3f8f5a',sup:'#3a7ca5',sub:'#c9772e',ent:'#8a63b8',core:'#a67c3d'},ORD=['sub','dem','ent','core','sup'],byId={};
@@ -92,20 +93,24 @@ window.MTU_RADAR=buildRadar;window.addEventListener('resize',function(){if(radar
 /* controls */
 D.forces.forEach(function(f){
  var g=document.createElement('div');g.className='sgroup';g.innerHTML='<div class="name">'+f.name+'<small>'+f.sub+'</small></div><div class="chips"></div>';var ch=g.querySelector('.chips');
- D.scenarios.filter(function(s){return s.f===f.id}).forEach(function(s){var c=document.createElement('button');c.type='button';c.className='chip';c.textContent=s.t;c.onclick=function(){apply(s,c)};ch.appendChild(c);chips.push(c)});groups.appendChild(g);
+ D.scenarios.filter(function(s){return s.f===f.id}).forEach(function(s){var c=document.createElement('button');c.type='button';c.className='chip';c.textContent=s.t;c.setAttribute('aria-pressed','false');c.onclick=function(){toggle(s,c)};ch.appendChild(c);chips.push(c)});groups.appendChild(g);
  var row=document.createElement('div');row.className='sl';row.innerHTML='<label for="s-'+f.id+'">'+f.name+'</label><input id="s-'+f.id+'" type="range" min="-100" max="100" step="5" value="0"><span></span>';slEl.appendChild(row);
  var inp=row.querySelector('input');sliders[f.id]={inp:inp,out:row.querySelector('span')};
  inp.oninput=function(){shift[f.id]=+inp.value;refresh()}});
-function refresh(){var tuned=false;
- D.forces.forEach(function(f){goal[f.id]=Math.max(0,Math.min(100,f.level+shift[f.id]));sliders[f.id].inp.value=shift[f.id];sliders[f.id].out.innerHTML='<b>'+sign(shift[f.id])+'</b> → '+goal[f.id];if(cur&&shift[f.id]!==(cur.d[f.id]||0))tuned=true});
- presetBtn.hidden=!(cur&&tuned);resetBtn.hidden=!cur;if(!anim)anim=requestAnimationFrame(tick)}
-function setShifts(d){D.forces.forEach(function(f){shift[f.id]=(d&&d[f.id])||0})}
-function apply(s,chip){chips.forEach(function(c){c.classList.remove('on')});chip.classList.add('on');cur=s;setShifts(s.d);
- var prop=D.forces.filter(function(f){return s.d[f.id]}).map(function(f){return '<b>'+f.name+'</b> '+sign(s.d[f.id])}).join(' · ');
- read.innerHTML='<p class="lbl">Scenario</p><h4>'+s.t+'</h4><p class="inshort">'+s.s+'</p><p class="delta">Proposed shifts from baseline: '+prop+'</p><p>'+s.m+'</p>';
- read.className='read show';slEl.hidden=false;refresh()}
-presetBtn.onclick=function(){if(cur){setShifts(cur.d);refresh()}};
-resetBtn.onclick=function(){cur=null;setShifts(null);chips.forEach(function(c){c.classList.remove('on')});read.className='read';read.innerHTML='';slEl.hidden=true;refresh()};
+function combined(){var d={};sel.forEach(function(s){for(var k in s.d)d[k]=(d[k]||0)+s.d[k]});return d}
+function refresh(){var tuned=false,pre=combined();
+ D.forces.forEach(function(f){goal[f.id]=Math.max(0,Math.min(100,f.level+shift[f.id]));sliders[f.id].inp.value=shift[f.id];sliders[f.id].out.innerHTML='<b>'+sign(shift[f.id])+'</b> → '+goal[f.id];if(sel.length&&shift[f.id]!==(pre[f.id]||0))tuned=true});
+ presetBtn.hidden=!(sel.length&&tuned);resetBtn.hidden=!sel.length;if(!anim)anim=requestAnimationFrame(tick)}
+function setShifts(d){D.forces.forEach(function(f){shift[f.id]=Math.max(-100,Math.min(100,(d&&d[f.id])||0))})}
+function shiftsText(d){return D.forces.filter(function(f){return d[f.id]}).map(function(f){return '<b>'+f.name+'</b> '+sign(d[f.id])}).join(' · ')||'none'}
+function render(){if(!sel.length){read.className='read';read.innerHTML='';slEl.hidden=true;return}
+ var h='';if(sel.length>1)h+='<p class="lbl">'+sel.length+' scenarios combined</p><p class="delta combined">Combined proposed shifts from baseline: '+shiftsText(combined())+'</p>';
+ sel.forEach(function(s){h+='<div class="scn"><p class="lbl">Scenario</p><h4>'+s.t+'</h4><p class="inshort">'+s.s+'</p><p class="delta">Proposed shifts from baseline: '+shiftsText(s.d)+'</p><p>'+s.m+'</p></div>'});
+ read.innerHTML=h;read.className='read show';slEl.hidden=false}
+function toggle(s,chip){var i=sel.indexOf(s);if(i>=0){sel.splice(i,1);chip.classList.remove('on');chip.setAttribute('aria-pressed','false')}else{sel.push(s);chip.classList.add('on');chip.setAttribute('aria-pressed','true')}
+ setShifts(combined());render();refresh()}
+presetBtn.onclick=function(){setShifts(combined());refresh()};
+resetBtn.onclick=function(){sel=[];setShifts(null);chips.forEach(function(c){c.classList.remove('on');c.setAttribute('aria-pressed','false')});render();refresh()};
 refresh();
 var h=location.hash.replace('#','');show(PARTS.indexOf(h)>=0?h:'learn');
 })();

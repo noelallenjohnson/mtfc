@@ -128,12 +128,12 @@ scripts: ["/assets/js/icf-data.js", "/assets/js/icf.js"]
     <div class="narrow body">
       <p>Pick a what-if scenario and iterate, shifting the balance of power relative to the baseline assessment. The themes are commonly discussed but conceptual in nature and scale, and deserve further industry discussion and academic exploration.</p>
     </div>
-    <div class="callout how"><p><b>How this works.</b> The baseline sets the relative power of the five forces. Choose a scenario below and the chart moves to the shifts proposed for it, with the baseline kept as a shaded shape for reference. Then tune any shift yourself to test your own view.</p></div>
+    <div class="callout how"><p><b>How this works.</b> The baseline sets the relative power of the five forces. Choose a scenario below and the chart moves to the shifts proposed for it, with the baseline kept as a shaded shape for reference. Select more than one and their shifts are added together. Then tune any shift yourself to test your own view.</p></div>
     <div class="radar" id="slot-c"></div>
     <div class="sgroups" id="c-groups"></div>
     <div class="panel">
       <div class="read" id="c-read"></div>
-      <div class="sliders" id="c-sliders" hidden><p class="lbl">Tune this scenario</p><p class="tune-help">Each slider is the shift applied to that force, in points from its baseline level. Move one and watch the chart respond.</p></div>
+      <div class="sliders" id="c-sliders" hidden><p class="lbl">Tune the shifts</p><p class="tune-help">Each slider is the shift applied to that force, in points from its baseline level. Move one and watch the chart respond.</p></div>
       <div class="toolbar"><button type="button" class="btn ghost" id="c-preset" hidden>Restore the proposed shifts</button><button type="button" class="btn ghost" id="c-reset" hidden>Reset to baseline</button><a class="btn ghost" href="mailto:{{ site.contact_email }}?subject=Industry%20Structure%20scenario">Propose a scenario</a></div>
       <p class="note">Force levels are the author's baseline assessment on a 0–100 scale; scenario shifts are proposed directions and relative scales, not measurements. "Attractiveness" is the simple inverse of the five forces — Porter's point that strong forces leave less value for the industry's firms to capture.</p>
     </div>
