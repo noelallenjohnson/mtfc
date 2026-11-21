@@ -138,8 +138,11 @@
 .icf .callout ul { margin: 8px 0 0; padding-left: 20px; }
 .icf .callout li { font-size: 15px; line-height: 1.6; margin-bottom: 6px; }
 .icf .callout li:last-child { margin-bottom: 0; }
-.icf details.ctx { margin: 8px 0 4px; border: 1px solid var(--line); border-radius: 6px; background: var(--soft); }
-.icf details.ctx summary { cursor: pointer; padding: 8px 12px; font-size: 13px; font-weight: 600; color: var(--gold-d); }
-.icf details.ctx summary:hover { color: var(--gold); }
-.icf details.ctx p { font-size: 14px; line-height: 1.65; margin: 0; padding: 2px 12px 12px; max-width: none; }
-.icf details.ctx a { color: var(--gold-d); font-weight: 600; }
+.icf details.ctx { margin: 6px 0 4px; }
+.icf details.ctx summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; font-size: 11.5px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: var(--ctl-fg); background: var(--ctl-bg); border-radius: 999px; padding: 4px 12px 4px 9px; }
+.icf details.ctx summary::-webkit-details-marker { display: none; }
+.icf details.ctx summary::before { content: "+"; font-size: 14px; font-weight: 700; line-height: 1; }
+.icf details.ctx[open] summary::before { content: "–"; }
+.icf details.ctx summary:hover { filter: brightness(.96); }
+.icf details.ctx p { font-size: 13.5px; line-height: 1.65; color: var(--muted); margin: 8px 0 4px; padding: 10px 14px; max-width: none; background: var(--soft); border-left: 3px solid var(--ctl-fg); border-radius: 4px; }
+.icf details.ctx a { color: var(--ctl-fg); font-weight: 600; }
