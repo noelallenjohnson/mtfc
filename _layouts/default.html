@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{{ "/assets/css/site.css" | relative_url }}">
 {%- for css in page.styles %}
-<link rel="stylesheet" href="{{ css | relative_url }}">
+<link rel="stylesheet" href="{{ css | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}">
 {%- endfor %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Mass Timber Finance & Consumer","alternateName":"MTFC","url":"{{ site.url }}/","logo":"{{ site.url }}/assets/img/icon-512.png","email":"{{ site.contact_email }}","description":{{ site.description | jsonify }}}
@@ -54,7 +54,7 @@
 </main>
 {% include footer.html %}
 {%- for js in page.scripts %}
-<script src="{{ js | relative_url }}" defer></script>
+<script src="{{ js | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}" defer></script>
 {%- endfor %}
 </body>
 </html>
