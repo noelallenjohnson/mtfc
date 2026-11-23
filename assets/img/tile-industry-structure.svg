@@ -26,6 +26,6 @@
     <text x="266" y="574">Suppliers</text><text x="1334" y="574">Buyers</text>
   </g>
   <g font-size="40" font-weight="700" letter-spacing="3" fill="#8f6a32">
-<text x="800" y="290">HIGH</text><text x="800" y="1040">MEDIUM</text><text x="266" y="664">MEDIUM</text><text x="1334" y="664">MEDIUM</text>
+<text x="800" y="290">HIGH</text><text x="800" y="1040">MEDIUM</text><text x="266" y="664">HIGH</text><text x="1334" y="664">MEDIUM</text>
   </g>
 </svg>
