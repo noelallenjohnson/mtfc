@@ -86,7 +86,7 @@ function buildRadar(){var w=radarBox.getBoundingClientRect().width;if(!w)return;
  svgEl(svg,'polygon',{points:ORD.map(function(id,i){return pt(i,byId[id].level).join(',')}).join(' '),fill:'#1a1a18','fill-opacity':.10,stroke:'#8a8578','stroke-width':1.2,'stroke-dasharray':'5 4'});
  var poly=svgEl(svg,'polygon',{fill:'#a67c3d','fill-opacity':.2,stroke:'#a67c3d','stroke-width':2.5,'stroke-linejoin':'round'}),o={};
  function cg(get){var x=0,y=0;ORD.forEach(function(id,i){var p=pt(i,get(id));x+=p[0];y+=p[1]});return [x/5,y/5]}
- var g0=cg(function(id){return byId[id].level}),gline=svgEl(svg,'line',{x1:g0[0],y1:g0[1],x2:g0[0],y2:g0[1],stroke:'#1a1a18','stroke-width':2,'stroke-linecap':'round'});
+ var df=svgEl(svg,'defs',{}),mk=svgEl(df,'marker',{id:'gar',viewBox:'0 0 10 10',refX:8,refY:5,markerWidth:small?5:5.5,markerHeight:small?5:5.5,orient:'auto-start-reverse'});svgEl(mk,'path',{d:'M0 0L10 5L0 10z',fill:'#1a1a18'});var g0=cg(function(id){return byId[id].level}),gline=svgEl(svg,'line',{x1:g0[0],y1:g0[1],x2:g0[0],y2:g0[1],stroke:'#1a1a18','stroke-width':3,'stroke-linecap':'butt'});
  svgEl(svg,'circle',{cx:g0[0],cy:g0[1],r:small?6:7,fill:'#fff',stroke:'#1a1a18','stroke-width':1.5,'stroke-dasharray':'3 2'});
  var gdot=svgEl(svg,'circle',{cx:g0[0],cy:g0[1],r:small?5:6,fill:'#1a1a18',stroke:'#fff','stroke-width':2});
  ORD.forEach(function(id,i){var p=pt(i,100,R+(small?16:22)),anc=Math.abs(p[0]-cx)<8?'middle':p[0]>cx?'start':'end',up=p[1]<cy-R*.5,ly=up?p[1]-18:p[1]+(Math.abs(p[1]-cy)<R*.5?-6:8);
@@ -96,10 +96,10 @@ function buildRadar(){var w=radarBox.getBoundingClientRect().width;if(!w)return;
  var an=svgEl(svg,'text',{x:small?10:16,y:small?44:56,'font-size':small?24:28,'font-weight':700,fill:'#1a1a18'}),ad=svgEl(svg,'text',{x:small?10:16,y:small?62:76,'font-size':small?11:12,fill:'#666460'});
  var lf=small?10.5:11.5,lx=VW-(small?222:250),ly=small?16:24;
  svgEl(svg,'rect',{x:lx,y:ly-9,width:14,height:10,fill:'#1a1a18','fill-opacity':.10,stroke:'#8a8578','stroke-dasharray':'3 2'});svgEl(svg,'text',{x:lx+20,y:ly,'font-size':lf,fill:'#666460'},'shaded shape = baseline');
- svgEl(svg,'circle',{cx:lx+7,cy:ly+14,r:5,fill:'#1a1a18'});svgEl(svg,'text',{x:lx+20,y:ly+18,'font-size':lf,fill:'#666460'},'centre of gravity of power');
+ svgEl(svg,'line',{x1:lx-2,y1:ly+14,x2:lx+14,y2:ly+14,stroke:'#1a1a18','stroke-width':3,'marker-end':'url(#gar)'});svgEl(svg,'text',{x:lx+20,y:ly+18,'font-size':lf,fill:'#666460'},'arrow = net shift in power');
  svgEl(svg,'text',{x:lx+20,y:ly+18+lf+3,'font-size':lf,fill:'#666460'},'(ring = baseline; shift shown ×3)');
  rd={small:small,poly:poly,o:o,pt:pt,an:an,ad:ad,cg:cg,g0:g0,gdot:gdot,gline:gline};drawRadar()}
-function drawRadar(){if(!rd)return;var g=rd.cg(function(id){return now[id]});g=[rd.g0[0]+(g[0]-rd.g0[0])*3,rd.g0[1]+(g[1]-rd.g0[1])*3];rd.gdot.setAttribute('cx',g[0]);rd.gdot.setAttribute('cy',g[1]);rd.gline.setAttribute('x2',g[0]);rd.gline.setAttribute('y2',g[1]);rd.poly.setAttribute('points',ORD.map(function(id,i){return rd.pt(i,now[id]).join(',')}).join(' '));
+function drawRadar(){if(!rd)return;var g=rd.cg(function(id){return now[id]});g=[rd.g0[0]+(g[0]-rd.g0[0])*3,rd.g0[1]+(g[1]-rd.g0[1])*3];rd.gdot.setAttribute('cx',g[0]);rd.gdot.setAttribute('cy',g[1]);rd.gline.setAttribute('x2',g[0]);rd.gline.setAttribute('y2',g[1]);var far=Math.hypot(g[0]-rd.g0[0],g[1]-rd.g0[1])>7;rd.gdot.style.display=far?'none':'';if(far)rd.gline.setAttribute('marker-end','url(#gar)');else rd.gline.removeAttribute('marker-end');rd.poly.setAttribute('points',ORD.map(function(id,i){return rd.pt(i,now[id]).join(',')}).join(' '));
  ORD.forEach(function(id,i){var p=rd.pt(i,now[id]),v=Math.round(now[id]),d=Math.round(goal[id])-byId[id].level;rd.o[id].dot.setAttribute('cx',p[0]);rd.o[id].dot.setAttribute('cy',p[1]);rd.o[id].lab.textContent=tcase(lvl(v))+' · '+v+(d?' ('+sign(d)+')':'')});
  var at=Math.round(attOf(function(id){return now[id]})),gd=Math.round(attOf(function(id){return goal[id]}))-base;rd.an.textContent=at;rd.ad.textContent=gd?sign(gd)+' vs. baseline of '+base:'baseline';drawInf()}
 /* influence bar: the strongest force is awarded half; the other four share the rest in proportion to their strength */
