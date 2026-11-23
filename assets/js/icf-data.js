@@ -5,9 +5,9 @@
    Edit text between the quotes; write an apostrophe as \' */
 window.MTU_DATA={
 forces:[
- {id:'core',name:'Rivalry',full:'Rivalry / collaboration',sub:'Among the firms that create mass timber products and buildings',level:78,
+ {id:'core',name:'Rivalry',full:'Rivalry / collaboration',sub:'Among the firms that create mass timber products and buildings',level:67,
   who:'Producers, fabricators, engineers, architects, contractors and developers: the firms that create mass timber products and buildings, competing or cooperating with one another.',
-  desc:'<p><b>Baseline: High (78).</b> Mass timber meets 7 of Porter\'s 9 tests for intense rivalry. Many small producers of similar size run capital-heavy, specialised plants well below capacity, selling products few buyers tell apart. Most firms are strongly committed to the business. Collaboration is the lever that lowers this level.</p>'},
+  desc:'<p><b>Baseline: High (67).</b> Mass timber meets 6.5 of Porter\'s 9 tests for intense rivalry, and the author deducts half a point for the collaboration already under way. Many small producers of similar size run capital-heavy, specialised plants well below capacity, selling products few buyers tell apart. Most firms are strongly committed to the business. Collaboration is the lever that lowers this level.</p>'},
  {id:'dem',name:'Buyers',full:'Buyers',sub:'End users whose demand the chain follows',level:56,
   who:'Market: occupants (persons and firms) and investors (those with savings). Non-market: civic and political organisations and persons.',
   desc:'<p><b>Baseline: Medium (56).</b> Mass timber meets 4.5 of Porter\'s 8 tests for buyer power. Buyers are many and none is dominant, and products are not fully standardised. But switching between bids is easy, returns are thin and financed, and the value that visible wood adds to what the buyer offers is still poorly understood.</p>'},
