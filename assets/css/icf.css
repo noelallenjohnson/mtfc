@@ -154,3 +154,26 @@
 .icf .toolbar .btn[hidden] { display: none; }
 .icf .read .scn + .scn { border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; }
 .icf .delta.combined { font-size: 14px; color: var(--ink); background: var(--soft); border-radius: 6px; padding: 8px 12px; margin-bottom: 14px; }
+.icf .diagram [data-k] { cursor: pointer; outline: none; }
+.icf .diagram [data-k]:hover rect, .icf .diagram [data-k]:focus rect, .icf .diagram [data-k].on rect { stroke: #a67c3d; stroke-width: 2.5; }
+.icf .who { background: var(--soft); border-left: 3px solid var(--gold); border-radius: 6px; padding: 12px 16px; margin: 10px 0 8px; min-height: 74px; }
+.icf .who p { margin: 0; font-size: 14.5px; line-height: 1.55; }
+.icf .who .lbl { margin-bottom: 4px; }
+.icf .tbl-scroll { overflow-x: auto; margin: 6px 0 22px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+.icf .tbl { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; line-height: 1.5; }
+.icf .tbl th { text-align: left; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-d); background: var(--soft); padding: 9px 12px; font-weight: 600; }
+.icf .tbl td { padding: 10px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+.icf .basis { font-size: 13.5px !important; color: var(--muted); }
+.icf .chips.flat { margin-top: 8px; }
+.icf .lbl.pick { margin: 18px 0 0; }
+.icf .inf { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-top: 12px; }
+.icf .inf-cap { font-size: 13.5px; color: var(--muted); margin: 0 0 10px; max-width: none; }
+.icf .inf-cap b { color: var(--ink); }
+.icf .inf-bar { display: flex; height: 54px; border-radius: 6px; overflow: hidden; }
+.icf .inf-seg { color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; overflow: hidden; border-right: 2px solid var(--paper); transition: width .35s; opacity: .8; }
+.icf .inf-seg.top { opacity: 1; }
+.icf .inf-seg:last-child { border-right: 0; }
+.icf .inf-seg span { font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.icf .inf-seg.top span { font-size: 15px; }
+.icf .inf-seg small { font-size: 11.5px; }
+@media (max-width: 640px) { .icf .inf-seg:not(.top) span { font-size: 9.5px; } .icf .inf-seg:not(.top) small { font-size: 10px; } }

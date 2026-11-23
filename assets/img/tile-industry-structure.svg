@@ -13,7 +13,7 @@
   <g font-weight="700" fill="#f7f6f3" font-size="50">
     <text x="800" y="542">Mass Timber</text><text x="800" y="604">Industry</text>
   </g>
-  <text x="800" y="670" font-size="34" font-weight="600" letter-spacing="2" fill="#c99a5c">INTERMEDIATING</text><text x="800" y="712" font-size="34" font-weight="600" letter-spacing="2" fill="#c99a5c">FORCES</text>
+  <text x="800" y="670" font-size="32" font-weight="600" letter-spacing="2" fill="#c99a5c">RIVALRY /</text><text x="800" y="712" font-size="32" font-weight="600" letter-spacing="2" fill="#c99a5c">COLLABORATION</text>
   <!-- outer cards -->
   <g filter="url(#s)" fill="#ffffff" stroke="#e2ded6" stroke-width="2">
     <rect x="570" y="112" width="460" height="226" rx="20"/>
@@ -22,10 +22,10 @@
     <rect x="1164" y="474" width="340" height="252" rx="20"/>
   </g>
   <g fill="#1a1a18" font-weight="600" font-size="54">
-    <text x="800" y="200">Substitutes</text><text x="800" y="950">Future entrants</text>
+    <text x="800" y="200">Substitutes</text><text x="800" y="950">New entrants</text>
     <text x="266" y="574">Suppliers</text><text x="1334" y="574">Buyers</text>
   </g>
   <g font-size="40" font-weight="700" letter-spacing="3" fill="#8f6a32">
-<text x="800" y="290">HIGH</text><text x="800" y="1040">LOW</text><text x="266" y="664">MEDIUM</text><text x="1334" y="664">HIGH</text>
+<text x="800" y="290">HIGH</text><text x="800" y="1040">MEDIUM</text><text x="266" y="664">HIGH</text><text x="1334" y="664">MEDIUM</text>
   </g>
 </svg>
