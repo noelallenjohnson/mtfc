@@ -3,9 +3,8 @@ title: "Mass Timber Finance & Consumer"
 description: "A research-driven working group on the economics, investment and consumer demand for mass timber."
 url: "https://www.masstimberfinanceconsumer.org"
 
-# STAGING: while the site is reviewed at noelallenjohnson.github.io/mtfc this stays "/mtfc".
-# AT LAUNCH (when www.masstimberfinanceconsumer.org points at GitHub): change to "" and add the CNAME file.
-baseurl: "/mtfc"
+# LIVE: served at www.masstimberfinanceconsumer.org (see the CNAME file). Launched Nov 23, 2026.
+baseurl: ""
 
 owner: "Old i, LLC"
 contact_email: "curator@masstimberfinanceconsumer.org"

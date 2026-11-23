@@ -39,8 +39,7 @@ Copy an existing file in `pages/`, give it a new name and a new `permalink`, and
 
 ## Launch settings
 
-`_config.yml` has `baseurl: "/mtfc"` while the site is reviewed at the GitHub address.
-When `www.masstimberfinanceconsumer.org` is pointed at GitHub, set `baseurl: ""` and add a file named `CNAME` containing `www.masstimberfinanceconsumer.org`.
+The site is live at `www.masstimberfinanceconsumer.org` (launched Nov 23, 2026): `_config.yml` has `baseurl: ""` and the `CNAME` file names the domain. DNS is managed at Squarespace (`www` CNAME to `noelallenjohnson.github.io`; apex A records to GitHub Pages).
 
 ## Ownership
 
