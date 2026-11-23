@@ -11,7 +11,7 @@ function resize(){var r=stage.getBoundingClientRect();if(!r.width)return;W=r.wid
 window.addEventListener('resize',resize,{passive:true});
 var parts=[];for(var i=0;i<140;i++)parts.push({t:Math.random(),k:i%5,j:Math.random()});
 function pos(a,r,side){return{x:CX+Math.cos(a)*r*S*RM*side,y:CY+Math.sin(a)*r*S*RM*TILT}}
-function lvl(v){return v>=67?'High':v>=40?'Medium':'Low'}
+function lvl(v){return v>=70?'High':v>=40?'Medium':'Low'}
 function attract(){var s=0;for(var k in F)s+=F[k];return Math.round(100-s/5)}
 function anchors(){var ry=mobile?H*.34:250*S,rx=mobile?W*.3:Math.min(W*.4,ry/TILT),ph=tt*0.0002;return{sub:{x:CX+Math.cos(-Math.PI/2+ph)*rx,y:CY+Math.sin(-Math.PI/2+ph)*ry},ent:{x:CX+Math.cos(Math.PI/2+ph)*rx,y:CY+Math.sin(Math.PI/2+ph)*ry},core:{x:CX,y:CY},sup:{x:CX-(mobile?110:420)*S,y:CY-(mobile?20:30)*S},dem:{x:CX+(mobile?120:330)*S,y:CY-10*S}}}
 function halo(x,y,r,col,alpha){var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col+Math.round(alpha*255).toString(16).padStart(2,'0'));g.addColorStop(1,col+'00');ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill()}
