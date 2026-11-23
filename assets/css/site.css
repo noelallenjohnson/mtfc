@@ -321,3 +321,16 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 
 .tile-graphic { display: block; width: auto; height: 190px; max-width: 100%; background: #fff; border-radius: 11px; margin: 0 auto 16px; }
 @media (min-width: 992px) { .card_body:has(> .tile-graphic) ~ .overflow_clip { display: none; } .card_body:has(> .tile-graphic) { display: flex; flex-direction: column; height: 100%; } .card_body:has(> .tile-graphic) > p { margin-bottom: 12px; } .card_body > .tile-graphic { flex: 1 1 0; min-height: 0; height: 0; align-self: center; object-fit: contain; max-height: 240px; } }
+
+.init-tags { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.init-tag { display: inline-block; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; border: 1px solid; }
+.init-tag.t-c { color: #1f6b45; border-color: #9cc9b1; background: #eef6f1; }
+.init-tag.t-f { color: #7a5a2c; border-color: #dcc39a; background: #faf4e8; }
+.init-tag.t-e { color: #2f4f7a; border-color: #a9bedb; background: #eef3f9; }
+.initiative-theme { color: rgb(107, 107, 102); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin: -4px 0 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.init-filter { max-width: 1100px; margin: 0 auto 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; }
+.init-sub:has(+ .init-filter) { margin-bottom: 28px; }
+.init-filter-label { color: rgb(107, 107, 102); font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-right: 6px; }
+.init-filter button { font: inherit; font-size: 13px; font-weight: 600; color: rgb(68, 68, 68); background: #fff; border: 1px solid rgb(227, 224, 216); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.init-filter button.on { color: #fff; background: rgb(166, 124, 61); border-color: rgb(166, 124, 61); }
+.init-card[hidden], .init-group[hidden] { display: none; }
