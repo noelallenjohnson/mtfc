@@ -319,8 +319,9 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 .mv-email { color: inherit; text-decoration: none; }
 .mv-email:hover { color: #8f6a32; text-decoration: underline; }
 
-.tile-graphic { display: block; width: auto; height: 190px; max-width: 100%; background: #fff; border-radius: 11px; margin: 0 auto 16px; }
-@media (min-width: 992px) { .card_body:has(> .tile-graphic) ~ .overflow_clip { display: none; } .card_body:has(> .tile-graphic) { display: flex; flex-direction: column; height: 100%; } .card_body:has(> .tile-graphic) > p { margin-bottom: 12px; } .card_body > .tile-graphic { flex: 1 1 0; min-height: 0; height: 0; align-self: center; object-fit: contain; max-height: 240px; } }
+.tile-graphic-slot { margin: 0 0 16px; text-align: center; }
+.tile-graphic { display: inline-block; width: auto; height: 190px; max-width: 100%; background: #fff; border-radius: 11px; }
+@media (min-width: 992px) { .card_body.has-graphic ~ .overflow_clip { display: none; } .card_body.has-graphic { display: flex; flex-direction: column; height: 100%; } .card_body.has-graphic > p { margin-bottom: 12px; } .tile-graphic-slot { flex: 1 1 0; min-height: 60px; position: relative; } .tile-graphic-slot > .tile-graphic { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; max-height: 240px; } }
 
 .init-tags { margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .init-tag { display: inline-block; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; border: 1px solid; }
