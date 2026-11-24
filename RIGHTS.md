@@ -49,7 +49,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | Porter's Five Forces base framework | Industry Structure page | Michael E. Porter (1979); diagram per Institute for Strategy and Competitiveness, Harvard Business School | Base diagram CC0 / public domain; redrawn, not reproduced |
 | Hero image (timber interior) | `assets/img/hero-timber-interior.jpg` | AI-generated image | *to confirm tool and terms* |
 | Home tile images | `assets/img/tile-*.{avif,jpg,webp}` | *to confirm* (Webflow template stock, project photography, author diagrams) | *to confirm* |
-| Construction photographs (home page fillers) | `assets/img/photo-timber-*.jpg` | Supplied by Noel Johnson, Nov. 24 2026; *to confirm photographer and project owner permission* | *to confirm* |
+| Construction photographs (home page fillers) | `assets/img/photo-timber-*.jpg` | Photographs by Noel Johnson, who owns the rights (confirmed Nov. 24 2026) | Author's own; used with permission |
 | Ascent MKE | `assets/img/illus-ascent-mke.jpg` | *to confirm photographer / owner* | *to confirm* |
 | HAUT Amsterdam | `assets/img/illus-haut-amsterdam.jpg` | *to confirm* | *to confirm* |
 | International House Sydney | `assets/img/illus-international-house.jpg` | *to confirm* | *to confirm* |

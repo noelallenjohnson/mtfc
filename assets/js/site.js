@@ -6,7 +6,12 @@
     "금융. 소비자. 목재의 미래.",
     "Finanzen. Verbraucher. Die Zukunft des Holzes.",
     "金融。消費者。木材の未来。",
-    "Finans. Konsumenter. Träets framtid."
+    "Finance. Consommateurs. L'avenir du bois.",
+    "Finanza. Consumatori. Il futuro del legno.",
+    "Finans. Forbrukere. Treets fremtid.",
+    "Finans. Konsumenter. Träets framtid.",
+    "Rahoitus. Kuluttajat. Puun tulevaisuus.",
+    "Financiën. Consumenten. De toekomst van hout."
   ];
   var HOLD = 3200;
   var el = document.getElementById('mtfcLangRotator');
