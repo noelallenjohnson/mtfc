@@ -22,11 +22,11 @@
 status: >-
   Draft tooling released for public comment
 byline: >-
-  Industry and firm growth requires capital. Thus, evaluation and training tools that build finance acumen can help mass timber compete for capital.
+  Industry and firm growth requires capital. Thus, tools for evaluation and learning finance acumen can help mass timber better compete for capital.
 author: >-
   Noel A. Johnson, Conrad / Old i, LLC
 sponsors_line: >-
-  Open. Suited to industry collective action, public programs or philanthropy.
+  Partnerships for development & deployment being sought.
 
 # ───── OPENING SECTION ─────
 why:
@@ -34,47 +34,47 @@ why:
     Why this work
   text:
     - >-
-      Mass timber firms need capital to grow: inventory, equipment, people, plants and projects. Capital is an input like any other, and it is allocated competitively. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and something else it could fund.
+      Mass timber firms need capital to grow: From OpEx like inventory, equipment, labor to CapEx like capacity or quality investments require capital as an input.  This input is allocated competitively, sold at market rates just like wages or materials. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and someone or something else seeking funding.
     - >-
-      The [Industry Structure](/industry-structure) analysis shows the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital is low today. Sound firms still struggle to raise money in that setting. Often the business is not the problem. The difficulty is explaining the market opportunity and the financial plan in the language and norms that capital providers use.
+      An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Still, difficulties raising raising money may be a business specific problem which manifests as abilites to explain the market opportunity and the financial plan in the language and norms used by capital providers.
     - >-
-      Mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. There is less acumen at world-class levels across capital markets and consumer considerations, and fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
+      The observation underlying this work is that mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. But less acumen at world-class levels is found across capital markets and consumer considerations. Fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
     - >-
-      This page is a demonstration of research and development focused on practical tooling aimed at closing that gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
+      In responese, this work is a demonstration of research and development focused on practical tooling aimed at closing this gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
 
 # ───── THE CEMEX OBSERVATION ─────
 observation:
   label: >-
     An observation
   text: >-
-    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. It is one illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. Mass timber is trying to take market share from that industry, and probably needs to do the same. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
+    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one illustration can be seene of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. As Mass timber is trying to take market share from that industry, similar acumen is probably needed. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
 
-# ───── WHAT CAPITAL ASKS IN RETURN ─────
+# ───── WHAT CAPITAL ASKS IN RETURN FOR ITS USE ─────
 exchange:
   heading: >-
-    What capital asks in return
+    What capital asks in return for its use
   text:
     - >-
-      To use another party’s capital, a firm must give something in exchange. There are only three things to give, alone or in combination. In the author’s research this exchange is discussed less often in the industry than it deserves, and comfort with it varies. It is the first fundamental of the module.
+      To use another party’s capital, a firm must share one or a combination of three things. This finance fundamental often holds up firms seeking growth capital.
   three:
     - label: >-
         One
       title: >-
         A share of future cash flows
       text: >-
-        Interest and repayment to a lender, distributions to an owner, or a share of revenue.
+        Loan: Interest and repayment to a lender. Equity: distributions to an invsetor.
     - label: >-
         Two
       title: >-
         A share of future asset value
       text: >-
-        Ownership of part of what the firm or the asset becomes worth, or a claim on it as security.
+        A claim on the business or project value to be created; shared asset ownership.
     - label: >-
         Three
       title: >-
-        A say in governance
+        Shared governance
       text: >-
-        Limits on the firm’s freedom to decide: covenants, board seats, approval rights, conditions and reporting.
+        Limits on the firm’s freedom to decide: covenants, board seats, approval rights and reporting.
   table_headings:
     - >-
       Kind of capital
@@ -89,25 +89,25 @@ exchange:
       - >-
         Bank or other senior debt
       - >-
-        A fixed claim: interest and repayment
+        A fixed, first claim on cash flows
       - >-
-        Security over assets, but no share in growth
+        Security via assets, but no share of its growth
       - >-
         Covenants and reporting
     -
       - >-
-        Private equity or venture capital
+        Equity
       - >-
-        A share of distributions
+        A non-fixed, secondary claim on cash flows
       - >-
-        A share of ownership and of its growth
+        Security via assets + a share of their growth
       - >-
-        Board seats, voting and approval rights
+        Board seats, approval rights, full transparancy
     -
       - >-
         Mission-driven or concessionary capital
       - >-
-        A reduced or patient claim
+        A reduced or partial/flexible claim on cashflows
       - >-
         Sometimes a share, often none
       - >-
@@ -116,7 +116,7 @@ exchange:
       - >-
         Public grants, contracts and incentives
       - >-
-        Usually none
+        Usually none; political-related expenses 
       - >-
         Usually none
       - >-
@@ -124,13 +124,13 @@ exchange:
   note: >-
     Typical patterns, for orientation. Actual terms vary by provider and by deal.
 
-# ───── SIX CHANNELS OF CAPITAL ─────
+# ───── VISUALIZING CAPITAL FLOWS ─────
 channels:
   heading: >-
     Six channels of capital
   text:
     - >-
-      Capital reaches the industry through six channels: three kinds of source, each funding two kinds of asset. A third dimension, risk, runs through all six. A firm that is fit to compete knows which channel suits its next need, and what that channel expects in return.
+      Capital flows into the mass timber industry through six channels: three kinds of source, each funding two kinds of asset. A third dimension, risk, runs through all six. A firm that is fit to compete knows which channel suits its next need, and what that channel expects in return.
   block_note: >-
     The block is two wide, three high and two deep. Its depth is risk: within every channel some providers fund what is new and novel, and others fund only what is proven and predictable. Which is which, for mass timber, is left open on purpose. Each firm maps it for itself, using the guide that follows.
   detail_label: >-
@@ -143,16 +143,16 @@ channels:
     - title: >-
         Financial assets
       sub: >-
-        Firms, intellectual property, technology
+        Firms, IP, tech
     - title: >-
         Real assets
       sub: >-
-        Buildings, equipment, machines
+        Bldgs, land, PP&E
   sources:
     - name: >-
-        Private
+        Market
       who: >-
-        Companies and individuals seeking a market return
+        Firms/persons seeking a market returns
       financial:
         - >-
           Equity: ownership in the firm
@@ -185,12 +185,12 @@ channels:
         - >-
           Grants and contracts
         - >-
-          Subsidies and tax incentives
+          Subsidies and tax relief
       real:
         - >-
           Grants and contracts
         - >-
-          Subsidies and tax incentives
+          Subsidies and tax relief 
 
 # ───── WAYFINDING ─────
 wayfinding:
@@ -205,19 +205,19 @@ wayfinding:
       text: >-
         The firm itself, its people and technology (financial assets), or a building, a line or a machine (real assets).
     - question: >-
-        How large is it, against what you have done before?
+        Scale, track record, how is it relative to past performance?
       text: >-
         A step of the same size as past borrowing, or an order of magnitude beyond it.
     - question: >-
-        How proven is the use?
+        How proven is the item consuming the added capital?
       text: >-
         More of what already works, or something new to the firm or to the market.
     - question: >-
-        What will you give in exchange?
+        What can comfortably shared in exchange?
       text: >-
         Cash flows, asset value, governance, and how much of each.
     - question: >-
-        Where does the capital want to go?
+        Markets: Where does the capital want to go?
       text: >-
         The countries, regions and property types institutional investors are allocating to, and whether your customers are there.
   table_headings:
@@ -284,10 +284,10 @@ wayfinding:
 # ───── INTERNATIONAL SIDENOTE ─────
 sidenote:
   label: >-
-    Sidenote · International, not only American
+    Sidenote · Mass Timber Industry is International
   before:
     - >-
-      Much of the industry’s discussion assumes a United States investor and a United States building. Institutional real estate capital is global. Meketa’s November 2026 primer on international core real estate reports that roughly 40% of global private real estate fund assets sit outside North America, mostly in Europe and Asia Pacific. Its Figures 2 and 3 show where open-end core funds hold their assets. In Europe, eight countries make up 86% of the composite, led by Germany at 23% and followed by France, the Netherlands, Spain, the United Kingdom, Italy, Poland and Sweden. In Asia Pacific, Japan and Australia each hold more than 30%.
+      Much of this discussion assumes a United States market and mindset. But, institutional real estate capital is global - just like mass timber adoption. Meketa’s November 2026 primer on international core real estate offers helpful context; for example, that roughly 40% of global private real estate fund assets sit outside North America, mostly in Europe and Asia Pacific. Its Figures 2 and 3 show where open-end core funds hold their assets. In Europe, eight countries make up 86% of the composite, led by Germany at 23% and followed by France, the Netherlands, Spain, the United Kingdom, Italy, Poland and Sweden. In Asia Pacific, Japan and Australia each hold more than 30%.
     - >-
       Several of those countries are also places where mass timber building has gained traction. That overlap is the point. A financially savvy firm lets capital flows inform where it looks for customers, and asks itself:
   questions:
@@ -299,17 +299,16 @@ sidenote:
       Do we hold this knowledge inside the firm, or have advisers who can guide us?
   after:
     - >-
-      Two cautions. The primer notes that its figures show what core funds hold, a narrow slice of each market, and not the market’s full size. And core funds mostly own completed, leased buildings, so they are more often the eventual buyers of what a developer creates than the funders of its construction; that second point is the author’s.
   source: >-
     Source: S. Maynard, L. Giordano and R. Ranade, [*International Core Real Estate Primer*](https://meketa.com/wp-content/uploads/2026/11/MEKETA_International-Real-Estate.pdf), Meketa Investment Group, November 2026, Figures 2 and 3 (Global ODCE country breakdowns as of June 30, 2026).
 
 # ───── THE ONE-HOUR PROGRAM ─────
 program:
   heading: >-
-    The one-hour program
+    A proposed one-hour program
   text:
     - >-
-      An initial session for the leaders of firms across the chain: producers, fabricators, engineers, architects, contractors and developers. It can be run in a room or online, for one firm or for a cohort.
+      A session for the leaders of firms across mass timber's supply side: producers, fabricators, engineers, architects, contractors and developers; be it in person or online.
   agenda:
     - time: >-
         0 – 5 min
@@ -368,7 +367,7 @@ rubric:
       Fit
   rows:
     - name: >-
-        Financial accounting
+        Accounting
       about: >-
         Reading the firm's statements as a lender or investor would
       not_yet: >-
@@ -438,9 +437,9 @@ rubric:
       fit: >-
         The plan states where the firm competes and why it wins, and has been tested against the industry's five forces.
     - name: >-
-        Strategy beyond markets
+        Non-markets forces
       about: >-
-        Codes, policy, public funders and the community
+        Regulatory codes, policy, public funders and electorates
       not_yet: >-
         The firm reacts to rules and programs as they arrive.
       developing: >-
@@ -458,15 +457,15 @@ rubric:
       fit: >-
         Decision rights are written down, a board or advisers test them, and the firm is ready to work with outside governance.
     - name: >-
-        Capital strategy
+        Capitalization
       about: >-
         What the firm will give in exchange for capital
       not_yet: >-
-        Leaders have not considered what they would give up.
+        Leaders lack focus & clarity on trade-offs.
       developing: >-
-        Leaders know which of the six channels fits the next need.
+        Leaders with a plan for where and for what.
       fit: >-
-        Leaders have decided how much cash flow, asset value and governance they will share, with whom, and who will carry the conversation.
+        Leaders with detailed cash flow, asset value and governance plans, over time with the right staff.
   empty_message: >-
     Score each of the ten fundamentals to see where the firm is fit and where to start.
   verdict_fit: >-
