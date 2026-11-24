@@ -1,0 +1,44 @@
+/* NOI assurance mechanism page */
+.nam-page { max-width: 1100px; }
+.nam-page .narrow { max-width: 800px; }
+.nam-steps { counter-reset: st; list-style: none; margin: 24px 0 8px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.nam-steps li { counter-increment: st; background: rgb(247,246,243); border-radius: 12px; padding: 18px 18px 16px; position: relative; font-size: 15px; line-height: 1.55; color: rgb(51,51,51); }
+.nam-steps li::before { content: counter(st); display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgb(166,124,61); color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+.nam-steps b { display: block; color: rgb(26,26,24); font-size: 16px; margin-bottom: 4px; }
+.nam-steps li:not(:last-child)::after { content: "→"; position: absolute; right: -13px; top: 18px; color: rgb(166,124,61); font-weight: 700; z-index: 1; }
+#nam { margin: 26px 0 10px; display: grid; grid-template-columns: 320px 1fr; gap: 26px; align-items: start; }
+.nam-controls { position: sticky; top: 84px; background: rgb(247,246,243); border-radius: 14px; padding: 18px 18px 14px; max-height: calc(100vh - 100px); overflow-y: auto; }
+.nam-g { border: 0; margin: 0 0 14px; padding: 0; }
+.nam-g legend, .nam-adv summary { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgb(143,106,50); padding: 0; margin-bottom: 8px; }
+.nam-adv summary { cursor: pointer; margin-bottom: 10px; }
+.nam-s { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: baseline; margin-bottom: 10px; }
+.nam-sl { font-size: 13.5px; line-height: 1.35; color: rgb(51,51,51); }
+.nam-s output { font-size: 13.5px; font-weight: 700; color: rgb(26,26,24); font-variant-numeric: tabular-nums; }
+.nam-s input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: rgb(166,124,61); margin: 2px 0 0; }
+.nam-reset { font: inherit; font-size: 13px; font-weight: 600; color: rgb(68,68,68); background: #fff; border: 1px solid rgb(227,224,216); border-radius: 6px; padding: 7px 12px; cursor: pointer; }
+.nam-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; }
+.nam-tile { border: 1px solid rgb(227,224,216); border-radius: 12px; padding: 14px 14px 12px; background: #fff; }
+.nam-tile b { display: block; font-size: 23px; line-height: 1.15; color: rgb(26,26,24); font-variant-numeric: tabular-nums; }
+.nam-tile span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: rgb(143,106,50); margin: 6px 0 4px; }
+.nam-tile p { margin: 0; font-size: 13px; line-height: 1.5; color: rgb(85,85,82); }
+.nam-chart { border: 1px solid rgb(227,224,216); border-radius: 12px; background: #fff; padding: 16px 14px 10px; margin-bottom: 18px; }
+.nam-chart h3 { font-size: 16px; font-weight: 600; margin: 0 0 4px 6px; color: rgb(26,26,24); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.nam-chart h3 button { font: inherit; font-size: 12.5px; font-weight: 600; color: rgb(143,106,50); background: #fff; border: 1px solid rgb(220,195,154); border-radius: 999px; padding: 4px 12px; cursor: pointer; white-space: nowrap; }
+.nam-chart svg { display: block; width: 100%; height: auto; }
+.nam-chart p { margin: 6px 6px 4px; font-size: 13px; line-height: 1.55; color: rgb(107,107,102); }
+.nam-rights { font-size: 13px; line-height: 1.6; color: rgb(107,107,102); border-top: 1px solid rgb(226,222,214); margin-top: 40px; padding-top: 22px; max-width: 800px; }
+@media (max-width: 1000px) {
+  #nam { grid-template-columns: 1fr; }
+  .nam-controls { position: static; max-height: none; }
+  .nam-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .nam-adv, .nam-reset { grid-column: 1 / -1; justify-self: start; }
+  .nam-advg { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .nam-steps { grid-template-columns: 1fr 1fr; }
+  .nam-steps li::after { display: none; }
+}
+@media (max-width: 640px) {
+  .nam-controls, .nam-advg { grid-template-columns: 1fr; }
+  .nam-tiles { grid-template-columns: 1fr 1fr; }
+  .nam-steps { grid-template-columns: 1fr; }
+  .nam-tile b { font-size: 20px; }
+}

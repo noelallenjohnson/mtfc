@@ -1,20 +1,66 @@
 ---
 layout: "default"
 permalink: "/market-rate-development-risk-mitigation-mechanism"
-title: "Market Rate Development Risk Mitigation Mechanism"
-og_title: "Market Rate Development Risk Mitigation Mechanism"
+title: "Market Rate Development Risk Mitigation Mechanism | Mass Timber Finance & Consumer"
+description: "An interactive tool that tests assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest fund can stand behind larger market-rate mass timber developments."
+og_title: "Market Rate Development Risk Mitigation Mechanism (MTFC)"
+og_description: "Assure income, not cost: test how a deposit that tops up forecast NOI, and is repaid from profit above the preferred return, could back market-rate mass timber developments."
+styles: ["/assets/css/fff.css", "/assets/css/nam.css"]
+scripts: ["/assets/js/nam.js"]
 ---
-<div class="initiative-detail">
+{% assign d = site.data.noi_assurance %}
+<div class="initiative-detail fff nam-page">
+<div class="narrow">
 <a href="/" class="initiative-back">← Back to Homepage</a>
 <p class="initiative-category">Capital Markets · Investment Focused</p>
 <p class="initiative-theme">Alternative theme: <span class="init-tag t-f">Finance</span></p>
 <h1 class="initiative-title">Market Rate Development Risk Mitigation Mechanism</h1>
-<div class="initiative-status">Status: In process, not released</div>
-<p class="initiative-meta"><strong>Author(s):</strong> [Add author names]<br><strong>Sponsor(s):</strong> [Add sponsor / affiliate names]</p>
-<p class="initiative-section-label">Abstract</p>
-<p class="initiative-body-text">A net-income assurance tool that de-risks project proformas, unlocking institutional capital flows to accelerate mainstream adoption across North America.</p>
+<div class="initiative-status">Status: {{ d.status }}</div>
+<p class="lede">{{ d.byline }}</p>
+<p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Partners:</strong> {{ d.partners_line }}</p>
+
+<h2>{{ d.why.heading }}</h2>
+{% for t in d.why.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}
+<h2>{{ d.how.heading }}</h2>
+</div>
+<ol class="nam-steps">
+{% for s in d.how.steps %}  <li><b>{{ s.title }}</b>{{ s.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ol>
+
+<div class="narrow">
+<h2>{{ d.tool.heading }}</h2>
+{% for t in d.tool.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}</div>
+
+<div id="nam">
+  <div class="nam-controls" aria-label="Settings"></div>
+  <div class="nam-out">
+    <div class="nam-tiles" aria-live="polite"></div>
+    <div class="nam-chart"><h3>Forecast income and the assured slice <button type="button" data-nam-sample>Show another outcome</button></h3><div id="nam-c1"></div><p>{{ d.tool.project_caption }}</p></div>
+    <div class="nam-chart"><h3>Money out of the fund and back in <button type="button" data-nam-sample>Show another outcome</button></h3><div id="nam-c2"></div><p>{{ d.tool.portfolio_caption }}</p></div>
+    <div class="nam-chart"><h3>The fund over time</h3><div id="nam-c3"></div><p>{{ d.tool.fund_caption }}</p></div>
+  </div>
+</div>
+<noscript><p class="initiative-body-text">The interactive tool needs JavaScript to run.</p></noscript>
+
+<div class="narrow">
+<h2>{{ d.assumptions.heading }}</h2>
+<ul class="plain">
+{% for t in d.assumptions.points %}<li>{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+<p class="fine">{{ d.assumptions.note }}</p>
+
+<h2>{{ d.partnerships.heading }}</h2>
+{% for t in d.partnerships.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}
 <div class="initiative-links">
-<p class="initiative-links-label">Related Research</p>
-<a href="#" class="initiative-link-button">Read the full paper →</a>
+<p class="initiative-links-label">{{ d.related.label }}</p>
+<ul class="plain">
+{% for t in d.related.items %}<li>{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+<a href="mailto:{{ site.contact_email }}?subject=Risk%20Mitigation%20Mechanism" class="initiative-link-button">{{ d.partnerships.button }}</a>
+</div>
+<p class="nam-rights">{{ d.rights }}</p>
 </div>
 </div>

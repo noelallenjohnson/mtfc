@@ -1,0 +1,107 @@
+# ─────────────────────────────────────────────────────────────────────────
+# MARKET RATE DEVELOPMENT RISK MITIGATION MECHANISM — the words on the page.
+# Editing rules are the same as for the Firm Financial Fitness file:
+# change only the ordinary text lines; leave labels, >- marks, dashes and
+# indentation alone; keep each piece of text on ONE line.
+# The numbers inside the interactive tool are not in this file. Ask Claude.
+# ─────────────────────────────────────────────────────────────────────────
+
+status: >-
+  Tool released for public review
+byline: >-
+  Mass timber's supporters have subsidized cost. This tool tests assuring income instead, so that a modest fund can stand behind larger, market-rate developments.
+author: >-
+  Noel A. Johnson, Conrad / Old i, LLC
+partners_line: >-
+  Partnerships for development & deployment being sought.
+
+why:
+  heading: >-
+    Why assure income and not subsidize cost
+  text:
+    - >-
+      Institutional investors and their lenders are not against mass timber. They are unsure of it. That uncertainty sits in one place in the proforma: the forecast of net operating income (NOI).
+    - >-
+      NOI is also where a dollar matters most. A building is valued by dividing its NOI by a capitalization rate, so at a 6% cap rate each dollar of annual NOI is worth about $16.67 of value. A dollar of cost is worth a dollar.
+    - >-
+      Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, can reach larger and more visible developments, the kind that change what developers and investors believe is normal.
+
+how:
+  heading: >-
+    How the mechanism works
+  steps:
+    - title: >-
+        A funder places a deposit
+      text: >-
+        For example $10 million, in an interest-bearing account held by a third-party surety.
+    - title: >-
+        Projects are assured
+      text: >-
+        For each selected development the fund stands behind the top slice of forecast NOI for the first years after lease-up, up to a yearly limit.
+    - title: >-
+        Shortfalls are topped up
+      text: >-
+        If a building's NOI falls short of forecast, the fund pays the difference, up to the limit. The investor and the bank see steadier cash flow.
+    - title: >-
+        Winners replenish the fund
+      text: >-
+        Once a project has paid its investors their preferred return, a share of the profit above it goes back to the fund. Projects that beat forecast cover those that fell short.
+
+tool:
+  heading: >-
+    Test it
+  text:
+    - >-
+      Set the fund, the assurance and the spread of outcomes. The tool simulates 3,000 possible futures for the set of projects and shows what the fund would be expected to pay out, get back and be left with.
+  project_caption: >-
+    One project. The dark line is forecast NOI. The gold band is the slice the fund assures. The grey band shows where four in five simulated outcomes fall. Dots show one outcome, with gold bars where the fund tops it up.
+  portfolio_caption: >-
+    One simulated set of projects. Gold bars are top-ups paid out of the fund. Green bars are profit shares paid back in after the preferred return.
+  fund_caption: >-
+    The fund's balance over time. The line is the middle outcome; the band covers four in five. The last step is the year projects are sold or refinanced and profit shares are paid.
+
+assumptions:
+  heading: >-
+    What the tool assumes
+  points:
+    - >-
+      Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a forecast yield on cost of about 6.4%. These can be changed under "Project baseline".
+    - >-
+      A building that leases below forecast tends to stay below, so most of each project's miss persists from year to year, with a smaller random part each year.
+    - >-
+      Projects share some of their fortunes through the market they are in. The "shared market risk" setting controls how much. The more they share, the less diversification helps.
+    - >-
+      All projects start together and are sold or refinanced at the end of the assured period. A real program would stagger them.
+    - >-
+      The spread of outcomes is the reader's to set. The starting values are placeholders, to be calibrated against published REIT same-store NOI results and open-end core fund (ODCE) data.
+  note: >-
+    An illustration for discussion, not an offer, a commitment or advice on any financing.
+
+partnerships:
+  heading: >-
+    Partnerships for further development and deployment
+  text:
+    - >-
+      This is a first version of the tool. The next steps are to calibrate it against market data, test the terms with institutional investors, lenders and sureties, and pilot it on a small set of blue-ribbon developments.
+  button: >-
+    Discuss a partnership →
+
+related:
+  label: >-
+    Related research
+  items:
+    - >-
+      [Listening to Investors](/listening-to-investors): what institutional capital asks about mass timber.
+    - >-
+      [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber): evidence on what renters pay for.
+    - >-
+      [Firm Financial Fitness](/firm-financial-fitness): what capital asks in return for its use.
+
+rights: >-
+  The mechanism, this tool and all rights to commercialize them are retained by Old i, LLC (Conrad). Published by Mass Timber Finance & Consumer for public review and comment.
+
+home_tile:
+  text: >-
+    Assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest fund can stand behind larger market-rate mass timber developments. An interactive tool to test it.
+  status: >-
+    Tool released for public review
