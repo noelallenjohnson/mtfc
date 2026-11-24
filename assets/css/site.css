@@ -335,3 +335,18 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 .init-filter button { font: inherit; font-size: 13px; font-weight: 600; color: rgb(68, 68, 68); background: #fff; border: 1px solid rgb(227, 224, 216); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
 .init-filter button.on { color: #fff; background: rgb(166, 124, 61); border-color: rgb(166, 124, 61); }
 .init-card[hidden], .init-group[hidden] { display: none; }
+
+.init-photo { border-radius: 8px; overflow: hidden; min-height: 220px; position: relative; }
+.init-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.init-photo[hidden] { display: none; }
+@media (max-width: 991px) { .init-photo { display: none; } }
+.framework-more { color: rgb(143,106,50); font-weight: 600; white-space: nowrap; }
+.about-why { max-width: 900px; margin: 0 auto; padding: 20px 24px 90px; }
+.about-why .framework-block { margin-bottom: 44px; }
+.country-tag { display: inline-block; align-self: flex-start; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; border: 1px solid; margin: 0 0 10px; }
+.country-tag.t-m { color: #7a5a2c; border-color: #dcc39a; background: #faf4e8; }
+.country-tag.t-n { color: #2f4f7a; border-color: #a9bedb; background: #eef3f9; }
+.country-value { color: rgb(26,26,24); font-size: 14.5px; line-height: 1.55; margin: 0 0 10px; }
+.group-label { white-space: normal; }
+.group-heading-row { min-width: 0; }
+.about-why .advisory-label { text-align: left; margin-bottom: 28px; }
