@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/firm-financial-fitness"
 title: "Firm Financial Fitness — a training module | Mass Timber Finance & Consumer"
-description: "Industry and firm growth requires capital. Thus, evaluation and training tools that build finance acumen can help mass timber compete for capital. An initial one-hour module with a self-evaluation and a wayfinding guide across six channels of capital."
+description: "Industry and firm growth requires capital. Tools that evaluate and build finance acumen can help mass timber compete for capital. A first version with a self-evaluation and a wayfinding guide across six channels of capital."
 og_title: "Firm Financial Fitness — a training module (MTFC)"
 og_description: "What capital asks in return, six channels of capital, a wayfinding guide and a ten-part self-evaluation built on the core disciplines taught at leading business schools."
 styles: ["/assets/css/fff.css"]
@@ -60,12 +60,12 @@ scripts: ["/assets/js/fff.js"]
 <ol class="way-q">
 {% for q in d.wayfinding.questions %}  <li><b>{{ q.question }}</b>{{ q.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
 {% endfor %}</ol>
+<p class="initiative-body-text">{{ d.wayfinding.note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 <div class="ftbl-wrap"><table class="ftbl">
 <thead><tr>{% for t in d.wayfinding.table_headings %}<th>{{ t }}</th>{% endfor %}</tr></thead>
 <tbody>
 {% for r in d.wayfinding.table %}<tr><td>{{ r.need | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{{ r.pool | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td><td>{% assign cs = r.channel | split: " " %}{% for c in cs %}<span class="ch">{{ c }}</span> {% endfor %}</td><td>{{ r.give | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td></tr>
 {% endfor %}</tbody></table></div>
-<p class="fine">{{ d.wayfinding.note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 
 <aside class="note"><p class="k">{{ d.sidenote.label }}</p>
 {% for t in d.sidenote.before %}<p>{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>

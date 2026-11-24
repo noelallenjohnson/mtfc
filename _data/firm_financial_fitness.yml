@@ -22,7 +22,7 @@
 status: >-
   Draft tooling released for public comment
 byline: >-
-  Industry and firm growth requires capital. Thus, tools for evaluation and learning finance acumen can help mass timber better compete for capital.
+  Industry and firm growth requires capital. Tools that evaluate and build finance acumen can help mass timber compete for capital.
 author: >-
   Noel A. Johnson, Conrad / Old i, LLC
 sponsors_line: >-
@@ -34,20 +34,20 @@ why:
     Why this work
   text:
     - >-
-      Mass timber firms need capital to grow: From OpEx like inventory, equipment, labor to CapEx like capacity or quality investments require capital as an input.  This input is allocated competitively, sold at market rates just like wages or materials. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and someone or something else seeking funding.
+      Mass timber firms need capital to grow: for OpEx such as inventory and labor, and for CapEx such as equipment, capacity and quality. Capital is an input, allocated competitively and priced at market rates like labor or materials. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and someone or something else seeking funding.
     - >-
-      An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Still, difficulties raising money may be a business specific problem which shows up in its ability to explain the market opportunity and the financial plan in the language and norms used by capital providers.
+      An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Even so, a firm’s difficulty raising money is often its own: explaining the market opportunity and the financial plan in the language capital providers use.
     - >-
       The observation underlying this work is that mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. But less acumen at world-class levels is found across capital markets and consumer considerations. Fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
     - >-
-      In response, this work is a demonstration of research and development focused on practical tooling aimed at closing this gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
+      In response, this work demonstrates practical tools aimed at closing this gap: a first version, for public use and comment, of mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
 
 # ───── THE CEMEX OBSERVATION ─────
 observation:
   label: >-
     An observation
   text: >-
-    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one can see an illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. As mass timber is trying to take market share from that industry, similar acumen is probably needed. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
+    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one can see an illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. Mass timber is trying to take market share from that industry and probably needs similar acumen. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
 
 # ───── WHAT CAPITAL ASKS IN RETURN FOR ITS USE ─────
 exchange:
@@ -55,7 +55,7 @@ exchange:
     What capital asks in return for its use
   text:
     - >-
-      To use another party’s capital, a firm must share one or a combination of three things. This finance fundamental often holds up firms seeking growth capital.
+      To use another party’s capital, a firm must share one or a combination of three things. Firms seeking growth capital often stall on this fundamental.
   three:
     - label: >-
         One
@@ -100,7 +100,7 @@ exchange:
       - >-
         A non-fixed, secondary claim on cash flows
       - >-
-        Security via assets + a share of their growth
+        Ownership of the assets and a share of their growth
       - >-
         Board seats, approval rights, full transparency
     -
@@ -116,7 +116,7 @@ exchange:
       - >-
         Public grants, contracts and incentives
       - >-
-        Usually none; political-related expenses
+        Usually none, though pursuing it has political costs
       - >-
         Usually none
       - >-
@@ -205,7 +205,7 @@ wayfinding:
       text: >-
         The firm itself, its people and technology (financial assets), or a building, a line or a machine (real assets).
     - question: >-
-        Scale, track record, how is it relative to past performance?
+        How large is it, relative to your track record?
       text: >-
         A step of the same size as past borrowing, or an order of magnitude beyond it.
     - question: >-
@@ -460,11 +460,11 @@ rubric:
       about: >-
         What the firm will give in exchange for capital
       not_yet: >-
-        Leaders lack focus & clarity on trade-offs.
+        Leaders are unclear on the trade-offs.
       developing: >-
-        Leaders with a plan for where and for what.
+        Leaders have a plan for which capital and what for.
       fit: >-
-        Leaders with detailed cash flow, asset value and governance plans, over time with the right staff.
+        Leaders have detailed plans for cash flow, asset value and governance, and the staff to carry them out.
   empty_message: >-
     Score each of the ten fundamentals to see where the firm is fit and where to start.
   verdict_fit: >-
@@ -589,7 +589,7 @@ partnerships:
     Partnerships for further development and deployment
   text:
     - >-
-      This is a first version. Developing it further and putting it to use takes partners. Building the industry’s capacity in finance and business benefits every firm, yet no single firm has reason to pay for it alone.
+      This is a first version. Developing it further and putting it to use takes partners. Building the industry’s capacity in finance and business benefits every firm; a classic collective action opportunity.
   three:
     - title: >-
         Industry groups
@@ -629,6 +629,6 @@ credit:
 # ───── THE CARD ON THE HOME PAGE ─────
 home_tile:
   text: >-
-    Industry and firm growth requires capital. Thus, evaluation and training tools that build finance acumen can help mass timber compete for capital. An initial one-hour module, with a self-evaluation and a wayfinding guide across six channels of capital.
+    Industry and firm growth requires capital. Tools that evaluate and build finance acumen can help mass timber compete for capital. A first version, with a self-evaluation and a wayfinding guide across six channels of capital.
   status: >-
-    Initial version for public use and comment
+    Draft tooling released for public comment
