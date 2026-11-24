@@ -1,23 +1,37 @@
-/* Home page: rotating tagline. Edit the phrases here. */
+/* Home page: the tagline in several languages, two visible at a time, scrolling upward.
+   Edit the phrases here. */
 (function () {
   var phrases = [
-    { text: "Finance. Consumers. Timber's Future.", duration: 6000 },
-    { text: "금융. 소비자. 목재의 미래.", duration: 3000 },
-    { text: "Finanzen. Verbraucher. Die Zukunft des Holzes.", duration: 3000 },
-    { text: "金融。消費者。木材の未来。", duration: 3000 },
-    { text: "Finans. Konsumenter. Träets framtid.", duration: 3000 }
+    "Finance. Consumers. Timber's Future.",
+    "금융. 소비자. 목재의 미래.",
+    "Finanzen. Verbraucher. Die Zukunft des Holzes.",
+    "金融。消費者。木材の未来。",
+    "Finans. Konsumenter. Träets framtid."
   ];
+  var HOLD = 3200;
   var el = document.getElementById('mtfcLangRotator');
-  if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var index = 0;
-  function showNext() {
-    el.classList.add('fade-out');
-    setTimeout(function () {
-      index = (index + 1) % phrases.length;
-      el.textContent = phrases[index].text;
-      el.classList.remove('fade-out');
-      setTimeout(showNext, phrases[index].duration);
-    }, 500);
+  if (!el) return;
+  var track = el.querySelector('.lang-track');
+  var list = phrases.concat(phrases.slice(0, 2));
+  track.innerHTML = '';
+  var rows = list.map(function (t) {
+    var d = document.createElement('div'); d.className = 'lang-row'; d.textContent = t;
+    d.setAttribute('aria-hidden', 'true'); track.appendChild(d); return d;
+  });
+  el.classList.add('is-live');
+  var i = 0;
+  function rowH() { return rows[0].getBoundingClientRect().height; }
+  function place(animate) {
+    track.style.transition = animate ? '' : 'none';
+    track.style.transform = 'translateY(' + (-i * rowH()) + 'px)';
+    rows.forEach(function (r, n) { r.classList.toggle('is-top', n === i); });
+    if (!animate) { void track.offsetHeight; track.style.transition = ''; }
   }
-  setTimeout(showNext, phrases[0].duration);
+  place(false);
+  window.addEventListener('resize', function () { place(false); });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(function () {
+    i += 1; place(true);
+    if (i === phrases.length) setTimeout(function () { i = 0; place(false); }, 750);
+  }, HOLD);
 })();

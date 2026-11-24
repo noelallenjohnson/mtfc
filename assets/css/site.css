@@ -290,11 +290,14 @@ html { scroll-padding-top: 100px; }
 
 /* Home rotating tagline */
 .lang-rotator-wrap { text-align: center; padding: 0 5%; }
-.lang-rotator { font-size: 64px; font-weight: 600; color: #1a1a18; line-height: 1.2; min-height: 1.4em; display: inline-block; opacity: 1; transition: opacity 0.5s ease; }
-.lang-rotator.fade-out { opacity: 0; }
-@media (max-width: 900px) { .lang-rotator { font-size: 40px; } }
-@media (max-width: 600px) { .lang-rotator { font-size: 30px; } }
-@media (prefers-reduced-motion: reduce) { .lang-rotator { transition: none; } }
+.lang-rotator { --row: 64px; font-size: 40px; font-weight: 600; line-height: 1.2; color: #1a1a18; }
+.lang-rotator.is-live { height: calc(var(--row) * 2); overflow: hidden; }
+.lang-track { transition: transform 0.7s ease; will-change: transform; }
+.lang-row { height: var(--row); display: flex; align-items: center; justify-content: center; text-align: center; color: rgb(166, 124, 61); transition: color 0.7s ease; }
+.lang-row.is-top { color: #1a1a18; }
+@media (max-width: 1100px) { .lang-rotator { font-size: 30px; --row: 50px; } }
+@media (max-width: 760px) { .lang-rotator { font-size: 20px; --row: 58px; } }
+@media (prefers-reduced-motion: reduce) { .lang-track, .lang-row { transition: none; } }
 
 /* Contact block (home): use the site font (the original named a font that was never loaded) */
 .contact-section .heading-2, .contact-section .text-block { font-family: inherit; }
