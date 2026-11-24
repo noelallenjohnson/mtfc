@@ -36,18 +36,18 @@ why:
     - >-
       Mass timber firms need capital to grow: From OpEx like inventory, equipment, labor to CapEx like capacity or quality investments require capital as an input.  This input is allocated competitively, sold at market rates just like wages or materials. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and someone or something else seeking funding.
     - >-
-      An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Still, difficulties raising raising money may be a business specific problem which manifests as abilites to explain the market opportunity and the financial plan in the language and norms used by capital providers.
+      An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Still, difficulties raising money may be a business specific problem which shows up in its ability to explain the market opportunity and the financial plan in the language and norms used by capital providers.
     - >-
       The observation underlying this work is that mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. But less acumen at world-class levels is found across capital markets and consumer considerations. Fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
     - >-
-      In responese, this work is a demonstration of research and development focused on practical tooling aimed at closing this gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
+      In response, this work is a demonstration of research and development focused on practical tooling aimed at closing this gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
 
 # ───── THE CEMEX OBSERVATION ─────
 observation:
   label: >-
     An observation
   text: >-
-    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one illustration can be seene of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. As Mass timber is trying to take market share from that industry, similar acumen is probably needed. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
+    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one can see an illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. As mass timber is trying to take market share from that industry, similar acumen is probably needed. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
 
 # ───── WHAT CAPITAL ASKS IN RETURN FOR ITS USE ─────
 exchange:
@@ -62,7 +62,7 @@ exchange:
       title: >-
         A share of future cash flows
       text: >-
-        Loan: Interest and repayment to a lender. Equity: distributions to an invsetor.
+        Loan: Interest and repayment to a lender. Equity: distributions to an investor.
     - label: >-
         Two
       title: >-
@@ -102,12 +102,12 @@ exchange:
       - >-
         Security via assets + a share of their growth
       - >-
-        Board seats, approval rights, full transparancy
+        Board seats, approval rights, full transparency
     -
       - >-
         Mission-driven or concessionary capital
       - >-
-        A reduced or partial/flexible claim on cashflows
+        A reduced or flexible claim on cash flows
       - >-
         Sometimes a share, often none
       - >-
@@ -116,7 +116,7 @@ exchange:
       - >-
         Public grants, contracts and incentives
       - >-
-        Usually none; political-related expenses 
+        Usually none; political-related expenses
       - >-
         Usually none
       - >-
@@ -152,7 +152,7 @@ channels:
     - name: >-
         Market
       who: >-
-        Firms/persons seeking a market returns
+        Firms and persons seeking a market return
       financial:
         - >-
           Equity: ownership in the firm
@@ -190,7 +190,7 @@ channels:
         - >-
           Grants and contracts
         - >-
-          Subsidies and tax relief 
+          Subsidies and tax relief
 
 # ───── WAYFINDING ─────
 wayfinding:
@@ -213,7 +213,7 @@ wayfinding:
       text: >-
         More of what already works, or something new to the firm or to the market.
     - question: >-
-        What can comfortably shared in exchange?
+        What can comfortably be shared in exchange?
       text: >-
         Cash flows, asset value, governance, and how much of each.
     - question: >-
@@ -284,10 +284,10 @@ wayfinding:
 # ───── INTERNATIONAL SIDENOTE ─────
 sidenote:
   label: >-
-    Sidenote · Mass Timber Industry is International
+    Sidenote · The mass timber industry is international
   before:
     - >-
-      Much of this discussion assumes a United States market and mindset. But, institutional real estate capital is global - just like mass timber adoption. Meketa’s November 2026 primer on international core real estate offers helpful context; for example, that roughly 40% of global private real estate fund assets sit outside North America, mostly in Europe and Asia Pacific. Its Figures 2 and 3 show where open-end core funds hold their assets. In Europe, eight countries make up 86% of the composite, led by Germany at 23% and followed by France, the Netherlands, Spain, the United Kingdom, Italy, Poland and Sweden. In Asia Pacific, Japan and Australia each hold more than 30%.
+      Much of this discussion assumes a United States market and mindset. But institutional real estate capital is global, just like mass timber adoption. Meketa’s November 2026 primer on international core real estate offers helpful context; for example, that roughly 40% of global private real estate fund assets sit outside North America, mostly in Europe and Asia Pacific. Its Figures 2 and 3 show where open-end core funds hold their assets. In Europe, eight countries make up 86% of the composite, led by Germany at 23% and followed by France, the Netherlands, Spain, the United Kingdom, Italy, Poland and Sweden. In Asia Pacific, Japan and Australia each hold more than 30%.
     - >-
       Several of those countries are also places where mass timber building has gained traction. That overlap is the point. A financially savvy firm lets capital flows inform where it looks for customers, and asks itself:
   questions:
@@ -297,8 +297,7 @@ sidenote:
       Do the two overlap in the markets where we are seeking customers?
     - >-
       Do we hold this knowledge inside the firm, or have advisers who can guide us?
-  after:
-    - >-
+  after: []
   source: >-
     Source: S. Maynard, L. Giordano and R. Ranade, [*International Core Real Estate Primer*](https://meketa.com/wp-content/uploads/2026/11/MEKETA_International-Real-Estate.pdf), Meketa Investment Group, November 2026, Figures 2 and 3 (Global ODCE country breakdowns as of June 30, 2026).
 
@@ -437,7 +436,7 @@ rubric:
       fit: >-
         The plan states where the firm competes and why it wins, and has been tested against the industry's five forces.
     - name: >-
-        Non-markets forces
+        Non-market forces
       about: >-
         Regulatory codes, policy, public funders and electorates
       not_yet: >-
@@ -584,55 +583,31 @@ after:
           text: >-
             A one-page capital plan: the channel, the request, the evidence still missing, and the next step with a date.
 
-# ───── GROUND RULES ─────
-ground_rules:
+# ───── PARTNERSHIPS ─────
+partnerships:
   heading: >-
-    Ground rules
-  boxes:
-    - title: >-
-        How the room works
-      points:
-        - >-
-          Nobody needs to have all the answers.
-        - >-
-          A firm's details stay with the firm. Nothing is collected for reporting.
-        - >-
-          Help is offered only where a firm asks for it.
-        - >-
-          Everyone shares, on the expectation that a rising tide lifts all.
-    - title: >-
-        What this is not
-      points:
-        - >-
-          An introduction service to investors or lenders. Each firm builds those relationships itself, works with those who have them, or pays professionals who do.
-        - >-
-          A first course in development or in running a plant. It assumes participants know their own business.
-
-# ───── WHO COULD SPONSOR IT ─────
-sponsors:
-  heading: >-
-    Who could sponsor it
+    Partnerships for further development and deployment
   text:
     - >-
-      The module builds the industry's professional capacity in finance and business, which no single firm has reason to pay for alone and all of them benefit from. That makes it a natural intervention for any party seeking to accelerate the industry's growth.
+      This is a first version. Developing it further and putting it to use takes partners. Building the industry’s capacity in finance and business benefits every firm, yet no single firm has reason to pay for it alone.
   three:
     - title: >-
-        Industry collective action
+        Industry groups
       text: >-
-        Associations and producer groups, as a shared investment in the capability of their members.
+        Associations and producer groups, to test the tools with member firms and host the one-hour program.
     - title: >-
-        Public policy
+        Public programs
       text: >-
-        Economic and workforce development programs that want firms able to absorb and repay growth capital.
+        Economic and workforce development programs, to deploy the tools where firms need to absorb and repay growth capital.
     - title: >-
-        Philanthropy
+        Philanthropy and universities
       text: >-
-        Funders pursuing climate, forest or rural-economy outcomes that depend on a financially capable industry.
+        Funders and business school faculty, to refine the self-evaluation and study what it shows.
   closing:
     - >-
-      A sponsor would fund facilitation, materials and a cohort of firms, starting with the one-hour session. What each cohort learns, kept anonymous, also sharpens the working group's research agenda on capital access.
+      What partners and firms learn, kept anonymous, will improve these tools and sharpen the working group’s research on capital access.
   button: >-
-    Discuss sponsoring or hosting a cohort →
+    Discuss a partnership →
 
 # ───── RELATED RESEARCH LINKS ─────
 related:
@@ -643,8 +618,6 @@ related:
       [Industry Structure](/industry-structure): the five forces these firms compete within.
     - >-
       [Listening to Investors](/listening-to-investors): the questions capital providers ask about mass timber.
-    - >-
-      [Capital Creation](/capital-creation): the capital the industry needs to reach scale.
 
 # ───── EARLIER WORK AND CREDIT ─────
 credit:

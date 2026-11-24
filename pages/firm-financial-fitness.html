@@ -16,7 +16,7 @@ scripts: ["/assets/js/fff.js"]
 <h1 class="initiative-title">Firm Financial Fitness</h1>
 <div class="initiative-status">Status: {{ d.status }}</div>
 <p class="lede">{{ d.byline }}</p>
-<p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Sponsor(s):</strong> {{ d.sponsors_line }}</p>
+<p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Partners:</strong> {{ d.sponsors_line }}</p>
 
 <h2>{{ d.why.heading }}</h2>
 {% for t in d.why.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
@@ -102,25 +102,20 @@ scripts: ["/assets/js/fff.js"]
 </div>
 {% endfor %}</details>
 
-<h2>{{ d.ground_rules.heading }}</h2>
-<div class="two">
-{% for b in d.ground_rules.boxes %}  <div><h3>{{ b.title }}</h3><ul>{% for p in b.points %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ul></div>
-{% endfor %}</div>
-
-<h2>{{ d.sponsors.heading }}</h2>
-{% for t in d.sponsors.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+<h2>{{ d.partnerships.heading }}</h2>
+{% for t in d.partnerships.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 {% endfor %}
 <div class="three">
-{% for c in d.sponsors.three %}  <div><b>{{ c.title }}</b><p>{{ c.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p></div>
+{% for c in d.partnerships.three %}  <div><b>{{ c.title }}</b><p>{{ c.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p></div>
 {% endfor %}</div>
-{% for t in d.sponsors.closing %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% for t in d.partnerships.closing %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 {% endfor %}
 <div class="initiative-links">
 <p class="initiative-links-label">{{ d.related.label }}</p>
 <ul class="plain">
 {% for t in d.related.items %}<li>{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
 {% endfor %}</ul>
-<a href="mailto:{{ site.contact_email }}?subject=Firm%20Financial%20Fitness" class="initiative-link-button">{{ d.sponsors.button }}</a>
+<a href="mailto:{{ site.contact_email }}?subject=Firm%20Financial%20Fitness" class="initiative-link-button">{{ d.partnerships.button }}</a>
 </div>
 <div class="origins">
 <p class="initiative-links-label">{{ d.credit.label }}</p>
