@@ -128,3 +128,5 @@ table.ftbl .ch { display: inline-flex; align-items: center; justify-content: cen
 .fff aside.note li { margin-bottom: 5px; }
 .fff aside.note .src { font-size: 13.5px; color: rgb(107,107,102); margin-bottom: 0; }
 .way-q li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.fff p a:not([class]), .fff li a:not([class]), .fff td a:not([class]) { color: rgb(143,106,50); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

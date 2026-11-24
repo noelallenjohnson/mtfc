@@ -1,0 +1,662 @@
+# ─────────────────────────────────────────────────────────────────────────
+# FIRM FINANCIAL FITNESS — all the words on the page live in this file.
+#
+# HOW TO EDIT
+#   1. Change only the lines of ordinary text. Each one sits on its own
+#      line, indented, under a label that ends in  >-
+#   2. Do not change the labels (the words before a colon), the  >-  marks,
+#      the dashes at the start of list items, or the indentation.
+#   3. Keep each piece of text on ONE line, however long it gets.
+#   4. To add a list item or table row, copy a whole existing item
+#      (from its dash to the line before the next dash) and edit the copy.
+#   5. Links are written [the words to click](https://address).
+#      *one star* makes italics, **two stars** make bold.
+#   6. When done, click "Commit changes". The site updates in about a minute.
+#
+# NOT IN THIS FILE: the labels inside the 3D block drawing. Ask Claude.
+# ─────────────────────────────────────────────────────────────────────────
+
+
+
+# ───── TOP OF THE PAGE ─────
+status: >-
+  Initial version for public use and comment · open to sponsors
+byline: >-
+  Industry and firm growth requires capital. Thus, evaluation and training tools that build finance acumen can help mass timber compete for capital.
+author: >-
+  Noel A. Johnson, Conrad / Old i, LLC
+sponsors_line: >-
+  Open. Suited to industry collective action, public programs or philanthropy.
+
+# ───── OPENING SECTION ─────
+why:
+  heading: >-
+    Why this work
+  text:
+    - >-
+      Mass timber firms need capital to grow: inventory, equipment, people, plants and projects. Capital is an input like any other, and it is allocated competitively. Every lender, investor, grant-maker and agency is choosing between a mass timber firm and something else it could fund.
+    - >-
+      The [Industry Structure](/industry-structure) analysis shows the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital is low today. Sound firms still struggle to raise money in that setting. Often the business is not the problem. The difficulty is explaining the market opportunity and the financial plan in the language and norms that capital providers use.
+    - >-
+      Mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. There is less acumen at world-class levels across capital markets and consumer considerations, and fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
+    - >-
+      This page is a demonstration of research and development focused on practical tooling aimed at closing that gap. The research under this theme sets out to demonstrate tangibly, and to develop as an initial version for public use and comment, mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
+
+# ───── THE CEMEX OBSERVATION ─────
+observation:
+  label: >-
+    An observation
+  text: >-
+    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. It is one illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. Mass timber is trying to take market share from that industry, and probably needs to do the same. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
+
+# ───── WHAT CAPITAL ASKS IN RETURN ─────
+exchange:
+  heading: >-
+    What capital asks in return
+  text:
+    - >-
+      To use another party’s capital, a firm must give something in exchange. There are only three things to give, alone or in combination. In the author’s research this exchange is discussed less often in the industry than it deserves, and comfort with it varies. It is the first fundamental of the module.
+  three:
+    - label: >-
+        One
+      title: >-
+        A share of future cash flows
+      text: >-
+        Interest and repayment to a lender, distributions to an owner, or a share of revenue.
+    - label: >-
+        Two
+      title: >-
+        A share of future asset value
+      text: >-
+        Ownership of part of what the firm or the asset becomes worth, or a claim on it as security.
+    - label: >-
+        Three
+      title: >-
+        A say in governance
+      text: >-
+        Limits on the firm’s freedom to decide: covenants, board seats, approval rights, conditions and reporting.
+  table_headings:
+    - >-
+      Kind of capital
+    - >-
+      Cash flows
+    - >-
+      Asset value
+    - >-
+      Governance
+  table:
+    -
+      - >-
+        Bank or other senior debt
+      - >-
+        A fixed claim: interest and repayment
+      - >-
+        Security over assets, but no share in growth
+      - >-
+        Covenants and reporting
+    -
+      - >-
+        Private equity or venture capital
+      - >-
+        A share of distributions
+      - >-
+        A share of ownership and of its growth
+      - >-
+        Board seats, voting and approval rights
+    -
+      - >-
+        Mission-driven or concessionary capital
+      - >-
+        A reduced or patient claim
+      - >-
+        Sometimes a share, often none
+      - >-
+        Mission conditions and impact reporting
+    -
+      - >-
+        Public grants, contracts and incentives
+      - >-
+        Usually none
+      - >-
+        Usually none
+      - >-
+        Eligibility, compliance and reporting, sometimes repayment if commitments are missed
+  note: >-
+    Typical patterns, for orientation. Actual terms vary by provider and by deal.
+
+# ───── SIX CHANNELS OF CAPITAL ─────
+channels:
+  heading: >-
+    Six channels of capital
+  text:
+    - >-
+      Capital reaches the industry through six channels: three kinds of source, each funding two kinds of asset. A third dimension, risk, runs through all six. A firm that is fit to compete knows which channel suits its next need, and what that channel expects in return.
+  block_note: >-
+    The block is two wide, three high and two deep. Its depth is risk: within every channel some providers fund what is new and novel, and others fund only what is proven and predictable. Which is which, for mass timber, is left open on purpose. Each firm maps it for itself, using the guide that follows.
+  detail_label: >-
+    The six channels in detail
+  columns:
+    - title: >-
+        Source
+      sub: >-
+        
+    - title: >-
+        Financial assets
+      sub: >-
+        Firms, intellectual property, technology
+    - title: >-
+        Real assets
+      sub: >-
+        Buildings, equipment, machines
+  sources:
+    - name: >-
+        Private
+      who: >-
+        Companies and individuals seeking a market return
+      financial:
+        - >-
+          Equity: ownership in the firm
+        - >-
+          Debt: loans to the firm
+      real:
+        - >-
+          Equity: ownership of the asset
+        - >-
+          Debt: loans secured by the asset
+    - name: >-
+        Philanthropic
+      who: >-
+        Foundations and individuals seeking a mission outcome
+      financial:
+        - >-
+          Grants and donations
+        - >-
+          Mission-driven or concessionary capital
+      real:
+        - >-
+          Grants and donations
+        - >-
+          Mission-driven or concessionary capital
+    - name: >-
+        Public
+      who: >-
+        Municipalities, ports and agencies seeking a public benefit
+      financial:
+        - >-
+          Grants and contracts
+        - >-
+          Subsidies and tax incentives
+      real:
+        - >-
+          Grants and contracts
+        - >-
+          Subsidies and tax incentives
+
+# ───── WAYFINDING ─────
+wayfinding:
+  heading: >-
+    Wayfinding: which pool of capital do you seek to swim in?
+  text:
+    - >-
+      Money is already flowing through each of the six channels. A firm’s task is to divert some of that flow toward itself, which starts with knowing which pool it belongs in. Five questions locate it.
+  questions:
+    - question: >-
+        What is the money for?
+      text: >-
+        The firm itself, its people and technology (financial assets), or a building, a line or a machine (real assets).
+    - question: >-
+        How large is it, against what you have done before?
+      text: >-
+        A step of the same size as past borrowing, or an order of magnitude beyond it.
+    - question: >-
+        How proven is the use?
+      text: >-
+        More of what already works, or something new to the firm or to the market.
+    - question: >-
+        What will you give in exchange?
+      text: >-
+        Cash flows, asset value, governance, and how much of each.
+    - question: >-
+        Where does the capital want to go?
+      text: >-
+        The countries, regions and property types institutional investors are allocating to, and whether your customers are there.
+  table_headings:
+    - >-
+      If the need is…
+    - >-
+      The pool is likely…
+    - >-
+      Channel
+    - >-
+      Expect to give
+  table:
+    - need: >-
+        Added capacity on an existing production line
+      pool: >-
+        A regional or commercial bank loan, secured by the existing plant and equipment
+      channel: >-
+        2
+      give: >-
+        Fixed cash flows, security over the assets, covenants
+    - need: >-
+        Working capital for inventory and receivables
+      pool: >-
+        A bank line of credit to the firm
+      channel: >-
+        1
+      give: >-
+        Fixed cash flows, covenants, regular reporting
+    - need: >-
+        Equity an order of magnitude larger than anything the firm has raised
+      pool: >-
+        Private equity or venture capital
+      channel: >-
+        1
+      give: >-
+        A share of cash flows and of value, and real governance: board seats and approval rights
+    - need: >-
+        A new plant or building that brings jobs or other public benefit to a place
+      pool: >-
+        Public incentives, tax credits, port or municipal participation
+      channel: >-
+        6
+      give: >-
+        Commitments on location, jobs and timing, with compliance reporting
+    - need: >-
+        Research, testing or a first-of-its-kind demonstration
+      pool: >-
+        Public or philanthropic grants
+      channel: >-
+        3 5
+      give: >-
+        Conditions on use, open results, reporting
+    - need: >-
+        A project with a mission outcome whose return falls short of the market’s
+      pool: >-
+        Mission-driven or concessionary capital, often alongside private capital
+      channel: >-
+        4
+      give: >-
+        A patient claim on cash flows, mission conditions, impact reporting
+  note: >-
+    Illustrative routes, not advice on any particular financing. Each pool also calls for a different person to carry the conversation: a return forecast for one, a political conversation for another, risk mitigation or reporting for a third. A firm reaches a provider in one of four ways: its leaders know them, it works with those who do, it pays an intermediary, or it pays for a guarantee.
+
+# ───── INTERNATIONAL SIDENOTE ─────
+sidenote:
+  label: >-
+    Sidenote · International, not only American
+  before:
+    - >-
+      Much of the industry’s discussion assumes a United States investor and a United States building. Institutional real estate capital is global. Meketa’s November 2026 primer on international core real estate reports that roughly 40% of global private real estate fund assets sit outside North America, mostly in Europe and Asia Pacific. Its Figures 2 and 3 show where open-end core funds hold their assets. In Europe, eight countries make up 86% of the composite, led by Germany at 23% and followed by France, the Netherlands, Spain, the United Kingdom, Italy, Poland and Sweden. In Asia Pacific, Japan and Australia each hold more than 30%.
+    - >-
+      Several of those countries are also places where mass timber building has gained traction. That overlap is the point. A financially savvy firm lets capital flows inform where it looks for customers, and asks itself:
+  questions:
+    - >-
+      Where is mass timber adoption growing, and where does institutional real estate capital want to go?
+    - >-
+      Do the two overlap in the markets where we are seeking customers?
+    - >-
+      Do we hold this knowledge inside the firm, or have advisers who can guide us?
+  after:
+    - >-
+      Two cautions. The primer notes that its figures show what core funds hold, a narrow slice of each market, and not the market’s full size. And core funds mostly own completed, leased buildings, so they are more often the eventual buyers of what a developer creates than the funders of its construction; that second point is the author’s.
+  source: >-
+    Source: S. Maynard, L. Giordano and R. Ranade, [*International Core Real Estate Primer*](https://meketa.com/wp-content/uploads/2026/11/MEKETA_International-Real-Estate.pdf), Meketa Investment Group, November 2026, Figures 2 and 3 (Global ODCE country breakdowns as of June 30, 2026).
+
+# ───── THE ONE-HOUR PROGRAM ─────
+program:
+  heading: >-
+    The one-hour program
+  text:
+    - >-
+      An initial session for the leaders of firms across the chain: producers, fabricators, engineers, architects, contractors and developers. It can be run in a room or online, for one firm or for a cohort.
+  agenda:
+    - time: >-
+        0 – 5 min
+      title: >-
+        Why capital is competed for
+      text: >-
+        The industry’s structure, and who else is asking the same providers for money.
+    - time: >-
+        5 – 15 min
+      title: >-
+        What capital asks in return
+      text: >-
+        Cash flows, asset value and governance, and how each kind of capital combines them.
+    - time: >-
+        15 – 25 min
+      title: >-
+        Six channels and wayfinding
+      text: >-
+        Each leader places the firm’s next need in a channel.
+    - time: >-
+        25 – 45 min
+      title: >-
+        Self-evaluation
+      text: >-
+        Each leader scores the firm on the ten fundamentals below.
+    - time: >-
+        45 – 55 min
+      title: >-
+        Know it, or have it on staff
+      text: >-
+        Discussion of the lowest scores: learn it, hire it or retain an adviser.
+    - time: >-
+        55 – 60 min
+      title: >-
+        One next step
+      text: >-
+        Written down, with a name and a date.
+
+# ───── SELF-EVALUATION (the ten fundamentals and their three levels) ─────
+rubric:
+  heading: >-
+    Self-evaluation: ten fundamentals
+  text:
+    - >-
+      The fundamentals follow the disciplines that make up the first-year MBA curriculum at leading business schools, among them [Stanford Graduate School of Business](https://www.gsb.stanford.edu/programs/mba/academic-experience/curriculum/first-year-curriculum) and [Harvard Business School](https://www.hbs.edu/mba/academic-experience/curriculum): accounting, finance, data and decisions, economics, marketing, operations, strategy, strategy beyond markets, and organizational behavior and leadership. The tenth draws them together as a capital strategy. A leader does not need to master each one personally. The firm needs each one either known at the top or held by someone on staff or on retainer.
+  instruction: >-
+    Choose the description closest to your firm today. Nothing you select leaves your browser.
+  basis_note: >-
+    The disciplines are those of the schools’ published first-year curricula (Stanford GSB, 2025–26 offerings; Harvard Business School, 2026–27 terms). The three levels for each, and their application to mass timber firms, are the author’s and are a draft for discussion.
+  level_names:
+    - >-
+      Not yet
+    - >-
+      Developing
+    - >-
+      Fit
+  rows:
+    - name: >-
+        Financial accounting
+      about: >-
+        Reading the firm's statements as a lender or investor would
+      not_yet: >-
+        Statements are prepared once a year, mainly for tax.
+      developing: >-
+        Monthly statements are produced and the leaders read them.
+      fit: >-
+        Timely statements an outsider can rely on, reviewed or audited, and leaders can explain every large variance.
+    - name: >-
+        Finance
+      about: >-
+        Valuing an investment and choosing how to fund it
+      not_yet: >-
+        Investments are decided by instinct or simple payback.
+      developing: >-
+        Cash flows are forecast for major investments before committing.
+      fit: >-
+        Leaders know the firm's cost of capital, can value the firm or a project, and can explain its mix of debt and equity.
+    - name: >-
+        Data and decisions
+      about: >-
+        Forecasting cash and testing what could go wrong
+      not_yet: >-
+        There is no written forecast.
+      developing: >-
+        An annual budget is set and compared with results.
+      fit: >-
+        A rolling twelve-month cash forecast is kept, with scenarios for a slow year and a lost customer.
+    - name: >-
+        Economics of the business
+      about: >-
+        Costs, pricing and competition
+      not_yet: >-
+        Prices are set at cost plus a margin.
+      developing: >-
+        Margins are known by product, project or customer.
+      fit: >-
+        Prices reflect the value delivered, and leaders can state where the firm stands against concrete, steel and rival producers.
+    - name: >-
+        Marketing
+      about: >-
+        Knowing who the end users are and what they value
+      not_yet: >-
+        The firm sells to whoever calls.
+      developing: >-
+        Customer groups are defined and tracked.
+      fit: >-
+        There is evidence of what occupants, owners and public bodies value and will pay for, and the offer is built on it.
+    - name: >-
+        Operations
+      about: >-
+        Capacity, throughput and unit cost
+      not_yet: >-
+        Capacity and utilization are not measured.
+      developing: >-
+        Utilization, lead times and unit costs are tracked.
+      fit: >-
+        Leaders can show how new capital changes throughput, unit cost and delivery, with the numbers behind it.
+    - name: >-
+        Strategy
+      about: >-
+        Where the firm competes and why it wins
+      not_yet: >-
+        There is no written plan.
+      developing: >-
+        A plan exists and is reviewed from time to time.
+      fit: >-
+        The plan states where the firm competes and why it wins, and has been tested against the industry's five forces.
+    - name: >-
+        Strategy beyond markets
+      about: >-
+        Codes, policy, public funders and the community
+      not_yet: >-
+        The firm reacts to rules and programs as they arrive.
+      developing: >-
+        Someone follows code changes, incentives and public programs.
+      fit: >-
+        The firm has working relationships with regulators, agencies and public funders, and plans around them.
+    - name: >-
+        Organization and leadership
+      about: >-
+        Who decides, and how the team performs
+      not_yet: >-
+        The owner decides everything.
+      developing: >-
+        A management team shares decisions and meets on a schedule.
+      fit: >-
+        Decision rights are written down, a board or advisers test them, and the firm is ready to work with outside governance.
+    - name: >-
+        Capital strategy
+      about: >-
+        What the firm will give in exchange for capital
+      not_yet: >-
+        Leaders have not considered what they would give up.
+      developing: >-
+        Leaders know which of the six channels fits the next need.
+      fit: >-
+        Leaders have decided how much cash flow, asset value and governance they will share, with whom, and who will carry the conversation.
+  empty_message: >-
+    Score each of the ten fundamentals to see where the firm is fit and where to start.
+  verdict_fit: >-
+    The firm is close to fit: it can hold a serious conversation in most channels.
+  verdict_developing: >-
+    The firm is developing: it can approach familiar lenders, and has work to do before larger or newer pools.
+  verdict_start: >-
+    The firm is at the start: build the basics before approaching new capital.
+
+# ───── AFTER THE FIRST HOUR (half-day workout) ─────
+after:
+  heading: >-
+    After the first hour
+  text:
+    - >-
+      The hour locates a firm’s gaps. Closing them takes practice on the firm’s own numbers and plans. A follow-on half-day workout does that, station by station, each one framed, discussed and then applied in writing.
+  expand_label: >-
+    See the half-day workout
+  stations:
+    - label: >-
+        Station 1
+      title: >-
+        Know who you are competing with for capital
+      steps:
+        - step: >-
+            Frame
+          text: >-
+            Capital is allocated competitively and priced against a safe alternative. A provider asks what it earns for taking your risk instead of someone else's. Industry structure shows where bargaining power sits and why that question is hard for mass timber today.
+        - step: >-
+            Discuss
+          text: >-
+            Who else is asking the same provider for money, and why would it choose you?
+        - step: >-
+            Apply
+          text: >-
+            Write the case for your firm in two sentences, in the provider's terms, not the product's.
+    - label: >-
+        Station 2
+      title: >-
+        The three levers of value
+      steps:
+        - step: >-
+            Frame
+          text: >-
+            Every investment case reaches value through one of three levers: the income it produces, the cost to create it, or the return required for its risk. Price is not cost. A cost that also adds risk, even perceived risk, grows in steps and not in a straight line, which is why the team matters as much as the product.
+        - step: >-
+            Discuss
+          text: >-
+            Which lever does your product or project move, and what evidence would a stranger accept?
+        - step: >-
+            Apply
+          text: >-
+            List the claims you make about mass timber. Mark each against a lever. Strike the ones that reach none.
+    - label: >-
+        Station 3
+      title: >-
+        Know your end users
+      steps:
+        - step: >-
+            Frame
+          text: >-
+            Without a market there is no price signal, and without a price signal an attribute has only potential value. Mass timber answers to three end users: occupants, the savers and investors who own the asset, and the civic and political interests that permit and promote it.
+        - step: >-
+            Discuss
+          text: >-
+            Which projects predominate in your market, and which end user were they responding to?
+        - step: >-
+            Apply
+          text: >-
+            Name your end user in each of the three groups, and what each one pays with: rent, capital or approval.
+    - label: >-
+        Station 4
+      title: >-
+        Your numbers, in their language
+      steps:
+        - step: >-
+            Frame
+          text: >-
+            Capital providers read the same few things in any firm: how cash moves through the year, what the money will be used for and how it comes back, how much new capital the firm can put to productive use, who decides, and whether the reporting is timely and clear.
+        - step: >-
+            Discuss
+          text: >-
+            What would a lender or investor ask first that you could not answer today?
+        - step: >-
+            Apply
+          text: >-
+            List the three documents you would need to produce within thirty days of a serious conversation, and who in your firm would produce them.
+    - label: >-
+        Station 5
+      title: >-
+        Choose your channel
+      steps:
+        - step: >-
+            Frame
+          text: >-
+            Each of the six channels has its own costs, timelines and expectations, some written and some not, and each asks for a different mix of cash flows, asset value and governance.
+        - step: >-
+            Discuss
+          text: >-
+            What capital do you use now, for operations and for long-lived assets, and what do you need next?
+        - step: >-
+            Apply
+          text: >-
+            Place your next request in one of the six channels. Mark it higher or lower risk. Name the person who will carry it, and two comparable deals a provider would recognise.
+    - label: >-
+        Close
+      title: >-
+        The room is the panel
+      steps:
+        - step: >-
+            Share
+          text: >-
+            There is no outside panel. Participants report what they found at each station, so that every firm learns from the others.
+        - step: >-
+            Leave with
+          text: >-
+            A one-page capital plan: the channel, the request, the evidence still missing, and the next step with a date.
+
+# ───── GROUND RULES ─────
+ground_rules:
+  heading: >-
+    Ground rules
+  boxes:
+    - title: >-
+        How the room works
+      points:
+        - >-
+          Nobody needs to have all the answers.
+        - >-
+          A firm's details stay with the firm. Nothing is collected for reporting.
+        - >-
+          Help is offered only where a firm asks for it.
+        - >-
+          Everyone shares, on the expectation that a rising tide lifts all.
+    - title: >-
+        What this is not
+      points:
+        - >-
+          An introduction service to investors or lenders. Each firm builds those relationships itself, works with those who have them, or pays professionals who do.
+        - >-
+          A first course in development or in running a plant. It assumes participants know their own business.
+
+# ───── WHO COULD SPONSOR IT ─────
+sponsors:
+  heading: >-
+    Who could sponsor it
+  text:
+    - >-
+      The module builds the industry's professional capacity in finance and business, which no single firm has reason to pay for alone and all of them benefit from. That makes it a natural intervention for any party seeking to accelerate the industry's growth.
+  three:
+    - title: >-
+        Industry collective action
+      text: >-
+        Associations and producer groups, as a shared investment in the capability of their members.
+    - title: >-
+        Public policy
+      text: >-
+        Economic and workforce development programs that want firms able to absorb and repay growth capital.
+    - title: >-
+        Philanthropy
+      text: >-
+        Funders pursuing climate, forest or rural-economy outcomes that depend on a financially capable industry.
+  closing:
+    - >-
+      A sponsor would fund facilitation, materials and a cohort of firms, starting with the one-hour session. What each cohort learns, kept anonymous, also sharpens the working group's research agenda on capital access.
+  button: >-
+    Discuss sponsoring or hosting a cohort →
+
+# ───── RELATED RESEARCH LINKS ─────
+related:
+  label: >-
+    Related research
+  items:
+    - >-
+      [Industry Structure](/industry-structure): the five forces these firms compete within.
+    - >-
+      [Listening to Investors](/listening-to-investors): the questions capital providers ask about mass timber.
+    - >-
+      [Capital Creation](/capital-creation): the capital the industry needs to reach scale.
+
+# ───── EARLIER WORK AND CREDIT ─────
+credit:
+  label: >-
+    Earlier work and credit
+  text: >-
+    During 2025 and 2026 the author prepared a discussion guide on capital acumen and capacity building for the Pacific Northwest Mass Timber Tech Hub, supported by the U.S. Economic Development Administration's Regional Technology and Innovation Hubs program, to help the Tech Hub engage supply-side firms in conversation. That guide is the Tech Hub's. The work on this page is separate: it rests on the author's own research, teaching and practice before that engagement and on further study since, and is published by Mass Timber Finance & Consumer.
+
+# ───── THE CARD ON THE HOME PAGE ─────
+home_tile:
+  text: >-
+    Industry and firm growth requires capital. Thus, evaluation and training tools that build finance acumen can help mass timber compete for capital. An initial one-hour module, with a self-evaluation and a wayfinding guide across six channels of capital.
+  status: >-
+    Initial version for public use and comment

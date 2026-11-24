@@ -44,3 +44,7 @@ The site is live at `www.masstimberfinanceconsumer.org` (launched Nov 23, 2026):
 ## Ownership
 
 See `LICENSE.md` and `RIGHTS.md`.
+
+## Editing page copy directly
+
+The Firm Financial Fitness page takes all of its words from one plain-text file, `_data/firm_financial_fitness.yml`. Edit that file on GitHub (pencil icon), commit, and the site rebuilds in about a minute. The editing rules are at the top of the file. If a commit breaks the file's structure, the build fails and the live site simply stays on the previous version until the file is fixed.
