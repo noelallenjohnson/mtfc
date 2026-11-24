@@ -30,6 +30,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | Mass Timber Industry Characterization | pnwmasstimbertechhub.org/capital-access | Credited and linked from the Industry Structure page |
 | Mass Timber Capital Flows Characterization | pnwmasstimbertechhub.org/capital-access | To be credited and linked from the forthcoming capital flows page |
 | Capital Access questions (draft for discussion, marked "Proprietary & Private") | Delivered to the Tech Hub; not public | Not posted. *To confirm with the Tech Hub before linking or publishing* |
+| Capital acumen / capacity building discussion guide | Delivered to the Tech Hub; not public | Not posted. Credited on the Firm Financial Fitness page, which is separate author work on the same theme (author's direction, Nov. 23 2026) |
 
 **Author's position (Noel Johnson, November 2026):** the MTFC pages are separate work, resting on the author's research and practice before the engagement and on further study after it, and are not built on the items delivered to the Tech Hub. MTFC pages are owned by Old i, LLC (*to document: assignment from Noel Johnson to Old i, LLC*).
 
@@ -39,6 +40,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 |---|---|
 | Industry Structure (framework, baseline, scenarios, animation) | `pages/industry-structure.html`, `assets/js/icf*.js` |
 | Listening to Institutional Investors (discussion draft, Nov. 20 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Nov2026_web.pdf` |
+| Firm Financial Fitness (one-hour module, exchange framing, six channels, wayfinding, self-evaluation rubric) | `pages/firm-financial-fitness.html`, `assets/js/fff.js`, `assets/css/fff.css` |
 
 ## 3. Third-party material
 
