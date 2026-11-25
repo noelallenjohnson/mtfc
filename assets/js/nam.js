@@ -160,13 +160,13 @@
     var bw = (W - l - r) / HB;
     for (i = 0; i < HB; i++) { var y0 = 0; [3, 2, 1, 0].forEach(function (c) { var h = R.hist[c][i] / R.nDeals * 100; if (h > 0.01) { s += '<rect x="' + (X(i * 5) + 1) + '" y="' + Y(y0 + h) + '" width="' + (bw - 2) + '" height="' + (Y(y0) - Y(y0 + h)) + '" fill="' + CATS[c][1] + '"/>'; y0 += h; } }); }
     s += '<line x1="' + X(100) + '" x2="' + X(100) + '" y1="' + (tp - 8) + '" y2="' + (H - b) + '" stroke="#1a1a18" stroke-width="2"/><text x="' + (X(100) + 6) + '" y="' + (tp - 0) + '" font-size="12" font-weight="600" fill="#1a1a18">Forecast</text>';
-    for (i = 0; i <= HB * 5; i += 20) s += '<text x="' + X(i) + '" y="' + (H - b + 17) + '" text-anchor="middle" font-size="12" fill="#6b6b66">' + i + '%' + (i === HB * 5 ? '+' : '') + '</text>';
+    for (i = 0; i <= HB * 5; i += 20) s += '<text x="' + X(i) + '" y="' + (H - b + 17) + '" text-anchor="middle" font-size="12" fill="#6b6b66">' + (i === 0 ? '≤' : '') + i + '%' + (i === HB * 5 ? '+' : '') + '</text>';
     s += '<text x="' + ((l + W - r) / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="12" fill="#6b6b66">Project NOI over the assured years, as a share of forecast</text>';
     return s + '</svg>';
   }
   function noteDeals(R) {
     var n = R.nDeals, p = R.catN.map(function (v) { return Math.round(v / n * 100); }), net = Math.max(0, R.top - R.rec) / R.deals;
-    return 'Of every 100 assured projects, <b>' + p[0] + '</b> need no top-up, <b>' + p[1] + '</b> are topped up and repay in full, <b>' + p[2] + '</b> repay in part and <b>' + p[3] + '</b> repay nothing. Those that repay nothing cost the mechanism <b>$' + (R.catN[3] ? Math.round(R.catLoss[3] / R.catN[3] * 1000) : 0) + 'k</b> each on average, against <b>$' + Math.round(net * 1000) + 'k</b> across all projects.';
+    return 'Of every 100 assured projects, <b>' + p[0] + '</b> need no top-up, <b>' + p[1] + '</b> are topped up and repay in full, <b>' + p[2] + '</b> repay in part and <b>' + p[3] + '</b> repay nothing. Those that repay nothing cost the mechanism <b>' + money(R.catN[3] ? R.catLoss[3] / R.catN[3] : 0, 2) + '</b> each on average, against <b>$' + Math.round(net * 1000) + 'k</b> across all projects.';
   }
 
   function chartFlows(R) {
