@@ -21,6 +21,8 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 |---|---|---|---|
 | Underwriting Mass Timber Apartments (working paper, Nov 2026) | Noel A. Johnson, Justin Angle, Talia Esarey | `assets/files/MTFC_Underwriting_Mass_Timber_Rentals_Working_Paper_Nov2026.pdf` | *to confirm: publication licence from authors* |
 
+| Mass Timber Business Case Studies (V1.0, 2022; V2.0 underway) | Conrad / Old i, LLC | Not hosted here; V1.0 linked at woodworks.org | Series owned by Conrad (Old i, LLC), licensed for presentation by WoodWorks and/or Think Wood |
+
 ## 2a. Earlier work prepared for the Pacific Northwest Mass Timber Tech Hub
 
 Under a Personal Services Contract with Oregon State University (TallWood Design Institute), July 2025 to August 1, 2026, Noel Johnson delivered three items to the Tech Hub. The contract makes work product resulting from it the property of the Institution. These items are **not published on this site**; the site credits and links to them.
