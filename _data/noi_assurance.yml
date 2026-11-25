@@ -48,9 +48,9 @@ how:
       text: >-
         If NOI falls short of forecast, the mechanism pays the difference, up to the limit. The capital source and the lender see steadier cash flow.
     - title: >-
-        Proceeds replenish the mechanism
+        Surplus proceeds replenish the mechanism
       text: >-
-        At sale or refinance, once the lender is paid and the equity has its preferred return and its capital back, the top-ups are repaid. The mechanism gets back no more than it paid, and the money goes on to the next project. After twenty years of commitments, what remains is returned to the funder.
+        At sale or permanent refinance, top-ups can be repaid if excess proceeds remain after the return of the loan and the equity and payment of market-rate preferred returns, before the waterfall splits surplus profits. Any funds returned support the next project. After twenty years of market support, unused or remaining capital returns to the funder.
 
 measures:
   heading: >-
@@ -70,6 +70,8 @@ tool:
     The average across all simulated futures. In the early years money only goes out. Repayments begin when the first projects are sold or refinanced, recover part of what was paid, and are recycled into new projects. After year 20 no new projects are added and the last ones run off.
   fund_caption: >-
     The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20, money is returned to the funder as each remaining project finishes. The aim is to return the pledge and nothing more; the note above the chart gives the spread of bad outcomes at which that happens.
+  deals_caption: >-
+    Every project the mechanism assures across all simulated futures, placed by the NOI it achieved over the assured years. The spread of this shape is the deal-level performance being assumed. Projects left of the forecast line draw on the mechanism; colour shows whether sale or refinance proceeds were enough to repay it. Move the spread of bad outcomes to see how wide the shape can become before the pledge no longer comes back in full.
   homes_caption: >-
     Homes in projects the mechanism has assured, added up from the year each project is committed.
 

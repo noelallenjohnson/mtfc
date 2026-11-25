@@ -69,7 +69,8 @@
     var outY = new Float64Array(NY + 2), inY = new Float64Array(NY + 2), retY = new Float64Array(NY + 2), started = new Float64Array(NY + 2);
     var deals = 0, drew = 0, below = 0, sumTop = 0, sumRec = 0, sumInt = 0, sumRet = 0, stops = 0, stopYear = new Float32Array(K), retK = new Float32Array(K);
     var proj = []; for (i = 0; i < N; i++) proj[i] = [];
-    var smp = null;
+    var smp = null, HB = 32, hist = [0, 1, 2, 3].map(function () { return new Float64Array(HB); }), catN = [0, 0, 0, 0], catLoss = [0, 0, 0, 0], sumFc = 0;
+    for (i = 0; i < N; i++) sumFc += fc[i];
 
     for (var k = 0; k < K; k++) {
       var bal = F, reserved = 0, act = [], j = 0, stopped = -1;
@@ -80,13 +81,15 @@
           var d = act[a], age = q - d.s, idx = age / 4 - (BUILD + 1);
           if (age % 4 === 0 && idx >= 0 && idx < N) {
             var x = fc[idx] * (1 + d.m + sn * NS[(k * JMAX + d.j) * NMAX + idx]), t = fc[idx] - x; t = t < 0 ? 0 : (t > lim[idx] ? lim[idx] : t);
-            d.top += t; bal -= t; reserved -= lim[idx]; sumTop += t; outY[yr] += t;
+            d.sx += x; d.top += t; bal -= t; reserved -= lim[idx]; sumTop += t; outY[yr] += t;
             d.fv += ((idx > 0 ? x - ds : 0) + t) * Math.pow(1 + pref, N - 1 - idx);
             if (d.j === 0) { proj[idx].push(x / fc[idx]); if (k === sample % K) { d.xs.push(x); d.ts.push(t); } }
             if (idx === N - 1) {
               var ex = d.fv + v0 * (1 + d.m) * (1 + d.v) - balExit - hurdle, rec = ex > 0 ? Math.min(d.top, ex) : 0;
               bal += rec; sumRec += rec; inY[yr] += rec;
               if (d.top > 0.0005) drew++;
+              var cat = d.top <= 0.0005 ? 0 : (rec >= d.top - 1e-6 ? 1 : (rec > 0 ? 2 : 3)), hb = Math.floor(d.sx / sumFc * 20); hb = hb < 0 ? 0 : (hb >= HB ? HB - 1 : hb);
+              hist[cat][hb]++; catN[cat]++; catLoss[cat] += d.top - rec;
               if (ex <= 0) below++;
               if (d.j === 0 && k === sample % K) smp = { xs: d.xs, ts: d.ts };
               act.splice(a, 1);
@@ -97,7 +100,7 @@
           if (bal - reserved >= expo) {
             var yi = Math.min(YMAX - 1, Math.floor((q + LIFE) / 4));
             var z = sr * ZM[k * YMAX + yi] + si * E1[k * JMAX + j];
-            act.push({ s: q, j: j, m: z < 0 ? sd * z : su * z, v: sv * (sr * ZV[k * YMAX + yi] + si * E2[k * JMAX + j]), top: 0, fv: 0, xs: [], ts: [] });
+            act.push({ s: q, j: j, m: z < 0 ? sd * z : su * z, v: sv * (sr * ZV[k * YMAX + yi] + si * E2[k * JMAX + j]), top: 0, fv: 0, sx: 0, xs: [], ts: [] });
             reserved += expo; deals++; started[Math.floor(q / 4) + 1] += 1; j++;
           } else if (stopped < 0) { stopped = q / 4; }
         }
@@ -109,7 +112,7 @@
     for (y = 0; y <= NY + 1; y++) { outY[y] /= K; inY[y] /= K; retY[y] /= K; started[y] /= K; }
     return { T: T, F: F, NY: NY, ds: ds, deals: deals / K, top: sumTop / K, rec: sumRec / K, interest: sumInt / K, returned: sumRet / K, retK: retK,
       shareDraw: drew / deals, shareBelow: below / deals, stopShare: stops / K, stopMed: pct(stopYear, 0.5),
-      path: path, resv: resv, outY: outY, inY: inY, retY: retY, started: started, proj: proj, smp: smp };
+      hist: hist, catN: catN, catLoss: catLoss, nDeals: deals, path: path, resv: resv, outY: outY, inY: inY, retY: retY, started: started, proj: proj, smp: smp };
   }
 
   /* ---------- drawing ---------- */
@@ -142,6 +145,28 @@
     }
     s += '<text x="' + (l + cw * 0.42 - bw / 2 - 10) + '" y="' + (Y(100) - 8) + '" font-size="12" font-weight="600" fill="#1a1a18">Forecast</text>';
     return s + '</svg>';
+  }
+
+  var CATS = [['No top-up needed', '#c9c6bd'], ['Topped up, repaid in full', '#3f7d5a'], ['Topped up, repaid in part', '#9cc3ac'], ['Topped up, not repaid', '#a67c3d']];
+  function chartDeals(R) {
+    var W = 760, H = 310, l = 58, r = 16, tp = 44, b = 46, HB = R.hist[0].length, i, c, mx = 0;
+    for (i = 0; i < HB; i++) { var t = 0; for (c = 0; c < 4; c++) t += R.hist[c][i]; mx = Math.max(mx, t / R.nDeals * 100); }
+    var st = mx > 24 ? 10 : mx > 12 ? 5 : 2, ymax = Math.ceil(mx / st) * st;
+    function X(v) { return l + (W - l - r) * v / (HB * 5); }
+    function Y(v) { return tp + (H - tp - b) * (1 - v / ymax); }
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Distribution of assured projects by net operating income achieved over the assured years, as a share of forecast, coloured by what the mechanism paid and recovered">';
+    for (var v = 0; v <= ymax + 1e-9; v += st) s += '<line x1="' + l + '" x2="' + (W - r) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#ece9e2"/><text x="' + (l - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="12" fill="#6b6b66">' + v + '%</text>';
+    var lx = l; CATS.forEach(function (k) { s += '<rect x="' + lx + '" y="8" width="12" height="12" rx="2" fill="' + k[1] + '"/><text x="' + (lx + 17) + '" y="18.5" font-size="12" fill="#333">' + k[0] + '</text>'; lx += 30 + k[0].length * 6.3; });
+    var bw = (W - l - r) / HB;
+    for (i = 0; i < HB; i++) { var y0 = 0; [3, 2, 1, 0].forEach(function (c) { var h = R.hist[c][i] / R.nDeals * 100; if (h > 0.01) { s += '<rect x="' + (X(i * 5) + 1) + '" y="' + Y(y0 + h) + '" width="' + (bw - 2) + '" height="' + (Y(y0) - Y(y0 + h)) + '" fill="' + CATS[c][1] + '"/>'; y0 += h; } }); }
+    s += '<line x1="' + X(100) + '" x2="' + X(100) + '" y1="' + (tp - 8) + '" y2="' + (H - b) + '" stroke="#1a1a18" stroke-width="2"/><text x="' + (X(100) + 6) + '" y="' + (tp - 0) + '" font-size="12" font-weight="600" fill="#1a1a18">Forecast</text>';
+    for (i = 0; i <= HB * 5; i += 20) s += '<text x="' + X(i) + '" y="' + (H - b + 17) + '" text-anchor="middle" font-size="12" fill="#6b6b66">' + i + '%' + (i === HB * 5 ? '+' : '') + '</text>';
+    s += '<text x="' + ((l + W - r) / 2) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="12" fill="#6b6b66">Project NOI over the assured years, as a share of forecast</text>';
+    return s + '</svg>';
+  }
+  function noteDeals(R) {
+    var n = R.nDeals, p = R.catN.map(function (v) { return Math.round(v / n * 100); }), net = Math.max(0, R.top - R.rec) / R.deals;
+    return 'Of every 100 assured projects, <b>' + p[0] + '</b> need no top-up, <b>' + p[1] + '</b> are topped up and repay in full, <b>' + p[2] + '</b> repay in part and <b>' + p[3] + '</b> repay nothing. Those that repay nothing cost the mechanism <b>$' + (R.catN[3] ? Math.round(R.catLoss[3] / R.catN[3] * 1000) : 0) + 'k</b> each on average, against <b>$' + Math.round(net * 1000) + 'k</b> across all projects.';
   }
 
   function chartFlows(R) {
@@ -247,6 +272,7 @@
     var R = run(), n = notes(R);
     if (ld) ld.innerHTML = lead(R);
     cs[0].innerHTML = chartProject(R); cs[1].innerHTML = chartFlows(R); cs[2].innerHTML = chartFund(R); cs[3].innerHTML = chartHomes(R);
+    var c5 = root.querySelector('#nam-c5'), n5 = root.querySelector('#nam-n5'); if (c5) c5.innerHTML = chartDeals(R); if (n5) n5.innerHTML = noteDeals(R);
     ns.forEach(function (e, i) { if (e) e.innerHTML = n[i]; });
     if (beTimer) clearTimeout(beTimer); beTimer = setTimeout(breakEven, 250);
     window.NAM_LAST = { fund: P.fund, deals: R.deals, top: R.top, rec: R.rec, interest: R.interest, returned: R.returned, draw: R.shareDraw, below: R.shareBelow, stop: R.stopShare, need: R.T.need, expo: R.T.expo };
