@@ -76,7 +76,7 @@ users:
 kinds_heading: >-
   Three kinds of project
 kinds_text: >-
-  The building type does not decide the kind of project. What decides it is who pays for the building and what they answer to: a market, a mission, or a public mandate.
+  The building type does not decide the kind of project. What decides it is who pays for the building and what they answer to: the market, a mission, or the public.
 kinds_note: >-
   The same building type can fall in different kinds. Student housing built by a private developer to earn rent is market-rate; built by the university for its own students, it is non-market institutional. A speculative office is market-rate; a headquarters a company builds for itself is non-market institutional; a city hall is public and civic.
 
@@ -170,7 +170,7 @@ projects:
     eg: >-
       Libraries, schools, city halls, airports
     test: >-
-      Answers to a public mandate
+      Answers to the public
     define: >-
       Built by a government or public agency with public money, through public procurement, to serve everyone and to advance adopted policy.
     examples:

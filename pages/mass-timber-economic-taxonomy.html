@@ -39,7 +39,7 @@ scripts: ["/assets/js/tx.js"]
 <p class="initiative-body-text">{{ d.kinds_text }}</p>
 </div>
 <div class="tx-three">
-{% for p in d.projects %}<div class="tx-kind"><span>{{ p.test }}</span><h3>{{ p.name }}</h3><p>{{ p.define }}</p><ul>{% for e in p.examples %}<li>{{ e }}</li>{% endfor %}</ul></div>
+{% for p in d.projects %}<div class="tx-kind"><span>{{ p.test }}</span><h3>{{ p.name }}</h3><ul>{% for e in p.examples %}<li>{{ e }}</li>{% endfor %}</ul></div>
 {% endfor %}</div>
 <div class="narrow">
 <p class="initiative-body-text">{{ d.kinds_note }}</p>
