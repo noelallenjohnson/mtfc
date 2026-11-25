@@ -17,7 +17,7 @@ why:
   - >-
     Mass timber is sold on many attributes at once: beauty, wellbeing, speed, carbon, rural jobs. They do not all create value in the same way or for the same party. Some sell themselves on sight. Some are only learned by living or working in the building. Some can never be checked by the buyer and are worth only what a trusted third party will attest.
   - >-
-    This page borrows a well-established idea from information economics and applies it to mass timber. It then sorts the attributes considered by three pieces of work into the resulting classes: the renter study behind [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber), the Finnish and Swedish resident study by [Jussila et al.](https://doi.org/10.1080/02673037.2023.2217765), and the survey of [Industry Perceptions of Value Creation](/industry-perceptions-of-value-creation).  The result, a proposed taxonomy for mass timber.
+    This page borrows a well-established idea from information economics and applies it to mass timber. It then sorts the attributes considered by three pieces of work into the resulting classes: the renter study behind [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber), the Finnish and Swedish resident study by [Jussila et al.](https://doi.org/10.1080/02673037.2023.2217765), and the survey of [Industry Perceptions of Value Creation](/industry-perceptions-of-value-creation). The result is a proposed taxonomy for mass timber.
 
 classes_heading: >-
   Three attribute classes
@@ -77,13 +77,20 @@ tool:
   heading: >-
     A taxonomy tool
   text: >-
-    A proposed, usable method.  Start by the nature of project. Pair it to end users to derive how an attribute class should be emphasised.
+    A proposed, usable method. Start with the nature of the project. Pair it with an end user to see how much emphasis each attribute class deserves.
   caption: >-
     Block heights are the author's judgment of emphasis, from none to lead, informed by the three studies. They are a starting point for discussion, not a measurement.
   levels: ["Not a focus", "Minor", "Support", "Lead"]
+  steps:
+    project: >-
+      1 · Nature of the project
+    user: >-
+      2 · End user
+    result: >-
+      3 · Emphasis by attribute class
   labels:
     who: >-
-      Who pays for the value
+      Who pays
     lead: >-
       Lead with
     shows: >-
@@ -155,7 +162,7 @@ projects:
 attributes_heading: >-
   The attributes, sorted
 attributes_text: >-
-  Attribute comonly considered at conferences, proposed for classification.
+  Attributes commonly considered at conferences, proposed for classification.
 sources:
   U: >-
     Renter study
@@ -184,9 +191,7 @@ attributes:
   - { name: "National security alignment", cls: C, users: [P], src: [P], note: "Rated highly valued by 3 of 46 industry respondents." }
   - { name: "Fulfills ESG investment mandates", cls: C, users: [I], src: [P], note: "Rated highly valued by 7 of 46 industry respondents." }
 baseline: >-
-  Non-mass timber related attributes are held outside of this taxon.  For example, with apartments, location, floor plan and price remain the standard search attributes for any home. For industrial assets, proximty to nodes (ports, industry clusters) along with column spacing, clear height, etc. are tier one attributes. Mass timber's attributes are weighed afterwards, not instead of them.
-outcomes_heading: >-
-  
+  Non-mass timber related attributes are held outside of this taxonomy. For example, with apartments, location, floor plan and price remain the standard search attributes for any home. For industrial assets, proximity to nodes (ports, industry clusters) along with column spacing, clear height, etc. are tier one attributes. Mass timber's attributes are weighed afterwards, not instead of them.
 discussion_heading: >-
   Points for discussion
 discussion:

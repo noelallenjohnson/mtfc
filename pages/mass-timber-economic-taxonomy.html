@@ -39,15 +39,15 @@ scripts: ["/assets/js/tx.js"]
 <p class="initiative-body-text">{{ d.tool.text }}</p>
 </div>
 <div class="tx-card" id="tx">
-  <div class="tx-seg" role="group" aria-label="Kind of project"><span>Project</span>{% for p in d.projects %}<button type="button" data-p="{{ p.key }}"{% if forloop.first %} class="is-on"{% endif %}>{{ p.name }}</button>{% endfor %}</div>
-  <p class="tx-eg" id="tx-eg" aria-live="polite"></p>
-  <div class="tx-stage">
-    <div><div class="tx-fig" id="tx-fig"></div><div class="tx-advice" id="tx-advice" aria-live="polite"></div></div>
-    <div class="tx-side">
-      <div class="tx-grid" id="tx-grid" role="group" aria-label="End users by attribute class"></div>
-      <div class="tx-cell" id="tx-cell" aria-live="polite"></div>
-    </div>
+  <div class="tx-steps">
+    <div class="tx-seg" role="group" aria-label="Nature of the project"><span>{{ d.tool.steps.project }}</span>{% for p in d.projects %}<button type="button" data-p="{{ p.key }}"{% if forloop.first %} class="is-on"{% endif %}>{{ p.name }}</button>{% endfor %}</div>
+    <div class="tx-seg" role="group" aria-label="End user"><span>{{ d.tool.steps.user }}</span>{% for u in d.users %}<button type="button" data-u="{{ u.key }}"{% if forloop.first %} class="is-on"{% endif %}>{{ u.name }}</button>{% endfor %}</div>
   </div>
+  <p class="tx-eg" id="tx-eg" aria-live="polite"></p>
+  <div class="tx-fig" id="tx-fig"></div>
+  <p class="tx-step">{{ d.tool.steps.result }}: <b id="tx-who"></b></p>
+  <div class="tx-result" id="tx-result" aria-live="polite"></div>
+  <div class="tx-advice" id="tx-advice" aria-live="polite"></div>
   <p class="tx-caption">{{ d.tool.caption }}</p>
 </div>
 
@@ -57,15 +57,15 @@ scripts: ["/assets/js/tx.js"]
 </div>
 <div class="tx-three tx-lists">
 {% for c in d.classes %}<div class="tx-list {{ c.key }}"><h3>{{ c.name }}</h3><ul>
-{% for a in d.attributes %}{% if a.cls == c.key %}<li><b>{{ a.name }}</b><span class="tx-chips">{% for s in a.src %}<i>{{ d.sources[s] }}</i>{% endfor %}</span></li>
+{% for a in d.attributes %}{% if a.cls == c.key %}<li title="{{ a.note | escape }}"><b>{{ a.name }}</b><span class="tx-chips">{% for s in a.src %}<i>{{ d.sources[s] }}</i>{% endfor %}</span></li>
 {% endif %}{% endfor %}</ul></div>
 {% endfor %}</div>
 <div class="narrow">
 <p class="initiative-body-text">{{ d.baseline }}</p>
-<h3 class="tx-h3">{{ d.outcomes_heading }}</h3>
+{% if d.outcomes %}<h3 class="tx-h3">{{ d.outcomes_heading }}</h3>
 <ul class="tx-method">
 {% for o in d.outcomes %}<li>{{ o | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
-{% endfor %}</ul>
+{% endfor %}</ul>{% endif %}
 
 <h2>{{ d.discussion_heading }}</h2>
 <ol class="tx-points">
