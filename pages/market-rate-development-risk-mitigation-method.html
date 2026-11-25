@@ -1,9 +1,11 @@
 ---
 layout: "default"
-permalink: "/market-rate-development-risk-mitigation-mechanism"
-title: "Market Rate Development Risk Mitigation Mechanism | Mass Timber Finance & Consumer"
+permalink: "/market-rate-development-risk-mitigation-method"
+redirect_from:
+  - /market-rate-development-risk-mitigation-mechanism
+title: "Market Rate Development Risk Mitigation Method | Mass Timber Finance & Consumer"
 description: "An interactive tool that tests assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest pledge can stand behind larger market-rate mass timber developments."
-og_title: "Market Rate Development Risk Mitigation Mechanism (MTFC)"
+og_title: "Market Rate Development Risk Mitigation Method (MTFC)"
 og_description: "Assure income, not cost: test how a deposit that tops up forecast NOI, and is repaid from profit above the preferred return, could back market-rate mass timber developments."
 styles: ["/assets/css/fff.css", "/assets/css/nam.css"]
 scripts: ["/assets/js/nam.js"]
@@ -14,10 +16,11 @@ scripts: ["/assets/js/nam.js"]
 <a href="/" class="initiative-back">← Back to Homepage</a>
 <p class="initiative-category">Capital Markets · Investment Focused</p>
 <p class="initiative-theme">Alternative theme: <span class="init-tag t-f">Finance</span></p>
-<h1 class="initiative-title">Market Rate Development Risk Mitigation Mechanism</h1>
+<h1 class="initiative-title">Market Rate Development Risk Mitigation Method</h1>
 <div class="initiative-status">Status: {{ d.status }}</div>
 <p class="lede">{{ d.byline }}</p>
 <p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Partners:</strong> {{ d.partners_line }}</p>
+{% if d.intro %}<p class="initiative-body-text">{{ d.intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
 
 <h2>{{ d.why.heading }}</h2>
 {% for t in d.why.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>

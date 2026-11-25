@@ -36,7 +36,7 @@ ratings:
 
 taxonomy:
   heading: >-
-    Mapped to a simple taxonomy
+    Mapped to a simple market-informed schema
   text: >-
     Real estate separates assets driven by supply and demand from those shaped by socio-political forces. Sorting each "highly valued" rating by the class of its theme shows where the industry places mass timber's value. Demand and supply together are market drivers. Socio-political themes are non-market drivers.
   caption: >-
@@ -101,7 +101,7 @@ reflections:
     Reflections
   text:
     - >-
-      Research on mass timber consumers is scarce. Two known studies offer initial comparisons to inform discussion of how the industry should market its products and projects. [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber) (Johnson, Angle and Esarey, 2026) surveyed 26 households at two exposed mass timber developments in Portland, Oregon. [Consumer housing choices among residents living in wooden multi-storey buildings](https://doi.org/10.1080/02673037.2023.2217765) (Jussila et al., 2023) interviewed seven households in five non-exposed developments across Finland and Sweden.
+      Research on mass timber consumers is scarce. Two known studies offer initial comparisons to inform discussion of how the industry should market its products and projects. [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber) (Johnson, Angle and Esarey, 2026) surveyed 26 households at two exposed mass timber developments in Portland, Oregon. [Consumer housing choices among residents living in wooden multi-storey buildings](https://doi.org/10.1080/02673037.2023.2217765) (Jussila et al., 2024) interviewed seven households in five non-exposed developments across Finland and Sweden.
     - >-
       Both are small and directional. Even so, divergences from the industry's understanding of its customers can be detected.
   points:
@@ -162,6 +162,6 @@ rights: >-
 
 home_tile:
   title: >-
-    Industry Perceptions: Value Creation Mechanisms
+    Industry Perceptions of Value Creation
   text: >-
     Survey answers from 67 experienced mass timber professionals on what they believe customers value: a baseline to test against consumer research.

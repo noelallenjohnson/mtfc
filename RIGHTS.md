@@ -47,7 +47,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | Industry Structure (framework, baseline, scenarios, animation) | `pages/industry-structure.html`, `assets/js/icf*.js` |
 | Listening to Institutional Investors (discussion draft, Nov. 20 2026) | `assets/files/MTFC_Listening_to_Institutional_Investors_Discussion_Draft_Nov2026_web.pdf` |
 | Firm Financial Fitness (one-hour module, exchange framing, six channels, wayfinding, self-evaluation rubric) | `pages/firm-financial-fitness.html`, `assets/js/fff.js`, `assets/css/fff.css` |
-| Market Rate Development Risk Mitigation Mechanism (NOI assurance concept, simulator and charts). No client; idea, intellectual property and all commercialization rights retained by Old i, LLC / Conrad (author's statement, Nov. 24 2026) | `pages/market-rate-development-risk-mitigation-mechanism.html`, `assets/js/nam.js`, `assets/css/nam.css`, `_data/noi_assurance.yml` |
+| Market Rate Development Risk Mitigation Method, with its Mass Timber Cashflow Assurance Mechanism (NOI assurance concept, simulator and charts). No client; idea, intellectual property and all commercialization rights retained by Old i, LLC / Conrad (author's statement, Nov. 24 2026) | `pages/market-rate-development-risk-mitigation-method.html`, `assets/js/nam.js`, `assets/css/nam.css`, `_data/noi_assurance.yml` |
 
 ## 3. Third-party material
 
