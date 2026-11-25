@@ -76,15 +76,44 @@ words:
       - { label: "Schedule and timing", count: 2, cls: N }
       - { label: "Transport and logistics", count: 1, cls: N }
 
-discussion:
+findings:
   heading: >-
-    Points for discussion
-  text: >-
+    Findings
+  points:
+    - title: >-
+        Beauty is the most widely held belief
+      text: >-
+        35 of 46 respondents rated beauty or aesthetics as highly valued, and only one said it was not mentioned. No other theme comes close to that level of agreement.
+    - title: >-
+        Construction speed and wellbeing follow
+      text: >-
+        Faster on-site construction was rated highly valued by 29 of 46, biophilic or health and wellness benefits by 24, and asset differentiation by 20. Every other theme was rated highly valued by fewer than four in ten.
+    - title: >-
+        Most of the perceived value is market-driven, with a large non-market share
+      text: >-
+        Demand themes drew 42% of all "highly valued" ratings and supply themes 22%. Socio-political themes drew the remaining 36%, spread across ten themes that were each rated highly valued by 23% of respondents on average.
+    - title: >-
+        Policy-alignment themes rank lowest
+      text: >-
+        National security alignment was rated highly valued by 3 of 46, and 34 said it was not mentioned. Fulfilling ESG investment mandates and alignment with forest management needs were each rated highly valued by 7 of 46.
+    - title: >-
+        Open answers name sustainability as the value, and cost as the objection
+      text: >-
+        Asked for the most important ways mass timber creates value, 10 of 22 named sustainability or decarbonization, ahead of beauty, biophilia and speed at 8 each. Asked what pushback they hear, 21 of 25 named cost and 10 named unfamiliarity.
+
+reflections:
+  heading: >-
+    Reflections
+  text:
+    - >-
+      Research on the people who rent, buy and occupy mass timber buildings is scarce. Two consumer studies currently known to exist offer a first comparison. [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber) (Johnson, Angle and Esarey, 2026) studied 26 renters at two exposed mass timber developments in Portland, Oregon. [Consumer housing choices among residents living in wooden multi-storey buildings](https://doi.org/10.1080/02673037.2023.2217765) (Jussila et al., 2023) interviewed residents and property managers in five cities across Finland and Sweden.
+    - >-
+      Both are small and directional. Read against them, the survey suggests where the industry's picture of its customer holds up and where it may not.
   points:
     - title: >-
         The industry is right about beauty and wellbeing
       text: >-
-        Beauty leads by a wide margin (35 of 46 rated it highly valued), and biophilic or health benefits rank third (24 of 46). The renter study found the same mechanisms at work: beauty, architectural differentiation and feelings of calm.
+        Beauty leads by a wide margin, and biophilic or health benefits rank third. The renter study found the same mechanisms at work: beauty, architectural differentiation and feelings of calm. The Finnish and Swedish residents likewise experienced the wood as mainly positive, judged together with the building's overall aesthetics.
     - title: >-
         It may be wrong about how that value is paid
       text: >-
@@ -92,23 +121,19 @@ discussion:
     - title: >-
         Sustainability is the industry's story more than the consumer's
       text: >-
-        Sustainability and decarbonization was the most common theme when respondents answered in their own words (10 of 22), and 16 of 46 rated decarbonization highly valued. The renter study found little consumer-created value from credence attributes such as carbon footprint, local manufacture or heritage.
+        Sustainability was the most common theme when respondents answered in their own words. The renter study found little consumer-created value from credence attributes such as carbon footprint, local manufacture or heritage. In Finland and Sweden, neither the building material nor sustainability triggered residents' initial interest; location, floor plan and affordability guided the choice.
     - title: >-
         Whose value is construction speed?
       text: >-
-        Faster on-site construction ranks second only to beauty (29 of 46 rated it highly valued). Speed matters to the developer and the investor. An occupant never experiences it. The answer suggests that "the customer" is not one person in the industry's mind.
+        Faster on-site construction ranks second only to beauty. Speed matters to the developer and the investor. An occupant never experiences it. The answer suggests that "the customer" is not one person in the industry's mind.
     - title: >-
         A large share of the perceived value sits outside the market
       text: >-
-        Socio-political themes drew 36% of the "highly valued" ratings. Market-rate capital underwrites to comparables set by supply and demand. Value that depends on policy, approvals or public goodwill is harder to underwrite and does not travel from one project to the next.
+        More than a third of the "highly valued" ratings went to socio-political themes. Market-rate capital underwrites to comparables set by supply and demand. Value that depends on policy, approvals or public goodwill is harder to underwrite and does not travel from one project to the next.
     - title: >-
         The industry is unsure that timber stimulates demand
       text: >-
         "Stimulate consumer demand" was rated highly valued by 16 of 46, less than half the number for beauty. Respondents believe people find the buildings beautiful without being confident that beauty turns into demand. That gap is what consumer research can close.
-    - title: >-
-        The objection is cost, and nobody mentioned the consumer
-      text: >-
-        Of 25 respondents who named the pushback they hear, 21 named cost and 10 named unfamiliarity. None reported doubt about whether residents or tenants want the product. The debate inside the industry is about the denominator, the cost to build, while the evidence on the numerator, what occupants value, is only starting to arrive.
 
 method:
   heading: >-

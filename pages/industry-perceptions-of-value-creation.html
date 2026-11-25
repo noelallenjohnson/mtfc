@@ -21,7 +21,7 @@ scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
 {% for t in d.why %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 {% endfor %}
 <h2>{{ d.who.heading }}</h2>
-<p class="initiative-body-text">{{ d.who.text }}</p>
+{% if d.who.text and d.who.text != "" %}<p class="initiative-body-text">{{ d.who.text }}</p>{% endif %}
 </div>
 <div class="ip-who" id="ip-who"></div>
 
@@ -66,10 +66,15 @@ scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
 </div>
 
 <div class="narrow">
-<h2>{{ d.discussion.heading }}</h2>
-<p class="initiative-body-text">{{ d.discussion.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+<h2>{{ d.findings.heading }}</h2>
 <ol class="ip-points">
-{% for p in d.discussion.points %}<li><b>{{ p.title }}</b>{{ p.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% for p in d.findings.points %}<li><b>{{ p.title }}</b>{{ p.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ol>
+
+<h2>{{ d.reflections.heading }}</h2>
+{% for t in d.reflections.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}<ol class="ip-points">
+{% for p in d.reflections.points %}<li><b>{{ p.title }}</b>{{ p.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
 {% endfor %}</ol>
 
 <h2>{{ d.method.heading }}</h2>
