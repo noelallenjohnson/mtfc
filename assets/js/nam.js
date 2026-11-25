@@ -4,10 +4,10 @@
   var root = document.getElementById('nam');
   if (!root) return;
 
-  var K = 2000, HQ = 60, LIFE = 16, JMAX = 46, YMAX = 16;
+  var K = 2000, HQ = 80, LIFE = 16, JMAX = 66, YMAX = 22, INTEREST = 5;
 
   var DEF = { fund: 10, limit: 0.5, limpct: 10, years: 2, pace: 9, irr: 14, down: 8, up: 8, rho: 30,
-              pref: 9, share: 100, intr: 4, cost: 77, yoc: 6, ltc: 55, rate: 6.25, cap: 6, price: 6, lease: 50 };
+              pref: 9, cost: 77, units: 200, yoc: 6, ltc: 55, rate: 6.25, cap: 6, price: 6, lease: 50 };
   var CTL = [
     ['The fund', [
       ['fund', 'Funder’s pledge on deposit', 10, 100, 5, function (v) { return '$' + v + 'M'; }],
@@ -23,13 +23,12 @@
       ['rho', 'Shared market risk between projects', 0, 90, 5, function (v) { return v + '%'; }]
     ]],
     ['Replenishing the fund', [
-      ['pref', 'Preferred return paid to investors first', 9, 11, 0.5, function (v) { return v.toFixed(1) + '%'; }],
-      ['share', 'Share of profit above it that repays top-ups', 10, 100, 10, function (v) { return v + '%'; }],
-      ['intr', 'Interest earned on the deposit', 0, 6, 0.5, function (v) { return v.toFixed(1) + '%'; }]
+      ['pref', 'Preferred return paid to investors first', 9, 11, 0.5, function (v) { return v.toFixed(1) + '%'; }]
     ]]
   ];
   var ADV = [
     ['cost', 'Project cost', 30, 200, 1, function (v) { return '$' + v + 'M'; }],
+    ['units', 'Homes per project', 50, 400, 10, function (v) { return v; }],
     ['yoc', 'Year-one yield on cost, unleveraged', 5, 7.5, 0.1, function (v) { return v.toFixed(1) + '%'; }],
     ['ltc', 'Bank loan, share of cost', 40, 70, 1, function (v) { return v + '%'; }],
     ['rate', 'Loan interest rate', 4, 8, 0.25, function (v) { return v.toFixed(2) + '%'; }],
@@ -47,13 +46,13 @@
   var ZM = fill(K * YMAX), ZV = fill(K * YMAX), E1 = fill(K * JMAX), E2 = fill(K * JMAX), N3 = fill(K * JMAX), N4 = fill(K * JMAX);
 
   function pct(arr, q) { var a = Array.prototype.slice.call(arr).sort(function (x, y) { return x - y; }); var i = (a.length - 1) * q, lo = Math.floor(i), hi = Math.ceil(i); return a[lo] + (a[hi] - a[lo]) * (i - lo); }
-  function money(v, d) { var a = Math.abs(v); return (v < 0 ? '−' : '') + '$' + (a >= 100 ? Math.round(a) : a.toFixed(d === undefined ? 1 : d)) + 'M'; }
+  function money(v, d) { var a = Math.abs(v); if (a >= 1000) return (v < 0 ? '−' : '') + '$' + (a / 1000).toFixed(a >= 10000 ? 0 : 1) + ' billion'; return (v < 0 ? '−' : '') + '$' + (a >= 100 ? Math.round(a) : a.toFixed(d === undefined ? 1 : d)) + 'M'; }
 
   var sample = 11;
 
   function run() {
     var F = P.fund, rho = P.rho / 100, sd = P.down / 100, su = P.up / 100, sv = P.price / 100, pref = P.pref / 100,
-        share = P.share / 100, iq = P.intr / 100 / 4, step = Math.round(P.pace / 3);
+        share = 1, iq = INTEREST / 100 / 4, step = Math.round(P.pace / 3);
     var noi = P.cost * P.yoc / 100, noiL = noi * P.lease / 100, loan = P.cost * P.ltc / 100, eq = P.cost - loan, lr = P.rate / 100;
     var ds = loan * lr / (1 - Math.pow(1 + lr, -30));
     var lim4 = Math.min(P.limit, noi * P.limpct / 100), lim3 = P.years === 2 ? Math.min(P.limit, noiL * P.limpct / 100) : 0;
@@ -63,7 +62,7 @@
 
     var NY = HQ / 4, path = [], resv = [], y;
     for (y = 0; y <= NY; y++) { path[y] = new Float32Array(K); resv[y] = new Float32Array(K); }
-    var deals = 0, drew = 0, below = 0, repaidFull = 0, sumTop = 0, sumRec = 0, sumInt = 0, stopYear = new Float32Array(K), stops = 0;
+    var started = new Float32Array(HQ / 4 + 1), deals = 0, drew = 0, below = 0, repaidFull = 0, sumTop = 0, sumRec = 0, sumInt = 0, stopYear = new Float32Array(K), stops = 0;
     var a4 = [], a4t = [], out3 = [], out4 = [], smp = [];
 
     for (var k = 0; k < K; k++) {
@@ -95,7 +94,7 @@
             var yi = Math.min(YMAX - 1, Math.floor((q + LIFE) / 4));
             var z = sr * ZM[k * YMAX + yi] + si * E1[k * JMAX + j];
             act.push({ s: q, j: j, m: z < 0 ? sd * z : su * z, v: sv * (sr * ZV[k * YMAX + yi] + si * E2[k * JMAX + j]), top: 0 });
-            reserved += expo; deals++; j++;
+            reserved += expo; deals++; j++; started[Math.floor(q / 4)] += 1;
           } else if (stopped < 0) { stopped = q / 4; }
         }
         if (q % 4 === 0) { path[q / 4][k] = bal; resv[q / 4][k] = reserved; }
@@ -107,7 +106,7 @@
       deals: nd, top: sumTop / K, rec: sumRec / K, interest: sumInt / K, shareDraw: drew / deals, shareBelow: below / deals,
       shareRepaid: drew ? repaidFull / drew : 1, stopShare: stops / K, stopMed: pct(stopYear, 0.5),
       path: path, resv: resv, dscr0: pct(a4, 0.1), dscr1: pct(a4t, 0.1), out3: out3, out4: out4, smp: smp,
-      end10: pct(path[10], 0.5), end15: pct(path[NY], 0.5), slots: Math.floor((HQ - LIFE) / step) + 1 };
+      end10: pct(path[10], 0.5), endN: pct(path[NY], 0.5), started: started, ramp: Math.ceil(LIFE / step), active: Math.min(LIFE / step, F / expo) };
   }
 
   /* ---------- drawing ---------- */
@@ -165,7 +164,7 @@
     var ymax = Math.max(R.F, Math.max.apply(null, hi)) * 1.08;
     function X(i) { return l + (W - l - r) * i / N; }
     function Y(v) { return tp + (H - tp - b) * (1 - v / ymax); }
-    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Fund balance over fifteen years across simulated outcomes">';
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Fund balance over twenty years across simulated outcomes">';
     var st = ymax > 120 ? 50 : ymax > 60 ? 20 : ymax > 25 ? 10 : ymax > 12 ? 5 : 2;
     for (var v = 0; v <= ymax; v += st) s += '<line x1="' + l + '" x2="' + (W - r) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#ece9e2"/><text x="' + (l - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="12" fill="#6b6b66">$' + v + 'M</text>';
     var band = ''; for (y = 0; y <= N; y++) band += (y ? 'L' : 'M') + X(y) + ',' + Y(hi[y]); for (y = N; y >= 0; y--) band += 'L' + X(y) + ',' + Y(Math.max(0, lo[y]));
@@ -174,24 +173,52 @@
     var d = '', e = ''; for (y = 0; y <= N; y++) { d += (y ? 'L' : 'M') + X(y) + ',' + Y(md[y]); e += (y ? 'L' : 'M') + X(y) + ',' + Y(rv[y]); }
     s += '<path d="' + e + '" fill="none" stroke="#55585a" stroke-width="2" stroke-dasharray="3 4"/><text x="' + (X(N) - 4) + '" y="' + (Y(rv[N - 4]) - 8) + '" text-anchor="end" font-size="12" fill="#55585a">Held against active projects</text>';
     s += '<path d="' + d + '" fill="none" stroke="#8f6a32" stroke-width="3"/>';
-    for (y = 0; y <= N; y++) if (y % (N > 12 ? 5 : 1) === 0 || y === N) s += '<text x="' + X(y) + '" y="' + (H - 14) + '" text-anchor="' + (y === 0 ? 'start' : y === N ? 'end' : 'middle') + '" font-size="12" fill="#6b6b66">' + (y === 0 ? 'Start' : 'Year ' + y) + '</text>';
+    for (y = 0; y <= N; y++) if (y % 5 === 0) s += '<text x="' + X(y) + '" y="' + (H - 14) + '" text-anchor="' + (y === 0 ? 'start' : y === N ? 'end' : 'middle') + '" font-size="12" fill="#6b6b66">' + (y === 0 ? 'Start' : 'Year ' + y) + '</text>';
     return s + '</svg>';
   }
 
+  function chartHomes(R) {
+    var W = 760, H = 250, l = 58, r = 16, tp = 18, b = 40, N = R.NY, y, cum = [], c = 0;
+    for (y = 0; y <= N; y++) { c += R.started[y] / K * P.units; cum[y] = c; }
+    var ymax = Math.max(1, c) * 1.1;
+    function X(i) { return l + (W - l - r) * i / N; }
+    function Y(v) { return tp + (H - tp - b) * (1 - v / ymax); }
+    var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Cumulative homes in assured projects over twenty years">';
+    var st = ymax > 8000 ? 2000 : ymax > 4000 ? 1000 : ymax > 1600 ? 500 : ymax > 800 ? 200 : 100;
+    for (var v = 0; v <= ymax; v += st) s += '<line x1="' + l + '" x2="' + (W - r) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#ece9e2"/><text x="' + (l - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="12" fill="#6b6b66">' + v.toLocaleString('en-US') + '</text>';
+    var d = 'M' + X(0) + ',' + Y(0); for (y = 0; y <= N; y++) d += 'L' + X(y) + ',' + Y(y ? cum[y - 1] : 0) + 'L' + X(y) + ',' + Y(cum[y]);
+    s += '<path d="' + d + 'L' + X(N) + ',' + Y(0) + 'Z" fill="#3f7d5a" opacity=".18"/><path d="' + d + '" fill="none" stroke="#3f7d5a" stroke-width="3"/>';
+    for (y = 0; y <= N; y++) if (y % 5 === 0) s += '<text x="' + X(y) + '" y="' + (H - 14) + '" text-anchor="' + (y === 0 ? 'start' : y === N ? 'end' : 'middle') + '" font-size="12" fill="#6b6b66">' + (y === 0 ? 'Start' : 'Year ' + y) + '</text>';
+    return s + '</svg>';
+  }
+
+  function lead(R) {
+    var backed = R.deals * P.cost, homes = R.deals * P.units, net = Math.max(0, R.top - R.rec), perHome = net * 1e6 / homes;
+    var costHomes = R.F / (P.cost / P.units), lev = backed / R.F, activeDev = R.active * P.cost;
+    var w = Math.max(1.2, costHomes / homes * 100);
+    return '<div class="nam-lead-top"><div><b>$' + Math.round(lev) + ' : $1</b><span>Leverage</span><p>Development backed over 20 years for each dollar pledged. About ' + money(activeDev, 0) + ' is under assurance at any one time.</p></div>'
+      + '<div><b>' + Math.round(homes).toLocaleString('en-US') + '</b><span>Homes in assured projects</span><p>' + R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' projects and ' + money(backed, 0) + ' of development over 20 years.</p></div>'
+      + '<div><b>$' + Math.round(perHome).toLocaleString('en-US') + '</b><span>Expected subsidy per home</span><p>Top-ups not repaid, spread over the homes backed. Interest earned is not counted.</p></div></div>'
+      + '<div class="nam-vs"><p>The same ' + money(R.F, 0) + ', two ways</p>'
+      + '<div class="nam-vs-row"><span>Spent on cost</span><i><em style="width:' + w.toFixed(1) + '%"></em></i><b>' + Math.round(costHomes) + ' homes</b></div>'
+      + '<div class="nam-vs-row is-noi"><span>Placed behind cash flow</span><i><em style="width:100%"></em></i><b>' + Math.round(homes).toLocaleString('en-US') + ' homes</b></div>'
+      + '<small>A dollar spent on cost buys a dollar of building: ' + money(R.F, 0) + ' pays for about ' + Math.round(costHomes) + ' homes at $' + Math.round(P.cost / P.units * 1e6 / 1000).toLocaleString('en-US') + ',000 each, once. A dollar placed behind forecast NOI is mostly not spent, is repaid when projects succeed, and is used again.</small></div>';
+  }
+
   function tiles(R) {
-    var backed = R.deals * P.cost, net = R.top - R.rec, perDeal = net / R.deals;
-    var lasts = R.stopShare < 0.5 ? 'Beyond 15 years' : 'About ' + R.stopMed.toFixed(R.stopMed % 1 ? 1 : 0) + ' years';
+    var net = Math.max(0, R.top - R.rec), perDeal = net / R.deals, rate = R.top / R.deals / P.years, need = R.ramp * R.expo;
+    var lasts = R.stopShare < 0.5 ? 'Beyond 20 years' : 'About ' + R.stopMed.toFixed(R.stopMed % 1 ? 1 : 0) + ' years';
     var lastsNote = R.stopShare < 0.5
-      ? (R.stopShare < 0.01 ? 'In every simulated future the fund can still back a new project when the next one is due.' : 'In ' + Math.round((1 - R.stopShare) * 100) + '% of simulated futures the fund can always back the next project.')
+      ? (R.stopShare < 0.01 ? 'In every simulated future the fund can back a new project whenever the next one is due.' : 'In ' + Math.round((1 - R.stopShare) * 100) + '% of simulated futures the fund can always back the next project.')
       : 'In the middle outcome this is when the fund first cannot cover a new project when one is due.';
     var T = [
       ['$' + (100 / P.cap).toFixed(2), 'Value of $1 of yearly NOI', 'At a ' + P.cap.toFixed(2) + '% cap rate. A dollar of cost is worth $1.'],
-      [R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' projects', 'Assured over 15 years', money(backed, 0) + ' of development, about $' + Math.round(backed / R.F) + ' for each $1 pledged.'],
       ['$' + Math.round(R.expo * 1000) + 'k', 'Most the fund can pay one project', 'The lesser of the dollar limit and ' + P.limpct + '% of forecast NOI, over ' + (P.years === 2 ? 'two years' : 'one year') + '.'],
-      [Math.round(R.shareDraw * 100) + '%', 'Projects that draw a top-up', Math.round(R.shareBelow * 100) + '% of projects finish below the ' + P.pref + '% preferred return.'],
-      [money(R.top), 'Expected top-ups paid', money(R.rec) + ' is expected back: ' + (R.top > 0 ? Math.round(R.rec / R.top * 100) : 0) + ' cents on the dollar. The fund never gets back more than it paid.'],
-      [money(net), 'Expected cost of the program', 'Over 15 years, about $' + Math.round(perDeal * 1000) + 'k a project, before ' + money(R.interest) + ' of interest earned.'],
-      [money(R.end10) + ' → ' + money(R.end15), 'Fund at year 10 and year 15', 'Middle outcome, from a ' + money(R.F, 0) + ' pledge. ' + (R.end15 >= R.F ? 'The flywheel holds its size.' : 'The flywheel tapers.')],
+      ['$' + Math.round(rate * 1000) + 'k', 'Expected top-up per project, per assured year', (rate / R.noi * 100).toFixed(1) + '% of forecast NOI. ' + Math.round(R.shareDraw * 100) + '% of projects draw something.'],
+      [(R.top > 0 ? Math.round(R.rec / R.top * 100) : 0) + '¢', 'Repaid per dollar of top-up', Math.round(R.shareBelow * 100) + '% of projects finish below the ' + P.pref + '% preferred return and repay nothing.'],
+      ['$' + Math.round(perDeal * 1000) + 'k', 'Expected net cost per project', 'Top-ups paid less top-ups repaid.'],
+      [money(need), 'Smallest pledge that launches the flywheel', 'Covers the ' + R.ramp + ' projects committed in the first four years, before any proceeds come back.'],
+      [money(R.end10) + ' → ' + money(R.endN), 'Fund at year 10 and year 20', 'Middle outcome, from a ' + money(R.F, 0) + ' pledge, with interest at ' + INTEREST + '%. ' + (R.endN >= R.F ? 'The flywheel holds its size.' : 'The flywheel tapers.')],
       [lasts, 'How long the pledge keeps working', lastsNote]
     ];
     return T.map(function (x) { return '<div class="nam-tile"><b>' + x[0] + '</b><span>' + x[1] + '</span><p>' + x[2] + '</p></div>'; }).join('');
@@ -199,7 +226,7 @@
 
   /* ---------- build ---------- */
   var ctl = root.querySelector('.nam-controls'), out = root.querySelector('.nam-tiles');
-  var c1 = root.querySelector('#nam-c1'), c2 = root.querySelector('#nam-c2'), c3 = root.querySelector('#nam-c3');
+  var c1 = root.querySelector('#nam-c1'), c2 = root.querySelector('#nam-c2'), c3 = root.querySelector('#nam-c3'), c4 = root.querySelector('#nam-c4'), ld = root.querySelector('.nam-lead');
   var labels = {};
   function slider(def) {
     var w = el('label', 'nam-s'), id = 'nam-' + def[0];
@@ -219,10 +246,13 @@
   var timer = null;
   function schedule() { if (timer) cancelAnimationFrame(timer); timer = requestAnimationFrame(draw); }
   function draw() {
+    var noi = P.cost * P.yoc / 100, e4 = Math.min(P.limit, noi * P.limpct / 100), e3 = P.years === 2 ? Math.min(P.limit, noi * P.lease / 100 * P.limpct / 100) : 0;
+    var fmin = Math.max(10, Math.ceil(Math.ceil(LIFE / Math.round(P.pace / 3)) * (e3 + e4)));
+    var fs = document.getElementById('nam-fund'); fs.min = fmin; if (P.fund < fmin) P.fund = fmin;
     for (var k in labels) labels[k]();
     var R = run();
-    out.innerHTML = tiles(R); c1.innerHTML = chartProject(R); c2.innerHTML = chartDeals(R); c3.innerHTML = chartFund(R);
-    window.NAM_LAST = { deals: R.deals, top: R.top, rec: R.rec, interest: R.interest, end10: R.end10, end15: R.end15, draw: R.shareDraw, below: R.shareBelow, stop: R.stopShare, stopMed: R.stopMed, expo: R.expo, dscr0: R.dscr0, dscr1: R.dscr1 };
+    ld.innerHTML = lead(R); out.innerHTML = tiles(R); c1.innerHTML = chartProject(R); c2.innerHTML = chartDeals(R); c3.innerHTML = chartFund(R); c4.innerHTML = chartHomes(R);
+    window.NAM_LAST = { deals: R.deals, top: R.top, rec: R.rec, interest: R.interest, end10: R.end10, endN: R.endN, fund: P.fund, ramp: R.ramp, draw: R.shareDraw, below: R.shareBelow, stop: R.stopShare, stopMed: R.stopMed, expo: R.expo, dscr0: R.dscr0, dscr1: R.dscr1 };
   }
   draw();
 })();

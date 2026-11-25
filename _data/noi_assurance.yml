@@ -9,7 +9,7 @@
 status: >-
   Tool released for public review
 byline: >-
-  Mass timber's supporters have subsidized cost. This tool tests assuring income instead, so that a modest fund can stand behind larger, market-rate developments.
+  Mass timber's supporters have subsidized cost. This tool tests assuring cash flow instead, where each dollar pledged can stand behind many times more development.
 author: >-
   Noel A. Johnson, Conrad / Old i, LLC
 partners_line: >-
@@ -30,12 +30,12 @@ why:
 
 how:
   heading: >-
-    How the mechanism works
+    How the Mass Timber Cashflow Assurance Mechanism works
   steps:
     - title: >-
         A funder makes a pledge
       text: >-
-        For example $10 million, placed in an interest-bearing account held by a third-party surety.
+        For example $10 million, held in U.S. Treasuries at a money-center bank that supplies cash when a top-up is due.
     - title: >-
         Projects are assured
       text: >-
@@ -47,20 +47,37 @@ how:
     - title: >-
         Proceeds replenish the fund
       text: >-
-        At sale or refinance, once investors have their preferred return, profit above it repays the top-ups. The fund gets back no more than it paid, and the money goes on to the next project.
+        At sale or refinance, once the lender is paid and investors have their preferred return and their equity back, the top-ups are repaid. The fund gets back no more than it paid, and the money goes on to the next project.
 
 tool:
   heading: >-
     Test the flywheel
   text:
     - >-
-      A pledge that is repaid and reused is a flywheel. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures over fifteen years and shows how many projects the pledge backs, what it is expected to pay out and get back, and whether the flywheel holds its size or tapers.
+      A pledge that is repaid and reused is a flywheel. The aim is not to make money. It is to use the money to bring about the most new mass timber homes. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures over twenty years and shows the leverage, the subsidy per home, and whether the flywheel holds its size or tapers.
   project_caption: >-
     The two income years of one project, drawn as a share of forecast so the top slice is visible. The dark line is forecast NOI and the gold cap is the slice the fund assures. The whisker beside each bar spans four in five simulated outcomes. The dot is one outcome, with a gold bar where the fund tops it up.
   portfolio_caption: >-
     One simulated run of the program. Gold bars are top-ups paid to a project. Green bars are what that project repays after its investors' preferred return. A project never repays more than it received.
   fund_caption: >-
-    The fund's balance over fifteen years. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active.
+    The fund's balance over twenty years. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active.
+  homes_caption: >-
+    Homes in projects the fund has assured, added up over twenty years. New commitments stop after year 16 so that every project finishes inside the window.
+
+run:
+  heading: >-
+    How it would be run
+  points:
+    - >-
+      **Aimed at investors, not developers.** The assurance is arranged with blue-ribbon institutional investors, of the kind represented by Principal, Nuveen, Blackstone, Brookfield and QuadReal. A developer does not know whether a given deal benefits from it. That stays with the investor's fund manager and investment committee, in conversation with the administrator, which limits selection bias.
+    - >-
+      **An administrator the industry already trusts.** The program needs an administrator with a proven record in both the institutional developer's world and the institutional investor's world. It reviews the lender's and the investor's underwriting, confirms that the forecast is reasonable, and that forecast becomes the baseline the assurance is measured against.
+    - >-
+      **Normal priorities are respected.** Proceeds go first to the lender, then to the investors' preferred return, then to the return of their equity, then to repay the Cashflow Assurance Mechanism. Anything beyond that goes back to the investors and sponsor under the deal's own waterfall.
+    - >-
+      **The pledge sits in Treasuries.** It is held at a money-center bank, earning the 10-year U.S. Treasury yield, taken here as 5%. The bank provides liquidity when a top-up is due, secured against the holding.
+  note: >-
+    The firms named are examples of the kind of investor intended. None has reviewed or endorsed this mechanism.
 
 assumptions:
   heading: >-
@@ -73,7 +90,7 @@ assumptions:
     - >-
       The middle project returns about 14% a year to its investors, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes.
     - >-
-      The fund commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise.
+      The fund commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise. The smallest pledge offered is the amount that keeps new projects starting through the first four years, before any proceeds return.
     - >-
       A building that leases below forecast tends to stay below, and projects finishing in the same year share some of their fortunes through the market.
     - >-
