@@ -67,7 +67,7 @@ users:
     name: >-
       Investors
     text: >-
-      Owners, lenders (those with savings): the parties who fund and bear its risk.
+      Owners, lenders (those with savings): the parties who fund and bear its risk. Savings are mostly placed through investment firms with a fiduciary duty to seek the best risk-adjusted return.
   - key: P
     name: >-
       Socio-political
@@ -131,6 +131,8 @@ projects:
       O: [3, 3, 1]
       I: [2, 3, 2]
       P: [na, na, na]
+    na_note: >-
+      Governments and neighbours are not marketed to on a market-rate project. Help with approvals and local opposition is counted under investors, because it lowers risk.
     who: >-
       Occupants, through what they do. Investors receive it as net operating income.
     lead: >-
@@ -185,10 +187,12 @@ projects:
       - Community and recreation centers
     emphasis:
       O: [2, 2, 1]
-      I: [1, 0, 3]
-      P: [0, 2, 3]
+      I: [na, na, na]
+      P: [1, 0, 3]
+    na_note: >-
+      Return-seeking investors are not marketed to on a public project. Voters act through the socio-political end user.
     who: >-
-      Voters and taxpayers, through a government or public agency. On a public project the investor is the voter.
+      A government or public agency, with public money. Elected leaders earn votes by building projects whose attributes align with what their voters support.
     lead: >-
       Credence attributes that align with policy: decarbonization, forest management, rural jobs, on-shore supply, resilience. A government that sets these goals should be willing to pay for them.
     shows: >-
@@ -210,7 +214,7 @@ sources:
   P: >-
     Industry survey
 attributes:
-  - { name: "Visible wood: beauty and aesthetics", cls: S, users: [O, I], src: [U, J, P], note: "Noticed at once by all 23 renters who toured in person. Rated highly valued by 35 of 46 industry respondents. Found appealing in Finland and Sweden, though not the trigger for choosing a home." }
+  - { name: "Visible wood: beauty and aesthetics", cls: S, users: [O, I, P], src: [U, J, P], note: "Noticed at once by all 23 renters who toured in person. Rated highly valued by 35 of 46 industry respondents. Found appealing in Finland and Sweden, though not the trigger for choosing a home." }
   - { name: "Distinctive design and asset differentiation", cls: S, users: [O, I], src: [U, P], note: "Among the experiential mechanisms the renter study detected. Rated highly valued by 20 of 46 industry respondents." }
   - { name: "Marketing during construction", cls: S, users: [I], src: [P], note: "Rated highly valued by 9 of 46 industry respondents." }
   - { name: "Calm, health and wellbeing", cls: E, users: [O], src: [U, P], note: "24 of 26 renters agreed their home feels calmer. Rated highly valued by 24 of 46 industry respondents." }
@@ -226,6 +230,7 @@ attributes:
   - { name: "Regional culture, heritage and cultural resonance", cls: C, users: [P, O], src: [U, P], note: "Did not resonate with renters. Rated highly valued by 13 of 46 industry respondents." }
   - { name: "Identity, brand and value signaling", cls: C, users: [O, I], src: [U, P], note: "Renters' pride attached to a distinctive building, not to self-expression. Rated highly valued by 12 of 46 industry respondents." }
   - { name: "Structural ability, durability and resilience", cls: C, users: [I, P, O], src: [J, P], note: "Residents in Finland and Sweden trusted that builders had considered durability. Rated highly valued by 15 of 46 industry respondents." }
+  - { name: "Helps earn approvals and reduce local opposition", cls: C, users: [I], src: [P], note: "Valued by investors as lower entitlement risk. In the industry survey, 12 of 46 rated help with government approvals highly valued and 10 of 46 rated mitigating local opposition highly valued." }
   - { name: "Aligned with forest management needs", cls: C, users: [P], src: [P], note: "Rated highly valued by 7 of 46 industry respondents." }
   - { name: "Support for rural jobs and revitalization", cls: C, users: [P], src: [P], note: "Rated highly valued by 9 of 46 industry respondents." }
   - { name: "National security alignment", cls: C, users: [P], src: [P], note: "Rated highly valued by 3 of 46 industry respondents." }
@@ -247,6 +252,10 @@ discussion:
       Credence attributes need an attester and a payer
     text: >-
       Unlabelled claims earn little. Where a government or institution has adopted the goal, the claim has a natural payer; elsewhere it needs a recognised label and a segment that looks for it.
+  - title: >-
+      Credence attributes are chosen to fit the electorate
+    text: >-
+      Policy-related credence attributes appeal across the political spectrum, but not all at once. A project can center the ones its voters support: a jobs story for rural voters, a lower-carbon story for urban voters.
   - title: >-
       Production advantages are a separate matter
     text: >-

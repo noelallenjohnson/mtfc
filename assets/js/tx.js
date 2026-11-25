@@ -49,7 +49,7 @@
     CL.forEach(function (k, c) {
       var raw = P.emphasis[st.u][c], na = raw === 'na', lv = na ? 0 : raw, list = na ? [] : attrs(st.u, k);
       h += '<div class="tx-res ' + k + ' l' + lv + '"><header><b>' + cname[k] + '</b><span>' + (na ? NA : LV[lv]) + '</span></header><div class="meter" aria-hidden="true">' + [1, 2, 3].map(function (i) { return '<i' + (i <= lv ? ' class="on"' : '') + '></i>'; }).join('') + '</div>'
-        + (list.length ? '<ul>' + list.map(function (a) { return '<li title="' + esc(a.note).replace(/"/g, '&quot;') + '">' + esc(a.name) + '</li>'; }).join('') + '</ul>' : '<p class="none">' + (na ? esc((D.tool.na_text || '').trim()) : 'No attribute identified here.') + '</p>') + '</div>';
+        + (list.length ? '<ul>' + list.map(function (a) { return '<li title="' + esc(a.note).replace(/"/g, '&quot;') + '">' + esc(a.name) + '</li>'; }).join('') + '</ul>' : '<p class="none">' + (na ? esc((P.na_note || D.tool.na_text || '').trim()) : 'No attribute identified here.') + '</p>') + '</div>';
     });
     document.getElementById('tx-result').innerHTML = h;
     document.getElementById('tx-who').textContent = uname[st.u] + ', ' + P.name.trim().toLowerCase();
