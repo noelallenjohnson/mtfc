@@ -40,7 +40,9 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 
 **Author's position (Noel Johnson, November 2026):** the MTFC pages are separate work, resting on the author's research and practice before the engagement and on further study after it, and are not built on the items delivered to the Tech Hub. MTFC pages are owned by Old i, LLC (*to document: assignment from Noel Johnson to Old i, LLC*).
 
-*Open item:* the Industry Structure baseline (Part B) and the Listening to Institutional Investors draft use wording and interview material that overlap with what was delivered. A short written acknowledgement from the Tech Hub / OSU of the line described above would settle this.
+*Closed, Nov. 25 2026 (author's direction):* no Tech Hub acknowledgement is needed. The author confirms that the work product delivered to, and purchased by, the Tech Hub is the Capital Access questions document held by the Tech Hub (not posted here), and that it is different from the Listening to Institutional Investors report published and registered by MTFC.
+
+**Licence for MTFC reports registered with a DOI:** CC BY-NC-ND 4.0 (share unchanged with credit; no commercial use; no derivatives). Listening to Institutional Investors carries this licence from Nov. 25 2026.
 
 | MTFC work | File |
 |---|---|
