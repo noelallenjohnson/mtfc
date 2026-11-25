@@ -353,3 +353,5 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 .group-label { white-space: normal; }
 .group-heading-row { min-width: 0; }
 .about-why .advisory-label { text-align: left; margin-bottom: 28px; }
+
+.lang-eyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgb(107,107,102); }
