@@ -23,6 +23,8 @@ Owner of record for the platform: **Old i, LLC** (the MTFC brand is distinct fro
 
 | Mass Timber Business Case Studies (V1.0, 2022; V2.0 underway) | Conrad / Old i, LLC | Not hosted here; V1.0 linked at woodworks.org | Content authored by Conrad (Old i, LLC); licensed for presentation by WoodWorks and/or ThinkWood |
 
+| Industry Perceptions of Value Creation (surveys, Aug. 2025 and Aug. 2026) | Noel Johnson, Conrad / Old i, LLC; distribution facilitated by Mass Timber Group at its Summit | Aggregate counts only (`assets/js/ip-data.js`, `_data/industry_perceptions.yml`). Raw exports, names, emails and individual replies are not in this repository | Respondents were promised that only aggregate findings would be published |
+
 ## 2a. Earlier work prepared for the Pacific Northwest Mass Timber Tech Hub
 
 Under a Personal Services Contract with Oregon State University (TallWood Design Institute), July 2025 to August 1, 2026, Noel Johnson delivered three items to the Tech Hub. The contract makes work product resulting from it the property of the Institution. These items are **not published on this site**; the site credits and links to them.

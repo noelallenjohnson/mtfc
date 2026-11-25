@@ -1,20 +1,98 @@
 ---
 layout: "default"
 permalink: "/industry-perceptions-of-value-creation"
-title: "Industry Perceptions of Value Creation"
-og_title: "Industry Perceptions of Value Creation"
+title: "Industry Perceptions of Value Creation | Mass Timber Finance & Consumer"
+description: "Interactive results from two years of surveys of experienced mass timber professionals on what they believe customers value, compared with what renters reveal."
+og_title: "Industry Perceptions of Value Creation (MTFC)"
+og_description: "What the supply side of mass timber believes its customers value: an interactive baseline from two years of surveys."
+styles: ["/assets/css/ip.css"]
+scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
 ---
-<div class="initiative-detail">
+{% assign d = site.data.industry_perceptions %}
+<div class="initiative-detail ip-page">
+<div class="narrow">
 <a href="/" class="initiative-back">← Back to Homepage</a>
 <p class="initiative-category">Demand-Side · Consumer Focused</p>
 <p class="initiative-theme">Alternative theme: <span class="init-tag t-e">Entrepreneurship</span></p>
 <h1 class="initiative-title">Industry Perceptions of Value Creation</h1>
-<div class="initiative-status">Status: Survey results released for public review</div>
-<p class="initiative-meta"><strong>Author(s):</strong> [Add author names]<br><strong>Sponsor(s):</strong> [Add sponsor / affiliate names]</p>
-<p class="initiative-section-label">Abstract</p>
-<p class="initiative-body-text">An assessment of supply-side industry perceptions of how and where mass timber products create value, surfacing material misunderstandings across the ecosystem.</p>
+<div class="initiative-status">Status: {{ d.status }}</div>
+<p class="initiative-summary">{{ d.summary }}</p>
+<p class="initiative-meta"><strong>Author(s):</strong> {{ d.byline }}<br><strong>Supporter(s):</strong> {{ d.supporters }}</p>
+{% for t in d.why %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}
+<h2>{{ d.who.heading }}</h2>
+<p class="initiative-body-text">{{ d.who.text }}</p>
+</div>
+<div class="ip-who" id="ip-who"></div>
+
+<div class="narrow">
+<h2>{{ d.ratings.heading }}</h2>
+<p class="initiative-body-text">{{ d.ratings.text }}</p>
+</div>
+<div class="ip-card" id="ip-ratings">
+  <div class="ip-controls">
+    <div class="ip-seg" role="group" aria-label="Survey year" data-ip="year"><span>Year</span><button type="button" data-v="2025">2025</button><button type="button" data-v="2026">2026</button><button type="button" data-v="both" class="is-on">Both</button></div>
+    <div class="ip-seg" role="group" aria-label="Respondents" data-ip="seg"><span>Respondents</span><button type="button" data-v="all" class="is-on">All</button><button type="button" data-v="multi">More than one completed project</button><button type="button" data-v="mkt">Market-rate project</button><button type="button" data-v="non">Non-market or public project</button></div>
+    <div class="ip-seg" role="group" aria-label="Order" data-ip="sort"><span>Order</span><button type="button" data-v="rank" class="is-on">By rating</button><button type="button" data-v="cls">By class</button></div>
+  </div>
+  <div class="ip-legend"><span><i class="ip-k D"></i>Demand</span><span><i class="ip-k S"></i>Supply</span><span><i class="ip-k P"></i>Socio-political</span><span class="ip-legend-sep"><i class="ip-k full"></i>Highly valued</span><span><i class="ip-k tint"></i>Of interest</span><span><i class="ip-k none"></i>Not mentioned</span></div>
+  <p class="ip-n" id="ip-ratings-n" aria-live="polite"></p>
+  <div class="ip-bars" id="ip-bars"></div>
+  <p class="ip-caption">{{ d.ratings.caption }}</p>
+</div>
+
+<div class="narrow">
+<h2>{{ d.change.heading }}</h2>
+<p class="initiative-body-text">{{ d.change.text }}</p>
+</div>
+<div class="ip-card">
+  <div class="ip-legend"><span><i class="ip-dot hollow"></i>2025</span><span><i class="ip-dot"></i>2026</span></div>
+  <div class="ip-bars" id="ip-change"></div>
+  <p class="ip-caption">{{ d.change.caption }}</p>
+</div>
+
+<div class="narrow">
+<h2>{{ d.taxonomy.heading }}</h2>
+<p class="initiative-body-text">{{ d.taxonomy.text }}</p>
+</div>
+<div class="ip-card">
+  <div id="ip-tax"></div>
+  <p class="ip-caption">{{ d.taxonomy.caption }}</p>
+</div>
+
+<div class="narrow">
+<h2>{{ d.words.heading }}</h2>
+<p class="initiative-body-text">{{ d.words.text }}</p>
+</div>
+<div class="ip-two">
+{% assign blocks = "value,pushback" | split: "," %}{% for b in blocks %}{% assign w = d.words[b] %}
+<div class="ip-card">
+  <h3>{{ w.title }}</h3>
+  <div class="ip-bars ip-static">
+  {% for it in w.items %}<div class="ip-row"><div class="ip-label">{{ it.label }}</div><div class="ip-track"><i class="ip-fill {{ it.cls }}" style="width:{{ it.count | times: 100.0 | divided_by: w.n | round: 1 }}%"></i></div><div class="ip-val">{{ it.count }} <small>of {{ w.n }}</small></div></div>
+  {% endfor %}</div>
+  <p class="ip-caption">{{ w.note }}</p>
+</div>
+{% endfor %}
+</div>
+
+<div class="narrow">
+<h2>{{ d.discussion.heading }}</h2>
+<p class="initiative-body-text">{{ d.discussion.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+<ol class="ip-points">
+{% for p in d.discussion.points %}<li><b>{{ p.title }}</b>{{ p.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ol>
+
+<h2>{{ d.method.heading }}</h2>
+<ul class="ip-method">
+{% for p in d.method.points %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+
 <div class="initiative-links">
 <p class="initiative-links-label">Related Research</p>
-<a href="#" class="initiative-link-button">Read the full paper →</a>
+{% for r in d.related %}<p class="initiative-body-text"><a href="{{ r.url }}">{{ r.title }}</a>. {{ r.note }}</p>
+{% endfor %}</div>
+<p class="ip-rights">{{ d.rights }}</p>
 </div>
+<noscript><p class="initiative-body-text">The interactive charts need JavaScript.</p></noscript>
 </div>
