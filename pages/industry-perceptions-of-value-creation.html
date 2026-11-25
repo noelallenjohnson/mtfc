@@ -2,9 +2,9 @@
 layout: "default"
 permalink: "/industry-perceptions-of-value-creation"
 title: "Industry Perceptions of Value Creation | Mass Timber Finance & Consumer"
-description: "Interactive results from two years of surveys of experienced mass timber professionals on what they believe customers value, compared with what renters reveal."
+description: "Interactive results from a survey of 67 experienced mass timber professionals on what they believe customers value, compared with what renters reveal."
 og_title: "Industry Perceptions of Value Creation (MTFC)"
-og_description: "What the supply side of mass timber believes its customers value: an interactive baseline from two years of surveys."
+og_description: "What the supply side of mass timber believes its customers value: an interactive baseline from a survey of 67 industry professionals."
 styles: ["/assets/css/ip.css"]
 scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
 ---
@@ -31,7 +31,6 @@ scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
 </div>
 <div class="ip-card" id="ip-ratings">
   <div class="ip-controls">
-    <div class="ip-seg" role="group" aria-label="Survey year" data-ip="year"><span>Year</span><button type="button" data-v="2025">2025</button><button type="button" data-v="2026">2026</button><button type="button" data-v="both" class="is-on">Both</button></div>
     <div class="ip-seg" role="group" aria-label="Respondents" data-ip="seg"><span>Respondents</span><button type="button" data-v="all" class="is-on">All</button><button type="button" data-v="multi">More than one completed project</button><button type="button" data-v="mkt">Market-rate project</button><button type="button" data-v="non">Non-market or public project</button></div>
     <div class="ip-seg" role="group" aria-label="Order" data-ip="sort"><span>Order</span><button type="button" data-v="rank" class="is-on">By rating</button><button type="button" data-v="cls">By class</button></div>
   </div>
@@ -39,16 +38,6 @@ scripts: ["/assets/js/ip-data.js", "/assets/js/ip.js"]
   <p class="ip-n" id="ip-ratings-n" aria-live="polite"></p>
   <div class="ip-bars" id="ip-bars"></div>
   <p class="ip-caption">{{ d.ratings.caption }}</p>
-</div>
-
-<div class="narrow">
-<h2>{{ d.change.heading }}</h2>
-<p class="initiative-body-text">{{ d.change.text }}</p>
-</div>
-<div class="ip-card">
-  <div class="ip-legend"><span><i class="ip-dot hollow"></i>2025</span><span><i class="ip-dot"></i>2026</span></div>
-  <div class="ip-bars" id="ip-change"></div>
-  <p class="ip-caption">{{ d.change.caption }}</p>
 </div>
 
 <div class="narrow">

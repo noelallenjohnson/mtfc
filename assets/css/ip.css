@@ -47,7 +47,7 @@
 .ip-who { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 18px 0; }
 .ip-who .ip-card { margin: 0; }
 .ip-who .ip-row { grid-template-columns: 1fr; gap: 3px; padding: 5px 0; }
-.ip-who .ip-pair { display: grid; grid-template-columns: 34px 1fr 30px; gap: 8px; align-items: center; font-size: 12px; color: rgb(107,107,102); }
+.ip-who .ip-pair { display: grid; grid-template-columns: 1fr 30px; gap: 8px; align-items: center; font-size: 12px; color: rgb(107,107,102); }
 .ip-who .ip-track { height: 12px; }
 .ip-who .ip-track i { background: #55585a; } .ip-who .ip-track i.y25 { background: #9a9c9d; }
 .ip-who .ip-val { font-size: 12.5px; }
@@ -58,7 +58,7 @@
 .ip-tax-bar div + div { box-shadow: -2px 0 0 #fff; }
 .ip-tax-bar div b { display: block; font-size: 17px; }
 .ip-tax-bar .D { background: var(--D); } .ip-tax-bar .S { background: var(--S); } .ip-tax-bar .P { background: var(--P); }
-.ip-tax-mkt { display: grid; grid-template-columns: 54px 1fr; gap: 12px; font-size: 11.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; color: rgb(107,107,102); }
+.ip-tax-mkt { margin-top: 8px; font-size: 11.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; color: rgb(107,107,102); }
 .ip-tax-mkt div { display: flex; }
 .ip-tax-mkt span { border-top: 2px solid rgb(180,176,166); padding-top: 4px; margin-right: 2px; box-sizing: border-box; }
 .ip-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }

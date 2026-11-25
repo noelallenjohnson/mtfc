@@ -11,7 +11,7 @@ supporters: >-
   Mass Timber Group, which facilitated distribution of the survey as host of its Summit
 
 summary: >-
-  What does the supply side of mass timber believe its customers value? Two years of survey answers from experienced, committed industry professionals set a baseline of current leading perceptions, so they can be compared with what consumer research finds.
+  What does the supply side of mass timber believe its customers value? Survey answers from 67 experienced, committed industry professionals set a baseline of current leading perceptions, so they can be compared with what consumer research finds.
 
 why:
   - >-
@@ -19,29 +19,21 @@ why:
   - >-
     The respondents attended the Mass Timber Group Summit in Denver in August 2025 and August 2026. Most have worked on more than one completed mass timber project, and all spent time and money to be there. They are not a random sample of the industry. They are its informed and committed end, which is the group whose perceptions set the tone.
   - >-
-    Each person rated a list of possible sources of value as highly valued, of interest, or not mentioned. The two years asked the question in deliberately different words: in 2025, what clients said drove their choice of mass timber; in 2026, how end users (occupants, investors, politicians) would rank the same themes. The page belongs with the consumer-focused work because its subject is the supply side's picture of demand, including where that picture may be wrong.
+    Each person rated a list of possible sources of value as highly valued, of interest, or not mentioned. The question was put in two deliberately different ways: what clients said drove their choice of mass timber, and how end users (occupants, investors, politicians) would rank the same themes. The answers are pooled here. The page belongs with the consumer-focused work because its subject is the supply side's picture of demand, including where that picture may be wrong.
 
 who:
   heading: >-
     Who answered
   text: >-
-    67 people opened the survey across the two years. 55 described their background and 46 completed the ratings, 23 in each year. One person answered in both years and is counted both times. Each chart states the number of answers behind it.
+    67 people took part across two rounds of the survey. Not everyone answered every question: 55 described their background and 46 completed the ratings. One person took part in both rounds and is counted both times. Each chart states the number of answers behind it.
 
 ratings:
   heading: >-
     What the industry believes is valued
   text: >-
-    Each bar is one theme. The solid part is the share of respondents who rated it highly valued, the pale part "of interest", and the grey part "not mentioned". Colour shows where the theme sits in the proposed taxonomy: demand, supply, or socio-political. Change the year or the group of respondents to see what moves.
+    Each bar is one theme. The solid part is the share of respondents who rated it highly valued, the pale part "of interest", and the grey part "not mentioned". Colour shows where the theme sits in the proposed taxonomy: demand, supply, or socio-political. Change the group of respondents to see what moves.
   caption: >-
-    Hover over or tap a bar for the counts. Groups are small, so read differences between them as directional. "Interiors smell like forest" was asked in 2026 only.
-
-change:
-  heading: >-
-    2025 against 2026
-  text: >-
-    The share rating each theme highly valued, in each year. The hollow dot is 2025 and the solid dot is 2026. The two years differ in how the question was framed and in who was in the room, so a gap can reflect either.
-  caption: >-
-    23 respondents in each year. One respondent is about four percentage points.
+    Hover over or tap a bar for the counts. Groups are small, so read differences between them as directional. "Interiors smell like forest" was added in the second round, so 23 people rated it.
 
 taxonomy:
   heading: >-
@@ -49,7 +41,7 @@ taxonomy:
   text: >-
     Real estate separates assets driven by supply and demand from those shaped by socio-political forces. Sorting each "highly valued" rating by the class of its theme shows where the industry places mass timber's value. Demand and supply together are market drivers. Socio-political themes are non-market drivers.
   caption: >-
-    Share of all "highly valued" ratings. The classes hold different numbers of themes (demand 6, or 7 in 2026; supply 4; socio-political 10), so the average per theme is shown beside each share. The 2025 shares match the article that first reported them.
+    Share of all "highly valued" ratings, pooled. The classes hold different numbers of themes, so the average share of respondents rating each theme highly valued is shown beside each class.
 
 words:
   heading: >-
@@ -58,10 +50,10 @@ words:
     Open answers are reported as themes, never as individual replies. An answer can touch more than one theme.
   value:
     title: >-
-      2025: "What are one or two of the most important ways mass timber creates value?"
+      "What are one or two of the most important ways mass timber creates value?"
     n: 22
     note: >-
-      22 answers.
+      22 answers. Asked in the first round.
     items:
       - { label: "Sustainability, decarbonization, renewable material", count: 10, cls: P }
       - { label: "Beauty, aesthetics, design quality", count: 8, cls: D }
@@ -73,10 +65,10 @@ words:
       - { label: "Access to investors, funding or approvals", count: 2, cls: P }
   pushback:
     title: >-
-      2026: "What pushback do you hear from others on your development's use of mass timber?"
+      "What pushback do you hear from others on your development's use of mass timber?"
     n: 25
     note: >-
-      25 answers that named an objection. One further respondent reported none.
+      25 answers that named an objection. One further respondent reported none. Asked in the second round.
     items:
       - { label: "Cost: a premium, uncertain cost, or it does not pencil", count: 21, cls: N }
       - { label: "Unfamiliarity: contractors, building departments, partners, the product itself", count: 10, cls: N }
@@ -94,7 +86,7 @@ discussion:
     - title: >-
         The industry is right about beauty and wellbeing
       text: >-
-        Beauty led in both years (35 of 46 rated it highly valued) and biophilic or health benefits came second in 2025 and stayed level (24 of 46). The renter study found the same mechanisms at work: beauty, architectural differentiation and feelings of calm.
+        Beauty leads by a wide margin (35 of 46 rated it highly valued), and biophilic or health benefits rank third (24 of 46). The renter study found the same mechanisms at work: beauty, architectural differentiation and feelings of calm.
     - title: >-
         It may be wrong about how that value is paid
       text: >-
@@ -102,19 +94,19 @@ discussion:
     - title: >-
         Sustainability is the industry's story more than the consumer's
       text: >-
-        Sustainability and decarbonization was the most common theme when respondents answered in their own words in 2025 (10 of 22). The renter study found little consumer-created value from credence attributes such as carbon footprint, local manufacture or heritage. In the ratings, decarbonization fell from 10 of 23 in 2025 to 6 of 23 in 2026.
+        Sustainability and decarbonization was the most common theme when respondents answered in their own words (10 of 22), and 16 of 46 rated decarbonization highly valued. The renter study found little consumer-created value from credence attributes such as carbon footprint, local manufacture or heritage.
     - title: >-
         Whose value is construction speed?
       text: >-
-        Asked in 2026 how end users would rank the themes, 20 of 23 rated faster on-site construction highly valued, up from 9 of 23 the year before. Speed matters to the developer and the investor. An occupant never experiences it. The answer suggests that "the customer" is not one person in the industry's mind.
+        Faster on-site construction ranks second only to beauty (29 of 46 rated it highly valued). Speed matters to the developer and the investor. An occupant never experiences it. The answer suggests that "the customer" is not one person in the industry's mind.
     - title: >-
         A large share of the perceived value sits outside the market
       text: >-
-        Socio-political themes drew 40% of the "highly valued" ratings in 2025 and 33% in 2026. Market-rate capital underwrites to comparables set by supply and demand. Value that depends on policy, approvals or public goodwill is harder to underwrite and does not travel from one project to the next.
+        Socio-political themes drew 36% of the "highly valued" ratings. Market-rate capital underwrites to comparables set by supply and demand. Value that depends on policy, approvals or public goodwill is harder to underwrite and does not travel from one project to the next.
     - title: >-
         The industry is unsure that timber stimulates demand
       text: >-
-        "Stimulate consumer demand" was rated highly valued by 16 of 46, far below beauty. Respondents believe people find the buildings beautiful without being confident that beauty turns into demand. That gap is what consumer research can close.
+        "Stimulate consumer demand" was rated highly valued by 16 of 46, less than half the number for beauty. Respondents believe people find the buildings beautiful without being confident that beauty turns into demand. That gap is what consumer research can close.
     - title: >-
         The objection is cost, and nobody mentioned the consumer
       text: >-
@@ -125,19 +117,19 @@ method:
     Method and limits
   points:
     - >-
-      Surveys were run in Qualtrics at the Mass Timber Group Summit in Denver: in August 2025 among Summit attendees, with responses accepted until mid-September, and in August 2026 among participants in the Summit's developer course.
+      The survey was run in Qualtrics in two rounds at the Mass Timber Group Summit in Denver, in August 2025 and August 2026. Results from the two rounds are pooled.
     - >-
       Respondents chose to attend and chose to answer. The results describe informed, experienced and committed industry participants. They do not describe the industry as a whole, and they do not describe consumers.
     - >-
-      Partial responses are used wherever a question was answered, so the number of answers differs between charts.
+      Partial responses are used wherever a question was answered, so the number of answers differs between charts: 67 people took part, 55 described their background and 46 completed the ratings.
     - >-
-      The differences in question wording between years were intentional. The 2025 survey asked about clients' stated reasons. The 2026 survey asked respondents to take the end user's point of view.
+      The two rounds worded the rating question differently on purpose. One asked about clients' stated reasons for choosing mass timber. The other asked respondents to take the end user's point of view. Both aim at the same thing.
+    - >-
+      Some questions were asked in one round only: the nature of the respondent's work, the two open questions, and the theme "Interiors smell like forest".
     - >-
       The assignment of themes to demand, supply and socio-political classes is the author's. Two themes, structural ability and on-shore supply chain, could reasonably be classed as supply.
     - >-
       Open answers were grouped into themes by the author. Individual replies are kept private, as respondents were promised.
-    - >-
-      Early results from the 2025 survey were first reported in "Mass Timber & Money #7: Distilling Timber's Taxonometric Tendencies" (Noel Johnson, September 2025).
 
 related:
   - title: >-
@@ -158,4 +150,4 @@ home_tile:
   title: >-
     Industry Perceptions: Value Creation Mechanisms
   text: >-
-    Two years of survey answers from experienced mass timber professionals on what they believe customers value: a baseline to test against consumer research.
+    Survey answers from 67 experienced mass timber professionals on what they believe customers value: a baseline to test against consumer research.
