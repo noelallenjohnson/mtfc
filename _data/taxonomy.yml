@@ -1,0 +1,256 @@
+# Copy and classification for the Mass Timber Economic Taxonomy page.
+# Each paragraph is one indented line under ">-". Edit the words and commit.
+# In the "attributes" list: cls is S (search), E (experience) or C (credence);
+# users lists who values it: O (occupants), I (investors), P (socio-political);
+# src lists which work considered it: U (renter study), J (Jussila et al.), P (industry survey).
+# In "projects": each row of "emphasis" is search, experience, credence, scored 0 to 3.
+
+status: >-
+  Proposal released for public review
+byline: >-
+  Noel Johnson, Conrad / Old i, LLC
+
+summary: >-
+  A simple way to sort the claims made for mass timber: by how the person who must value an attribute can verify it, and by which end user that person is. The aim is a shared language for marketing, sales and product decisions.
+
+why:
+  - >-
+    Mass timber is sold on many attributes at once: beauty, wellbeing, speed, carbon, rural jobs. They do not all create value in the same way or for the same party. Some sell themselves on sight. Some are only learned by living or working in the building. Some can never be checked by the buyer and are worth only what a trusted third party will attest.
+  - >-
+    This page borrows a well-established idea from information economics and applies it to mass timber. It then sorts the attributes considered by three pieces of work into the resulting classes: the renter study behind [Underwriting Mass Timber Apartments](/household-valuation-of-mass-timber), the Finnish and Swedish resident study by [Jussila et al.](https://doi.org/10.1080/02673037.2023.2217765), and the survey of [Industry Perceptions of Value Creation](/industry-perceptions-of-value-creation).
+
+classes_heading: >-
+  Three classes of attribute
+classes:
+  - key: S
+    name: >-
+      Search
+    test: >-
+      Verified by inspection before the decision
+    text: >-
+      The buyer can see it on a tour or in a photograph. It sells itself and needs little marketing beyond getting people to look. For mass timber this depends on the wood being visible.
+    pays: >-
+      Pays through attention, differentiation and faster decisions.
+  - key: E
+    name: >-
+      Experience
+    test: >-
+      Learned only through use
+    text: >-
+      The user finds out by living or working in the building, or by building it. It cannot be judged on a tour. It shows up later, in what people do: whether they stay, renew and pay.
+    pays: >-
+      Pays through behaviour over time: retention, renewals, reliability.
+  - key: C
+    name: >-
+      Credence
+    test: >-
+      Cannot be verified even after use
+    text: >-
+      The user has to be told, and has to believe it. Carbon, provenance and policy alignment are of this kind. They create value only when a trusted third party attests to them and when someone with a stake in the claim is paying.
+    pays: >-
+      Pays through labels, certification and mandates, not through claims.
+classes_source: >-
+  Search and experience qualities follow Nelson (1970, 1974). Credence qualities follow Darby and Karni (1973).
+
+users_heading: >-
+  Three end users
+users_text: >-
+  The same attribute is worth different amounts to different parties. Three groups decide whether a mass timber building is worth more.
+users:
+  - key: O
+    name: >-
+      Occupants
+    text: >-
+      Residents, tenants, students, staff and visitors: the people inside the building.
+  - key: I
+    name: >-
+      Investors
+    text: >-
+      Developers, owners, lenders and other capital sources: the parties who fund it and bear its risk.
+  - key: P
+    name: >-
+      Socio-political
+    text: >-
+      Governments, agencies, neighbours and the public: the parties who set policy, grant approvals and sometimes pay for public goods.
+
+tool:
+  heading: >-
+    The taxonomy in action
+  text: >-
+    Choose the kind of project. The block for each pairing of end user and attribute class rises with how much that pairing deserves emphasis. Select a block, or a cell in the grid beneath it, to see the attributes that sit there and what the three studies found.
+  caption: >-
+    Block heights are the author's judgment of emphasis, from none to lead, informed by the three studies. They are a starting point for discussion, not a measurement.
+  levels: ["Not a focus", "Minor", "Support", "Lead"]
+  labels:
+    who: >-
+      Who pays for the value
+    lead: >-
+      Lead with
+    shows: >-
+      How the value shows up
+    prove: >-
+      Make it credible
+    demote: >-
+      Give less attention to
+
+projects:
+  - key: market
+    name: >-
+      Market-rate investment
+    eg: >-
+      Apartments, condominiums, offices: developer-initiated and bound by market comparables
+    emphasis:
+      O: [3, 3, 1]
+      I: [2, 2, 1]
+      P: [0, 1, 1]
+    who: >-
+      Occupants, through what they do. Investors receive it as net operating income.
+    lead: >-
+      Search and experience attributes for occupants: visible wood, distinctive design, calm and wellbeing.
+    shows: >-
+      In the renter study, not as higher rent but as longer stays, lower turnover cost, on-time payment, stronger credit and less need for concessions or marketing. Pitch these as changes to NOI lines.
+    prove: >-
+      Keep the wood exposed and get prospects to tour. Use the asset's own retention and collections history once it exists.
+    demote: >-
+      Carbon, provenance and heritage stories, unless the submarket has a segment that values them and the building carries a recognised label.
+  - key: nonmarket
+    name: >-
+      Non-market institutional
+    eg: >-
+      Universities, affordable housing, corporate and foundation headquarters
+    emphasis:
+      O: [2, 3, 2]
+      I: [1, 1, 3]
+      P: [0, 1, 2]
+    who: >-
+      The institution, which is owner and occupier at once and answers to a mission, a board or funders.
+    lead: >-
+      Experience attributes for the people inside (wellbeing, calm) together with credence attributes that match the institution's stated mission: carbon, identity, cultural resonance, ESG mandates.
+    shows: >-
+      As mission delivery: recruitment and retention of staff or students, donor and funder appeal, compliance with the institution's own commitments.
+    prove: >-
+      Third-party certification, life-cycle assessments and chain-of-custody documents. The institution needs evidence it can show its own stakeholders.
+    demote: >-
+      Arguments built on market comparables or rent, which do not drive the decision.
+  - key: public
+    name: >-
+      Public and civic
+    eg: >-
+      Libraries, schools, city halls, airports
+    emphasis:
+      O: [2, 2, 1]
+      I: [0, 1, 2]
+      P: [0, 2, 3]
+    who: >-
+      A government or public agency, on behalf of policy goals it has already set.
+    lead: >-
+      Credence attributes that align with policy: decarbonization, forest management, rural jobs, on-shore supply, resilience. A government that sets these goals should be willing to pay for them.
+    shows: >-
+      As progress against adopted policy, and as a building the public experiences as its own. Lower disruption during construction matters to neighbours.
+    prove: >-
+      Attestation the agency can cite: environmental product declarations, sourcing records, local employment figures, engineering review.
+    demote: >-
+      NOI arguments. There is no rent roll to move.
+
+attributes_heading: >-
+  The attributes, sorted
+attributes_text: >-
+  Every attribute considered by the three pieces of work, placed in one class. Outcomes that the industry survey listed alongside attributes are shown separately, because they are results of attributes and not attributes themselves.
+sources:
+  U: >-
+    Renter study
+  J: >-
+    Finland and Sweden study
+  P: >-
+    Industry survey
+attributes:
+  - { name: "Visible wood: beauty and aesthetics", cls: S, users: [O, I], src: [U, J, P], note: "Noticed at once by all 23 renters who toured in person. Rated highly valued by 35 of 46 industry respondents. Found appealing in Finland and Sweden, though not the trigger for choosing a home." }
+  - { name: "Distinctive design and asset differentiation", cls: S, users: [O, I], src: [U, P], note: "Among the experiential mechanisms the renter study detected. Rated highly valued by 20 of 46 industry respondents." }
+  - { name: "Marketing during construction", cls: S, users: [I], src: [P], note: "Rated highly valued by 9 of 46 industry respondents." }
+  - { name: "Calm, health and wellbeing", cls: E, users: [O], src: [U, P], note: "24 of 26 renters agreed their home feels calmer. Rated highly valued by 24 of 46 industry respondents." }
+  - { name: "Warmth and feel of natural material", cls: E, users: [O], src: [U, J], note: "Renters describe the wood in sensory and emotional terms. Residents in Finland and Sweden experienced the material as mainly positive." }
+  - { name: "Interiors smell like forest", cls: E, users: [O], src: [P], note: "Rated highly valued by 4 of 23 industry respondents." }
+  - { name: "Faster on-site construction", cls: E, users: [I], src: [P], note: "Rated highly valued by 29 of 46 industry respondents. Learned by building. It matters to an investor only if the whole investment period shortens." }
+  - { name: "Smaller on-site workforce", cls: E, users: [I], src: [P], note: "Rated highly valued by 16 of 46 industry respondents." }
+  - { name: "Better construction labor safety", cls: E, users: [I, P], src: [P], note: "Rated highly valued by 8 of 46 industry respondents." }
+  - { name: "Less construction noise and dust", cls: E, users: [P, I], src: [P], note: "Experienced by neighbours. Rated highly valued by 10 of 46 industry respondents." }
+  - { name: "Lower carbon, decarbonization, circular economy", cls: C, users: [P, I, O], src: [U, J, P], note: "Renters ranked it low and named it least important more often than other attributes; a minority values it and asks for a label. It did not trigger interest in Finland and Sweden. Rated highly valued by 16 of 46 industry respondents." }
+  - { name: "Locally grown and made, on-shore supply chain", cls: C, users: [P, O], src: [U, P], note: "Little effect on renters. Rated highly valued by 12 of 46 industry respondents." }
+  - { name: "Regional culture, heritage and cultural resonance", cls: C, users: [P, O], src: [U, P], note: "Did not resonate with renters. Rated highly valued by 13 of 46 industry respondents." }
+  - { name: "Identity, brand and value signaling", cls: C, users: [O, I], src: [U, P], note: "Renters' pride attached to a distinctive building, not to self-expression. Rated highly valued by 12 of 46 industry respondents." }
+  - { name: "Structural ability, durability and resilience", cls: C, users: [I, P, O], src: [J, P], note: "Residents in Finland and Sweden trusted that builders had considered durability. Rated highly valued by 15 of 46 industry respondents." }
+  - { name: "Aligned with forest management needs", cls: C, users: [P], src: [P], note: "Rated highly valued by 7 of 46 industry respondents." }
+  - { name: "Support for rural jobs and revitalization", cls: C, users: [P], src: [P], note: "Rated highly valued by 9 of 46 industry respondents." }
+  - { name: "National security alignment", cls: C, users: [P], src: [P], note: "Rated highly valued by 3 of 46 industry respondents." }
+  - { name: "Fulfills ESG investment mandates", cls: C, users: [I], src: [P], note: "Rated highly valued by 7 of 46 industry respondents." }
+baseline: >-
+  Location, floor plan and price remain the standard search attributes for any home. In Finland and Sweden they, not the material, guided the choice. Mass timber's attributes are weighed after these, not instead of them.
+outcomes_heading: >-
+  Outcomes, not attributes
+outcomes:
+  - >-
+    **Stimulate consumer demand** (16 of 46 in the industry survey): the result when search and experience attributes work on occupants.
+  - >-
+    **Help earn government approvals** (12 of 46): the result when credence attributes align with a government's own goals.
+  - >-
+    **Mitigate local opposition** (10 of 46): the result of a building neighbours like the look of and a quieter construction site.
+
+discussion_heading: >-
+  Points for discussion
+discussion:
+  - title: >-
+      Match the attribute to the party who can value it
+    text: >-
+      A carbon story told to a renter and a calm interior described to a procurement officer are both aimed at the wrong reader. Most confusion about whether mass timber "creates value" comes from pairing an attribute with an end user who cannot verify it or has no reason to pay for it.
+  - title: >-
+      Search and experience attributes need the wood to be seen
+    text: >-
+      If the structure is covered, what remains for the occupant is a credence claim about what is behind the wall. Product and design choices that keep timber exposed protect the two classes that pay in the market.
+  - title: >-
+      Credence attributes need an attester and a payer
+    text: >-
+      Unlabelled claims earn little. Where a government or institution has adopted the goal, the claim has a natural payer; elsewhere it needs a recognised label and a segment that looks for it.
+  - title: >-
+      Production advantages are a separate matter
+    text: >-
+      Speed, a smaller crew and a safer site are learned by building, and they lower cost or time for the producer. They belong in the pitch to an investor only when they change the investment's duration or risk.
+
+method:
+  heading: >-
+    Notes and limits
+  points:
+    - >-
+      The three classes are standard in information economics. Their application to mass timber, the placement of each attribute and the emphasis shown for each project type are the author's proposal.
+    - >-
+      Some attributes fit more than one class. Exposed wood is found on inspection and also lived with; it is placed under search because that is where it first acts. Speed of construction is an experience attribute to the builder and closer to a credence claim for a capital source until a track record exists.
+    - >-
+      The evidence is early. The renter study covers 26 households at two developments. The Finnish and Swedish study is qualitative, in buildings where the timber was mostly covered. The industry survey reports perceptions, not consumer behaviour.
+    - >-
+      Comment is invited on the placements and on attributes that are missing.
+
+references:
+  - >-
+    Nelson, P. (1970). Information and consumer behavior. *Journal of Political Economy*, 78(2), 311–329.
+  - >-
+    Nelson, P. (1974). Advertising as information. *Journal of Political Economy*, 82(4), 729–754.
+  - >-
+    Darby, M. R., & Karni, E. (1973). Free competition and the optimal amount of fraud. *Journal of Law and Economics*, 16(1), 67–88.
+
+related:
+  - title: >-
+      Underwriting Mass Timber Apartments
+    url: /household-valuation-of-mass-timber
+    note: >-
+      The renter study that applies search, experience and credence attributes to mass timber apartments.
+  - title: >-
+      Industry Perceptions of Value Creation
+    url: /industry-perceptions-of-value-creation
+    note: >-
+      What experienced industry professionals believe customers value.
+
+rights: >-
+  Proposed by Noel Johnson, Conrad / Old i, LLC. May be cited and adapted with attribution.
+
+home_tile:
+  text: >-
+    A proposed framework that sorts mass timber's attributes as search, experience or credence, and matches them to occupants, investors and socio-political end users.

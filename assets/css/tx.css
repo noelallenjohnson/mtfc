@@ -1,0 +1,64 @@
+/* Mass Timber Economic Taxonomy page */
+.tx-page { max-width: 1040px; --S: #a67c3d; --Sd: #7d5c2b; --Sm: #94702f; --St: #f4ead6; --E: #3f7d5a; --Ed: #2c5a40; --Em: #37704f; --Et: #e4f0e9; --C: #4a6fa5; --Cd: #334f79; --Cm: #40618f; --Ct: #e5ecf6; }
+.tx-page .narrow { max-width: 800px; }
+.tx-page h2 { margin-top: 44px; }
+.tx-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 18px 0; }
+.tx-class, .tx-user, .tx-list { border-radius: 12px; padding: 18px 18px 14px; background: rgb(247,246,243); }
+.tx-class { border-top: 5px solid; }
+.tx-class.S, .tx-list.S { border-color: var(--S); background: var(--St); } .tx-class.E, .tx-list.E { border-color: var(--E); background: var(--Et); } .tx-class.C, .tx-list.C { border-color: var(--C); background: var(--Ct); }
+.tx-class span { display: block; line-height: 1.45; font-size: 11.5px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; color: rgb(85,88,90); }
+.tx-class h3, .tx-user h3, .tx-list h3 { font-size: 21px; margin: 4px 0 8px; color: rgb(26,26,24); }
+.tx-class p, .tx-user p { font-size: 14.5px; line-height: 1.6; color: rgb(51,51,51); margin: 0 0 8px; }
+.tx-class .tx-pays { font-weight: 600; color: rgb(26,26,24); margin: 0; }
+.tx-caption { margin-top: 16px; }
+.tx-small, .tx-caption { font-size: 13px; line-height: 1.55; color: rgb(107,107,102); }
+.tx-card { border: 1px solid rgb(227,224,216); border-radius: 12px; background: #fff; padding: 18px 20px 12px; margin: 18px 0; }
+.tx-seg { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.tx-seg > span { font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgb(107,107,102); margin-right: 4px; }
+.tx-seg button { font: inherit; font-size: 14px; font-weight: 600; color: rgb(68,68,68); background: #fff; border: 1px solid rgb(220,216,206); border-radius: 999px; padding: 7px 15px; cursor: pointer; }
+.tx-seg button.is-on { background: rgb(26,26,24); border-color: rgb(26,26,24); color: #fff; }
+.tx-seg button:focus-visible, .tx-grid button:focus-visible { outline: 2px solid var(--S); outline-offset: 2px; }
+.tx-eg { margin: 10px 0 0; font-size: 14px; color: rgb(85,88,90); }
+.tx-stage { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; align-items: start; margin-top: 8px; }
+.tx-fig svg { display: block; width: 100%; height: auto; }
+.tx-fig .blk { cursor: pointer; }
+.tx-fig .blk:hover polygon, .tx-fig .blk:focus polygon { filter: brightness(1.08); }
+.tx-fig .blk:focus { outline: none; }
+.tx-grid { display: grid; grid-template-columns: auto repeat(3, 1fr); gap: 5px; font-size: 12px; margin-top: 14px; }
+.tx-grid .h { font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: 10.5px; color: rgb(85,88,90); text-align: center; align-self: end; padding-bottom: 2px; }
+.tx-grid .r { font-weight: 600; font-size: 12.5px; color: rgb(26,26,24); align-self: center; padding-right: 6px; }
+.tx-grid button { font: inherit; font-size: 12px; font-weight: 700; border: 2px solid transparent; border-radius: 7px; padding: 9px 4px; cursor: pointer; color: #fff; line-height: 1.2; }
+.tx-grid button small { display: block; font-weight: 500; font-size: 10.5px; opacity: .9; }
+.tx-grid button.S { background: var(--S); } .tx-grid button.E { background: var(--E); } .tx-grid button.C { background: var(--C); }
+.tx-grid button.l0 { background: rgb(237,235,229); color: rgb(107,107,102); }
+.tx-grid button.l1 { opacity: .55; } .tx-grid button.l2 { opacity: .8; }
+.tx-grid button.is-on { border-color: rgb(26,26,24); opacity: 1; }
+.tx-cell { margin-top: 14px; border-top: 1px solid rgb(227,224,216); padding-top: 12px; }
+.tx-cell h3 { font-size: 16px; margin: 0 0 2px; color: rgb(26,26,24); }
+.tx-cell .lvl { font-size: 11.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: rgb(107,107,102); margin: 0 0 8px; }
+.tx-cell ul { list-style: none; margin: 0; padding: 0; }
+.tx-cell li { padding: 8px 0; border-top: 1px dashed rgb(227,224,216); font-size: 13.5px; line-height: 1.5; color: rgb(68,68,68); }
+.tx-cell li:first-child { border-top: 0; }
+.tx-cell li b { display: block; color: rgb(26,26,24); font-size: 14px; }
+.tx-cell .none { font-size: 13.5px; color: rgb(107,107,102); }
+.tx-chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+.tx-chips i { font-style: normal; font-size: 10.5px; font-weight: 600; letter-spacing: .3px; background: #fff; border: 1px solid rgb(210,206,196); border-radius: 999px; padding: 1px 8px; color: rgb(85,88,90); }
+.tx-advice { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; margin-top: 6px; }
+.tx-advice div { font-size: 13.5px; line-height: 1.55; color: rgb(51,51,51); }
+.tx-advice div b { display: block; font-size: 11.5px; letter-spacing: 1.2px; text-transform: uppercase; color: rgb(143,106,50); margin-bottom: 4px; }
+.tx-advice div.lead { grid-column: 1 / -1; background: rgb(26,26,24); color: #f7f6f3; border-radius: 10px; padding: 14px 16px; font-size: 15px; }
+.tx-advice div.lead b { color: #e3c58f; }
+.tx-lists .tx-list ul { list-style: none; margin: 0; padding: 0; }
+.tx-lists .tx-list li { padding: 8px 0; border-top: 1px solid rgba(0,0,0,.08); font-size: 14px; line-height: 1.4; }
+.tx-lists .tx-list li b { font-weight: 600; color: rgb(26,26,24); }
+.tx-h3 { font-size: 19px; margin: 28px 0 6px; }
+.tx-points { margin: 18px 0 0; padding: 0; list-style: none; counter-reset: pt; }
+.tx-points li { counter-increment: pt; position: relative; padding: 0 0 20px 44px; font-size: 16px; line-height: 1.65; color: rgb(51,51,51); }
+.tx-points li::before { content: counter(pt); position: absolute; left: 0; top: 2px; width: 28px; height: 28px; border-radius: 50%; background: rgb(26,26,24); color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.tx-points li b { display: block; color: rgb(26,26,24); font-size: 17px; margin-bottom: 2px; }
+.tx-method { margin: 12px 0 0; padding-left: 20px; font-size: 15px; line-height: 1.65; color: rgb(68,68,68); }
+.tx-method li { margin-bottom: 8px; }
+.tx-rights { font-size: 13px; line-height: 1.6; color: rgb(107,107,102); border-top: 1px solid rgb(226,222,214); margin-top: 40px; padding-top: 22px; }
+@media (max-width: 900px) { .tx-stage { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .tx-three { grid-template-columns: 1fr; } .tx-card { padding: 14px 14px 10px; } .tx-advice { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .tx-fig * { transition: none !important; } }

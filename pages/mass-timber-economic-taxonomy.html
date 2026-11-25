@@ -1,20 +1,92 @@
 ---
 layout: "default"
 permalink: "/mass-timber-economic-taxonomy"
-title: "Mass Timber Economic Taxonomy"
-og_title: "Mass Timber Economic Taxonomy"
+title: "Mass Timber Economic Taxonomy | Mass Timber Finance & Consumer"
+description: "A proposed taxonomy that sorts mass timber's attributes as search, experience or credence and matches them to occupants, investors and socio-political end users, with an interactive guide by project type."
+og_title: "Mass Timber Economic Taxonomy (MTFC)"
+og_description: "Search, experience or credence: which mass timber attributes create value, for whom, and on which kind of project."
+styles: ["/assets/css/tx.css"]
+scripts: ["/assets/js/tx.js"]
 ---
-<div class="initiative-detail">
+{% assign d = site.data.taxonomy %}
+<div class="initiative-detail tx-page">
+<div class="narrow">
 <a href="/" class="initiative-back">← Back to Homepage</a>
 <p class="initiative-category">Demand-Side · Consumer Focused</p>
 <p class="initiative-theme">Alternative theme: <span class="init-tag t-e">Entrepreneurship</span></p>
 <h1 class="initiative-title">Mass Timber Economic Taxonomy</h1>
-<div class="initiative-status">Status: Proposal released for public review</div>
-<p class="initiative-meta"><strong>Author(s):</strong> [Add author names]<br><strong>Sponsor(s):</strong> [Add sponsor / affiliate names]</p>
-<p class="initiative-section-label">Abstract</p>
-<p class="initiative-body-text">A proposed standard framework defining the means of value creation across mass timber products and buildings, establishing a shared language for analysis.</p>
+<div class="initiative-status">Status: {{ d.status }}</div>
+<p class="initiative-summary">{{ d.summary }}</p>
+<p class="initiative-meta"><strong>Author(s):</strong> {{ d.byline }}</p>
+{% for t in d.why %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% endfor %}
+<h2>{{ d.classes_heading }}</h2>
+</div>
+<div class="tx-three">
+{% for c in d.classes %}<div class="tx-class {{ c.key }}"><span>{{ c.test }}</span><h3>{{ c.name }}</h3><p>{{ c.text }}</p><p class="tx-pays">{{ c.pays }}</p></div>
+{% endfor %}</div>
+<div class="narrow">
+<p class="tx-small">{{ d.classes_source }}</p>
+<h2>{{ d.users_heading }}</h2>
+<p class="initiative-body-text">{{ d.users_text }}</p>
+</div>
+<div class="tx-three">
+{% for u in d.users %}<div class="tx-user"><h3>{{ u.name }}</h3><p>{{ u.text }}</p></div>
+{% endfor %}</div>
+
+<div class="narrow">
+<h2>{{ d.tool.heading }}</h2>
+<p class="initiative-body-text">{{ d.tool.text }}</p>
+</div>
+<div class="tx-card" id="tx">
+  <div class="tx-seg" role="group" aria-label="Kind of project"><span>Project</span>{% for p in d.projects %}<button type="button" data-p="{{ p.key }}"{% if forloop.first %} class="is-on"{% endif %}>{{ p.name }}</button>{% endfor %}</div>
+  <p class="tx-eg" id="tx-eg" aria-live="polite"></p>
+  <div class="tx-stage">
+    <div><div class="tx-fig" id="tx-fig"></div><div class="tx-advice" id="tx-advice" aria-live="polite"></div></div>
+    <div class="tx-side">
+      <div class="tx-grid" id="tx-grid" role="group" aria-label="End users by attribute class"></div>
+      <div class="tx-cell" id="tx-cell" aria-live="polite"></div>
+    </div>
+  </div>
+  <p class="tx-caption">{{ d.tool.caption }}</p>
+</div>
+
+<div class="narrow">
+<h2>{{ d.attributes_heading }}</h2>
+<p class="initiative-body-text">{{ d.attributes_text }}</p>
+</div>
+<div class="tx-three tx-lists">
+{% for c in d.classes %}<div class="tx-list {{ c.key }}"><h3>{{ c.name }}</h3><ul>
+{% for a in d.attributes %}{% if a.cls == c.key %}<li><b>{{ a.name }}</b><span class="tx-chips">{% for s in a.src %}<i>{{ d.sources[s] }}</i>{% endfor %}</span></li>
+{% endif %}{% endfor %}</ul></div>
+{% endfor %}</div>
+<div class="narrow">
+<p class="initiative-body-text">{{ d.baseline }}</p>
+<h3 class="tx-h3">{{ d.outcomes_heading }}</h3>
+<ul class="tx-method">
+{% for o in d.outcomes %}<li>{{ o | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+
+<h2>{{ d.discussion_heading }}</h2>
+<ol class="tx-points">
+{% for p in d.discussion %}<li><b>{{ p.title }}</b>{{ p.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ol>
+
+<h2>{{ d.method.heading }}</h2>
+<ul class="tx-method">
+{% for p in d.method.points %}<li>{{ p | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+<h3 class="tx-h3">References</h3>
+<ul class="tx-method">
+{% for r in d.references %}<li>{{ r | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+{% endfor %}</ul>
+
 <div class="initiative-links">
 <p class="initiative-links-label">Related Research</p>
-<a href="#" class="initiative-link-button">Read the full paper →</a>
+{% for r in d.related %}<p class="initiative-body-text"><a href="{{ r.url }}">{{ r.title }}</a>. {{ r.note }}</p>
+{% endfor %}</div>
+<p class="tx-rights">{{ d.rights }}</p>
 </div>
+<noscript><p class="initiative-body-text">The interactive figure needs JavaScript. The attributes are listed in full above.</p></noscript>
 </div>
+<script>window.TX_DATA = {{ d | jsonify }};</script>
