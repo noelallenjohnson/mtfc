@@ -220,8 +220,8 @@ attributes:
   - { name: "Calm, health and wellbeing", cls: E, users: [O], src: [U, P], note: "24 of 26 renters agreed their home feels calmer. Rated highly valued by 24 of 46 industry respondents." }
   - { name: "Warmth and feel of natural material", cls: E, users: [O], src: [U, J], note: "Renters describe the wood in sensory and emotional terms. Residents in Finland and Sweden experienced the material as mainly positive." }
   - { name: "Interiors smell like forest", cls: E, users: [O], src: [P], note: "Rated highly valued by 4 of 23 industry respondents." }
-  - { name: "Faster on-site construction", cls: E, users: [I], src: [P], note: "Rated highly valued by 29 of 46 industry respondents. Learned by building. It matters to an investor only if the whole investment period shortens." }
   - { name: "Operating performance: retention, on-time payment, credit quality", cls: E, users: [I], src: [U], note: "Learned by owning the asset. In the renter study, residents stayed longer, paid on time and had strong credit, without paying more rent." }
+  - { name: "Faster on-site construction", cls: E, users: [I], src: [P], note: "Rated highly valued by 29 of 46 industry respondents. Learned by building. It matters to an investor only if the whole investment period shortens." }
   - { name: "Smaller on-site workforce", cls: E, users: [I], src: [P], note: "Rated highly valued by 16 of 46 industry respondents." }
   - { name: "Better construction labor safety", cls: E, users: [I, P], src: [P], note: "Rated highly valued by 8 of 46 industry respondents." }
   - { name: "Less construction noise and dust", cls: E, users: [P, I], src: [P], note: "Experienced by neighbours. Rated highly valued by 10 of 46 industry respondents." }
