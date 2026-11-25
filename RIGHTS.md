@@ -44,6 +44,12 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 
 **Licence for MTFC reports registered with a DOI:** CC BY-NC-ND 4.0 (share unchanged with credit; no commercial use; no derivatives). Listening to Institutional Investors carries this licence from Nov. 25 2026.
 
+**DOI register (Zenodo, under the author's ORCID 0009-0001-1422-7113):**
+
+| Work | Version DOI | All-versions DOI | Registered |
+|---|---|---|---|
+| Listening to Institutional Investors (discussion draft, Nov. 20 2026) | 10.5281/zenodo.24544952 | 10.5281/zenodo.24544951 | Nov. 25 2026 |
+
 | MTFC work | File |
 |---|---|
 | Industry Structure (framework, baseline, scenarios, animation) | `pages/industry-structure.html`, `assets/js/icf*.js` |
