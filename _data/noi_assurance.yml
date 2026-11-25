@@ -69,7 +69,7 @@ tool:
   portfolio_caption: >-
     The average across all simulated futures. In the early years money only goes out. Repayments begin when the first projects are sold or refinanced, recover part of what was paid, and are recycled into new projects. After year 20 no new projects are added and the last ones run off.
   fund_caption: >-
-    The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20, money is returned to the funder as each remaining project finishes.
+    The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20, money is returned to the funder as each remaining project finishes. The aim is to return the pledge and nothing more; the note above the chart gives the spread of bad outcomes at which that happens.
   homes_caption: >-
     Homes in projects the mechanism has assured, added up from the year each project is committed.
 
@@ -84,7 +84,9 @@ run:
     - >-
       **Real estate development norms are respected.** Proceeds go first to the lender, then to the equity's preferred return, then to the return of equity, then to repay the Cashflow Assurance Mechanism. Anything beyond that is shared between the general and limited partners under the project's own waterfall.
     - >-
-      **The pledge sits in Treasuries.** It is held at a money-center bank, earning the 10-year U.S. Treasury yield, taken here as 5%. The bank provides liquidity when a top-up is due, secured against the holding.
+      **The pledge sits in Treasuries.** It is held at a money-center bank, earning the 10-year U.S. Treasury yield, taken here as 5%. The bank provides liquidity when a top-up is due, secured against the holding. The interest is not a return to the funder. It is one way of measuring the money as it moves and is used: the mechanism spends it on top-ups.
+    - >-
+      **The funder's goal is its pledge back, and no more.** The starting values are sized to the widest spread of bad outcomes the mechanism can absorb while still returning the pledge in full.
   note: >-
     The firms named are examples of the kind of capital source intended. None has reviewed or endorsed this mechanism.
 
@@ -97,7 +99,7 @@ assumptions:
     - >-
       Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a year-one unleveraged yield of about 6%. These can be changed under "Project baseline".
     - >-
-      The middle project returns about 14% a year on equity, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes. Both start at 20% and can be set to 10% or 30%.
+      The middle project returns about 14% a year on equity, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes. Good outcomes start at 20%. Bad outcomes start at 50%, the break-even: the widest spread at which the starting pledge is still expected back in full.
     - >-
       The mechanism commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise. The smallest pledge offered is the amount that keeps new projects starting until the first one repays.
     - >-
