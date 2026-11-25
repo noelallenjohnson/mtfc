@@ -8,7 +8,7 @@
   var COL = { S: ['#a67c3d', '#7d5c2b', '#94702f'], E: ['#3f7d5a', '#2c5a40', '#37704f'], C: ['#4a6fa5', '#334f79', '#40618f'] };
   var PALE = { S: ['#ecdfc6', '#d6c5a3', '#e1d2b5'], E: ['#d3e5da', '#b5cfc0', '#c4dacd'], C: ['#d5dfef', '#b7c6de', '#c6d2e7'] };
   var FLAT = ['#ebe9e3', '#d5d1c7', '#dfdcd3'];
-  var LV = D.tool.levels, st = { p: D.projects[0].key, u: 'O' };
+  var LV = D.tool.levels, NA = (D.tool.na || 'Not applicable').trim(), st = { p: D.projects[0].key, u: 'O' };
   function proj() { return D.projects.filter(function (p) { return p.key === st.p; })[0]; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
   function attrs(u, c) { return D.attributes.filter(function (a) { return a.cls === c && a.users.indexOf(u) >= 0; }); }
@@ -25,12 +25,12 @@
       s += poly([pt(r, 0, 0), pt(r, 3, 0), pt(r + 1, 3, 0), pt(r + 1, 0, 0)], on ? '#f1eee6' : '#f7f6f3', ' stroke="' + (on ? '#1a1a18' : '#e6e3db') + '" stroke-width="' + (on ? 2 : 1) + '"');
       var g = 0.08;
       CL.forEach(function (k, c) {
-        var lv = P.emphasis[u][c], z = lv ? 8 + lv * UNIT : 5, col = !lv ? FLAT : (on ? COL[k] : PALE[k]);
+        var raw = P.emphasis[u][c], na = raw === 'na', lv = na ? 0 : raw, z = lv ? 8 + lv * UNIT : 5, col = !lv ? FLAT : (on ? COL[k] : PALE[k]);
         var a = pt(r + g, c + g, z), b = pt(r + g, c + 1 - g, z), d = pt(r + 1 - g, c + 1 - g, z), e = pt(r + 1 - g, c + g, z);
         var e0 = pt(r + 1 - g, c + g, 0), d0 = pt(r + 1 - g, c + 1 - g, 0), b0 = pt(r + g, c + 1 - g, 0), cx = (a[0] + d[0]) / 2, cy = (a[1] + d[1]) / 2;
-        s += '<g class="blk" data-u="' + u + '" tabindex="0" role="button" aria-label="' + uname[u] + ', ' + cname[k] + ': ' + LV[lv] + '">'
+        s += '<g class="blk" data-u="' + u + '" tabindex="0" role="button" aria-label="' + uname[u] + ', ' + cname[k] + ': ' + (na ? NA : LV[lv]) + '">'
           + poly([e, d, d0, e0], col[1], ' stroke="#fff"') + poly([d, b, b0, d0], col[2], ' stroke="#fff"') + poly([a, b, d, e], col[0], ' stroke="#fff"')
-          + (on ? '<text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle" font-size="17" font-weight="700" fill="' + (lv ? '#fff' : '#8a877f') + '">' + (lv ? LV[lv] : '–') + '</text>' : '') + '</g>';
+          + (on ? '<text x="' + cx + '" y="' + (cy + 6) + '" text-anchor="middle" font-size="17" font-weight="700" fill="' + (lv ? '#fff' : '#8a877f') + '">' + (na ? 'n/a' : lv ? LV[lv] : '–') + '</text>' : '') + '</g>';
       });
       var p = pt(r + 0.5, 3, 0);
       s += '<text x="' + (p[0] + 16) + '" y="' + (p[1] + 12) + '" font-size="18" font-weight="' + (on ? 700 : 500) + '" fill="' + (on ? '#1a1a18' : '#8a877f') + '">' + uname[u] + '</text>';
@@ -47,9 +47,9 @@
   function drawResult() {
     var P = proj(), h = '';
     CL.forEach(function (k, c) {
-      var lv = P.emphasis[st.u][c], list = attrs(st.u, k);
-      h += '<div class="tx-res ' + k + ' l' + lv + '"><header><b>' + cname[k] + '</b><span>' + LV[lv] + '</span></header><div class="meter" aria-hidden="true">' + [1, 2, 3].map(function (i) { return '<i' + (i <= lv ? ' class="on"' : '') + '></i>'; }).join('') + '</div>'
-        + (list.length ? '<ul>' + list.map(function (a) { return '<li title="' + esc(a.note).replace(/"/g, '&quot;') + '">' + esc(a.name) + '</li>'; }).join('') + '</ul>' : '<p class="none">No attribute identified here.</p>') + '</div>';
+      var raw = P.emphasis[st.u][c], na = raw === 'na', lv = na ? 0 : raw, list = na ? [] : attrs(st.u, k);
+      h += '<div class="tx-res ' + k + ' l' + lv + '"><header><b>' + cname[k] + '</b><span>' + (na ? NA : LV[lv]) + '</span></header><div class="meter" aria-hidden="true">' + [1, 2, 3].map(function (i) { return '<i' + (i <= lv ? ' class="on"' : '') + '></i>'; }).join('') + '</div>'
+        + (list.length ? '<ul>' + list.map(function (a) { return '<li title="' + esc(a.note).replace(/"/g, '&quot;') + '">' + esc(a.name) + '</li>'; }).join('') + '</ul>' : '<p class="none">' + (na ? esc((D.tool.na_text || '').trim()) : 'No attribute identified here.') + '</p>') + '</div>';
     });
     document.getElementById('tx-result').innerHTML = h;
     document.getElementById('tx-who').textContent = uname[st.u] + ', ' + P.name.trim().toLowerCase();

@@ -4,6 +4,7 @@
 # users lists who values it: O (occupants), I (investors), P (socio-political);
 # src lists which work considered it: U (renter study), J (Jussila et al.), P (industry survey).
 # In "projects": each row of "emphasis" is search, experience, credence, scored 0 to 3.
+# Use na in place of a number where that end user is not marketed to on that kind of project.
 
 status: >-
   Proposal released for public review
@@ -88,6 +89,10 @@ tool:
   caption: >-
     Block heights are the author's judgment of emphasis, from none to lead, informed by the three studies. They are a starting point for discussion, not a measurement.
   levels: ["Not a focus", "Minor", "Support", "Lead"]
+  na: >-
+    Not applicable
+  na_text: >-
+    No end user of this kind is being marketed to on this kind of project.
   steps:
     project: >-
       1 · Nature of the project
@@ -124,8 +129,8 @@ projects:
       - Industrial and logistics buildings
     emphasis:
       O: [3, 3, 1]
-      I: [2, 2, 1]
-      P: [0, 1, 1]
+      I: [2, 3, 2]
+      P: [na, na, na]
     who: >-
       Occupants, through what they do. Investors receive it as net operating income.
     lead: >-
@@ -151,7 +156,7 @@ projects:
       - Corporate and foundation headquarters built for the owner's own use
       - Nonprofit hospitals, museums and places of worship
     emphasis:
-      O: [2, 3, 2]
+      O: [1, 3, 2]
       I: [1, 1, 3]
       P: [0, 1, 2]
     who: >-
@@ -180,10 +185,10 @@ projects:
       - Community and recreation centers
     emphasis:
       O: [2, 2, 1]
-      I: [0, 1, 2]
+      I: [1, 0, 3]
       P: [0, 2, 3]
     who: >-
-      A government or public agency, on behalf of policy goals it has already set.
+      Voters and taxpayers, through a government or public agency. On a public project the investor is the voter.
     lead: >-
       Credence attributes that align with policy: decarbonization, forest management, rural jobs, on-shore supply, resilience. A government that sets these goals should be willing to pay for them.
     shows: >-
@@ -212,6 +217,7 @@ attributes:
   - { name: "Warmth and feel of natural material", cls: E, users: [O], src: [U, J], note: "Renters describe the wood in sensory and emotional terms. Residents in Finland and Sweden experienced the material as mainly positive." }
   - { name: "Interiors smell like forest", cls: E, users: [O], src: [P], note: "Rated highly valued by 4 of 23 industry respondents." }
   - { name: "Faster on-site construction", cls: E, users: [I], src: [P], note: "Rated highly valued by 29 of 46 industry respondents. Learned by building. It matters to an investor only if the whole investment period shortens." }
+  - { name: "Operating performance: retention, on-time payment, credit quality", cls: E, users: [I], src: [U], note: "Learned by owning the asset. In the renter study, residents stayed longer, paid on time and had strong credit, without paying more rent." }
   - { name: "Smaller on-site workforce", cls: E, users: [I], src: [P], note: "Rated highly valued by 16 of 46 industry respondents." }
   - { name: "Better construction labor safety", cls: E, users: [I, P], src: [P], note: "Rated highly valued by 8 of 46 industry respondents." }
   - { name: "Less construction noise and dust", cls: E, users: [P, I], src: [P], note: "Experienced by neighbours. Rated highly valued by 10 of 46 industry respondents." }
