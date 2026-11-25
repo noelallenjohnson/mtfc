@@ -56,7 +56,7 @@ measures:
   heading: >-
     Three ways to judge the mechanism
   text: >-
-    Any intervention can be judged on three separate measures: how much development each subsidy dollar stands behind, how many homes result, and how much subsidy each home ends up costing. Each is shown against the same money spent on cost.
+    The mechanism can be judged on three separate measures. Leverage: how much private capital each pledged dollar stands behind. Efficiency: how small the implied subsidy is as a share of a project's cost. Impact: how many projects and new homes result.
 
 tool:
   heading: >-
@@ -104,8 +104,6 @@ assumptions:
       A building that leases below forecast tends to stay below, and projects finishing in the same year share some of their fortunes through the market.
     - >-
       New commitments are made for twenty years. After that, money not held against an active project is returned to the funder.
-    - >-
-      The comparison is a subsidy that pays 5% of a project's cost and is not repaid. That share is a placeholder and can be changed under "The comparison".
     - >-
       The spread of outcomes is a placeholder. It is the reader's to make more or less conservative until it is calibrated against published REIT results and open-end core fund (ODCE) data.
   note: >-

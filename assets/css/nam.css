@@ -62,3 +62,5 @@
 .nam-chart p.nam-note { margin: 2px 6px 10px; font-size: 14px; line-height: 1.55; color: rgb(51,51,51); }
 .nam-chart p.nam-note b { color: rgb(26,26,24); }
 @media (max-width: 640px) { .nam-lead-top > div + div { border-left: 0; padding-left: 0; border-top: 1px solid #45433e; padding-top: 14px; } .nam-chart h3 { flex-wrap: wrap; } }
+
+.nam-vs small { margin-top: 0; }

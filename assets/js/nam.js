@@ -7,7 +7,7 @@
   var K = 2000, COMMIT_Q = 80, BUILD = 2, JMAX = 82, YMAX = 30, NMAX = 5, INTEREST = 5, GROWTH = 0.03;
 
   var DEF = { fund: 10, limit: 0.5, limpct: 10, years: 3, pace: 9, irr: 14, down: 20, up: 20, rho: 30,
-              pref: 9, costsub: 5, cost: 77, units: 200, yoc: 6, ltc: 55, rate: 6.25, price: 6, lease: 50 };
+              pref: 9, cost: 77, units: 200, yoc: 6, ltc: 55, rate: 6.25, price: 6, lease: 50 };
   var CTL = [
     ['The mechanism', [
       ['fund', 'Funder’s pledge on deposit', 10, 100, 1, function (v) { return '$' + v + 'M'; }],
@@ -22,9 +22,6 @@
       ['up', 'Spread of good outcomes (NOI above forecast)', 10, 30, 5, function (v) { return '+' + v + '%'; }],
       ['rho', 'Shared market risk between projects', 0, 90, 5, function (v) { return v + '%'; }],
       ['pref', 'Preferred return paid first', 9, 11, 0.5, function (v) { return v.toFixed(1) + '%'; }]
-    ]],
-    ['The comparison', [
-      ['costsub', 'A cost subsidy would cover this share of project cost', 1, 20, 1, function (v) { return v + '%'; }]
     ]]
   ];
   var ADV = [
@@ -202,16 +199,12 @@
 
   function lead(R) {
     var backed = R.deals * P.cost, homes = R.deals * P.units, net = Math.max(0, R.top - R.rec), perHome = net * 1e6 / homes;
-    var costPerHome = P.cost * 1e6 / P.units, subHome = costPerHome * P.costsub / 100, costHomes = R.F * 1e6 / subHome;
-    var lev = backed / R.F, levCost = 100 / P.costsub, hx = homes / costHomes, less = (1 - perHome / subHome) * 100;
+    var costPerHome = P.cost * 1e6 / P.units, share = net / backed * 100, lev = backed / R.F;
     return '<div class="nam-lead-top">'
-      + '<div><span>1 · Subsidy dollar multiplier</span><b>$' + Math.round(lev) + ' : $1</b><p>Development backed for each dollar pledged, over 20 years of commitments. A cost subsidy covering ' + P.costsub + '% of cost backs $' + Math.round(levCost) + ' for each $1.</p></div>'
-      + '<div><span>2 · Homes multiplier</span><b>' + (hx >= 10 ? Math.round(hx) : hx.toFixed(1)) + '×</b><p>' + num(homes) + ' homes in assured projects, against ' + num(costHomes) + ' if the same ' + money(R.F, 0) + ' were spent on cost.</p></div>'
-      + '<div><span>3 · Subsidy per home</span><b>$' + num(perHome) + '</b><p>' + (perHome / costPerHome * 100).toFixed(2) + '% of a home’s $' + num(costPerHome) + ' development cost. A cost subsidy is $' + num(subHome) + ' a home, so this is ' + (less >= 99.5 ? 'over 99' : Math.round(less)) + '% less.</p></div></div>'
-      + '<div class="nam-vs"><p>The same ' + money(R.F, 0) + ', two ways</p>'
-      + '<div class="nam-vs-row"><span>Spent on cost</span><i><em style="width:' + Math.max(1.2, Math.min(100, costHomes / Math.max(homes, costHomes) * 100)).toFixed(1) + '%"></em></i><b>' + num(costHomes) + ' homes</b></div>'
-      + '<div class="nam-vs-row is-noi"><span>Placed behind cash flow</span><i><em style="width:' + Math.max(1.2, Math.min(100, homes / Math.max(homes, costHomes) * 100)).toFixed(1) + '%"></em></i><b>' + num(homes) + ' homes</b></div>'
-      + '<small>A dollar spent on cost is spent once. A dollar placed behind forecast NOI is mostly not spent, is repaid when projects succeed, and is used again. These figures move with the settings below.</small></div>';
+      + '<div><span>1 · Leverage</span><b>$' + Math.round(lev) + ' : $1</b><p>' + 'A ' + money(R.F, 0) + ' pledge stands behind ' + money(backed, 0) + ' of privately financed development over 20 years of commitments.</p></div>'
+      + '<div><span>2 · Efficiency</span><b>' + share.toFixed(2) + '%</b><p>The implied subsidy as a share of project cost: about $' + num(net / R.deals * 1000) + 'k on a ' + money(P.cost, 0) + ' project, or $' + num(perHome) + ' on a $' + num(costPerHome) + ' home.</p></div>'
+      + '<div><span>3 · Impact</span><b>' + num(homes) + ' homes</b><p>' + R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' assured projects over 20 years. ' + money(R.returned) + ' is then returned to the funder, including interest earned.</p></div></div>'
+      + '<div class="nam-vs"><small>The implied subsidy is what the mechanism is expected to pay out and not recover, back-calculated across every assured project. The buildings themselves are paid for by private capital. These figures move with the settings below.</small></div>';
   }
 
   function notes(R) {
