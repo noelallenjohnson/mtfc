@@ -73,6 +73,13 @@ users:
     text: >-
       Governments, NGOs, electorates: those focused on policy, regulations & approvals (public goods.)
 
+kinds_heading: >-
+  Three kinds of project
+kinds_text: >-
+  The building type does not decide the kind of project. What decides it is who pays for the building and what they answer to: a market, a mission, or a public mandate.
+kinds_note: >-
+  The same building type can fall in different kinds. Student housing built by a private developer to earn rent is market-rate; built by the university for its own students, it is non-market institutional. A speculative office is market-rate; a headquarters a company builds for itself is non-market institutional; a city hall is public and civic.
+
 tool:
   heading: >-
     A taxonomy tool
@@ -106,6 +113,15 @@ projects:
       Market-rate investment
     eg: >-
       Apartments, condominiums, offices: developer-initiated and bound by market comparables
+    test: >-
+      Answers to the market
+    define: >-
+      Built to earn a return from rents or sales. Private capital funds it, and its value is set by comparable properties.
+    examples:
+      - Market-rate apartments and condominiums
+      - Speculative office and mixed-use buildings
+      - Hotels and privately developed student housing
+      - Industrial and logistics buildings
     emphasis:
       O: [3, 3, 1]
       I: [2, 2, 1]
@@ -125,6 +141,15 @@ projects:
       Non-market institutional
     eg: >-
       Universities, affordable housing, corporate and foundation headquarters
+    test: >-
+      Answers to a mission
+    define: >-
+      Built by an organization for its own purpose. It is funded by endowment, donors, subsidy or the organization's balance sheet, and judged against the mission, not against market comparables.
+    examples:
+      - University academic buildings and residence halls
+      - Income-restricted affordable housing
+      - Corporate and foundation headquarters built for the owner's own use
+      - Nonprofit hospitals, museums and places of worship
     emphasis:
       O: [2, 3, 2]
       I: [1, 1, 3]
@@ -144,6 +169,15 @@ projects:
       Public and civic
     eg: >-
       Libraries, schools, city halls, airports
+    test: >-
+      Answers to a public mandate
+    define: >-
+      Built by a government or public agency with public money, through public procurement, to serve everyone and to advance adopted policy.
+    examples:
+      - Public libraries and schools
+      - City halls, courthouses and fire stations
+      - Airports and transit stations
+      - Community and recreation centers
     emphasis:
       O: [2, 2, 1]
       I: [0, 1, 2]

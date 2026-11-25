@@ -62,3 +62,10 @@
 .tx-rights { font-size: 13px; line-height: 1.6; color: rgb(107,107,102); border-top: 1px solid rgb(226,222,214); margin-top: 40px; padding-top: 22px; }
 @media (max-width: 720px) { .tx-three { grid-template-columns: 1fr; } .tx-card { padding: 14px 12px 10px; } .tx-advice, .tx-result { grid-template-columns: 1fr; } .tx-seg button { padding: 6px 12px; font-size: 13px; } }
 @media (prefers-reduced-motion: reduce) { .tx-fig * { transition: none !important; } }
+
+.tx-kind { border-radius: 12px; padding: 18px 18px 14px; background: #fff; border: 1px solid rgb(227,224,216); border-top: 5px solid rgb(26,26,24); }
+.tx-kind span { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; color: rgb(143,106,50); }
+.tx-kind h3 { font-size: 21px; margin: 4px 0 8px; color: rgb(26,26,24); }
+.tx-kind p { font-size: 14.5px; line-height: 1.6; color: rgb(51,51,51); margin: 0 0 10px; }
+.tx-kind ul { margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.55; color: rgb(51,51,51); }
+.tx-kind li { margin-bottom: 3px; }

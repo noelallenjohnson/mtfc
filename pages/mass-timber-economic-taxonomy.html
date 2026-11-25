@@ -35,6 +35,17 @@ scripts: ["/assets/js/tx.js"]
 {% endfor %}</div>
 
 <div class="narrow">
+<h2>{{ d.kinds_heading }}</h2>
+<p class="initiative-body-text">{{ d.kinds_text }}</p>
+</div>
+<div class="tx-three">
+{% for p in d.projects %}<div class="tx-kind"><span>{{ p.test }}</span><h3>{{ p.name }}</h3><p>{{ p.define }}</p><ul>{% for e in p.examples %}<li>{{ e }}</li>{% endfor %}</ul></div>
+{% endfor %}</div>
+<div class="narrow">
+<p class="initiative-body-text">{{ d.kinds_note }}</p>
+</div>
+
+<div class="narrow">
 <h2>{{ d.tool.heading }}</h2>
 <p class="initiative-body-text">{{ d.tool.text }}</p>
 </div>
