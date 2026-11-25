@@ -16,11 +16,6 @@
 .nam-s output { font-size: 13.5px; font-weight: 700; color: rgb(26,26,24); font-variant-numeric: tabular-nums; }
 .nam-s input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: rgb(166,124,61); margin: 2px 0 0; }
 .nam-reset { font: inherit; font-size: 13px; font-weight: 600; color: rgb(68,68,68); background: #fff; border: 1px solid rgb(227,224,216); border-radius: 6px; padding: 7px 12px; cursor: pointer; }
-.nam-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; }
-.nam-tile { border: 1px solid rgb(227,224,216); border-radius: 12px; padding: 14px 14px 12px; background: #fff; }
-.nam-tile b { display: block; font-size: 23px; line-height: 1.15; color: rgb(26,26,24); font-variant-numeric: tabular-nums; }
-.nam-tile span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: rgb(143,106,50); margin: 6px 0 4px; }
-.nam-tile p { margin: 0; font-size: 13px; line-height: 1.5; color: rgb(85,85,82); }
 .nam-chart { border: 1px solid rgb(227,224,216); border-radius: 12px; background: #fff; padding: 16px 14px 10px; margin-bottom: 18px; }
 .nam-chart h3 { font-size: 16px; font-weight: 600; margin: 0 0 4px 6px; color: rgb(26,26,24); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .nam-chart h3 button { font: inherit; font-size: 12.5px; font-weight: 600; color: rgb(143,106,50); background: #fff; border: 1px solid rgb(220,195,154); border-radius: 999px; padding: 4px 12px; cursor: pointer; white-space: nowrap; }
@@ -38,9 +33,7 @@
 }
 @media (max-width: 640px) {
   .nam-controls, .nam-advg { grid-template-columns: 1fr; }
-  .nam-tiles { grid-template-columns: 1fr 1fr; }
   .nam-steps { grid-template-columns: 1fr; }
-  .nam-tile b { font-size: 20px; }
 }
 
 /* leverage feature */
@@ -58,3 +51,14 @@
 .nam-vs-row b { text-align: right; font-variant-numeric: tabular-nums; color: #fff; }
 .nam-vs small { display: block; margin-top: 8px; font-size: 12.5px; line-height: 1.55; color: #b9b6ae; }
 @media (max-width: 640px) { .nam-lead-top { grid-template-columns: 1fr; gap: 14px; } .nam-lead-top b { font-size: 28px; } .nam-vs-row { grid-template-columns: 1fr 90px; } .nam-vs-row span { grid-column: 1 / -1; } }
+
+/* v4: measures panel above the tool, notes in place of tiles */
+.nam-leadwrap { margin-top: 8px; }
+.nam-leadwrap > h2, .nam-leadwrap > p { max-width: 800px; }
+.nam-leadwrap .nam-lead { margin-top: 18px; padding: 26px 26px 20px; }
+.nam-lead-top > div + div { border-left: 1px solid #45433e; padding-left: 20px; }
+.nam-lead-top span { margin: 0 0 8px; }
+.nam-lead-top b { margin-bottom: 8px; }
+.nam-chart p.nam-note { margin: 2px 6px 10px; font-size: 14px; line-height: 1.55; color: rgb(51,51,51); }
+.nam-chart p.nam-note b { color: rgb(26,26,24); }
+@media (max-width: 640px) { .nam-lead-top > div + div { border-left: 0; padding-left: 0; border-top: 1px solid #45433e; padding-top: 14px; } .nam-chart h3 { flex-wrap: wrap; } }

@@ -2,7 +2,7 @@
 layout: "default"
 permalink: "/market-rate-development-risk-mitigation-mechanism"
 title: "Market Rate Development Risk Mitigation Mechanism | Mass Timber Finance & Consumer"
-description: "An interactive tool that tests assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest fund can stand behind larger market-rate mass timber developments."
+description: "An interactive tool that tests assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest pledge can stand behind larger market-rate mass timber developments."
 og_title: "Market Rate Development Risk Mitigation Mechanism (MTFC)"
 og_description: "Assure income, not cost: test how a deposit that tops up forecast NOI, and is repaid from profit above the preferred return, could back market-rate mass timber developments."
 styles: ["/assets/css/fff.css", "/assets/css/nam.css"]
@@ -28,6 +28,12 @@ scripts: ["/assets/js/nam.js"]
 {% for s in d.how.steps %}  <li><b>{{ s.title }}</b>{{ s.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
 {% endfor %}</ol>
 
+<div class="nam-leadwrap">
+<h2>{{ d.measures.heading }}</h2>
+<p class="initiative-body-text">{{ d.measures.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+<div class="nam-lead" aria-live="polite"></div>
+</div>
+
 <div class="narrow">
 <h2>{{ d.tool.heading }}</h2>
 {% for t in d.tool.text %}<p class="initiative-body-text">{{ t | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
@@ -36,12 +42,10 @@ scripts: ["/assets/js/nam.js"]
 <div id="nam">
   <div class="nam-controls" aria-label="Settings"></div>
   <div class="nam-out">
-    <div class="nam-lead" aria-live="polite"></div>
-    <div class="nam-tiles"></div>
-    <div class="nam-chart"><h3>One project: forecast income and the assured slice <button type="button" data-nam-sample>Show another outcome</button></h3><div id="nam-c1"></div><p>{{ d.tool.project_caption }}</p></div>
-    <div class="nam-chart"><h3>The flywheel: money out to projects and back in <button type="button" data-nam-sample>Show another outcome</button></h3><div id="nam-c2"></div><p>{{ d.tool.portfolio_caption }}</p></div>
-    <div class="nam-chart"><h3>The pledge over twenty years</h3><div id="nam-c3"></div><p>{{ d.tool.fund_caption }}</p></div>
-    <div class="nam-chart"><h3>Homes in assured projects</h3><div id="nam-c4"></div><p>{{ d.tool.homes_caption }}</p></div>
+    <div class="nam-chart"><h3>One project: forecast income and the assured slice <button type="button" data-nam-sample>Show another outcome</button></h3><p class="nam-note" id="nam-n1"></p><div id="nam-c1"></div><p>{{ d.tool.project_caption }}</p></div>
+    <div class="nam-chart"><h3>Money out to projects and back in, year by year</h3><p class="nam-note" id="nam-n2"></p><div id="nam-c2"></div><p>{{ d.tool.portfolio_caption }}</p></div>
+    <div class="nam-chart"><h3>The pledge over time</h3><p class="nam-note" id="nam-n3"></p><div id="nam-c3"></div><p>{{ d.tool.fund_caption }}</p></div>
+    <div class="nam-chart"><h3>Homes in assured projects</h3><p class="nam-note" id="nam-n4"></p><div id="nam-c4"></div><p>{{ d.tool.homes_caption }}</p></div>
   </div>
 </div>
 <noscript><p class="initiative-body-text">The interactive tool needs JavaScript to run.</p></noscript>

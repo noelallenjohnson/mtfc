@@ -20,13 +20,13 @@ why:
     Why assure income and not subsidize cost
   text:
     - >-
-      Institutional investors and their lenders are not against mass timber. They are unsure of it. That uncertainty sits in one place in the proforma: the forecast of net operating income (NOI).
+      Institutional capital sources and their lenders are not against mass timber. They are unsure of it. That uncertainty sits in one place in the proforma: the forecast of net operating income (NOI).
     - >-
       The uncertainty is greatest when a new product goes into an asset with a very long economic life that is costly to correct. A $100 million apartment building is expected to hold economic value for a century or more, where a phone is expected to hold it for three to five years, and a remodel is expensive.
     - >-
       NOI is also where a dollar matters most. A building is valued by dividing its NOI by a capitalization rate, so at a 6% cap rate each dollar of annual NOI is worth about $16.67 of value. A dollar of cost is worth a dollar.
     - >-
-      Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, can reach larger and more visible developments, the kind that change what developers and investors believe is normal.
+      Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, can reach larger and more visible developments, the kind that change what the market believes is normal.
 
 how:
   heading: >-
@@ -39,60 +39,70 @@ how:
     - title: >-
         Projects are assured
       text: >-
-        One at a time, every several months. For each, the fund stands behind the top slice of forecast NOI through lease-up and the first stabilized year.
+        One at a time, every several months. For each, the mechanism stands behind the top slice of forecast NOI for the first three to five years after delivery: lease-up, stabilization, and one to three years of normal operations.
     - title: >-
         Shortfalls are topped up
       text: >-
-        If NOI falls short of forecast, the fund pays the difference, up to the limit. The investor and the bank see steadier cash flow.
+        If NOI falls short of forecast, the mechanism pays the difference, up to the limit. The capital source and the lender see steadier cash flow.
     - title: >-
-        Proceeds replenish the fund
+        Proceeds replenish the mechanism
       text: >-
-        At sale or refinance, once the lender is paid and investors have their preferred return and their equity back, the top-ups are repaid. The fund gets back no more than it paid, and the money goes on to the next project.
+        At sale or refinance, once the lender is paid and the equity has its preferred return and its capital back, the top-ups are repaid. The mechanism gets back no more than it paid, and the money goes on to the next project. After twenty years of commitments, what remains is returned to the funder.
+
+measures:
+  heading: >-
+    Three ways to judge the mechanism
+  text: >-
+    Any intervention can be judged on three separate measures: how much development each subsidy dollar stands behind, how many homes result, and how much subsidy each home ends up costing. Each is shown against the same money spent on cost.
 
 tool:
   heading: >-
-    Test the flywheel
+    Test the Mechanism
   text:
     - >-
-      A pledge that is repaid and reused is a flywheel. The aim is not to make money. It is to use the money to bring about the most new mass timber homes. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures over twenty years and shows the leverage, the subsidy per home, and whether the flywheel holds its size or tapers.
+      A pledge that is repaid and reused is a flywheel. The aim is not to make money. It is to use the money to bring about the most new mass timber homes. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures: twenty years of new commitments, then the return of the money to the funder. The three measures above and the four charts below adjust as the sliders move.
   project_caption: >-
-    The two income years of one project, drawn as a share of forecast so the top slice is visible. The dark line is forecast NOI and the gold cap is the slice the fund assures. The whisker beside each bar spans four in five simulated outcomes. The dot is one outcome, with a gold bar where the fund tops it up.
+    The assured years of one project, drawn as a share of each year's forecast so the top slice is visible. The dark line is forecast NOI and the gold cap is the slice the mechanism assures. The whisker beside each bar spans four in five simulated outcomes. The dot is one outcome, with a gold bar where the mechanism tops it up.
   portfolio_caption: >-
-    One simulated run of the program. Gold bars are top-ups paid to a project. Green bars are what that project repays after its investors' preferred return. A project never repays more than it received.
+    The average across all simulated futures. In the early years money only goes out. Repayments begin when the first projects are sold or refinanced, recover part of what was paid, and are recycled into new projects. After year 20 no new projects are added and the last ones run off.
   fund_caption: >-
-    The fund's balance over twenty years. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active.
+    The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20, money is returned to the funder as each remaining project finishes.
   homes_caption: >-
-    Homes in projects the fund has assured, added up over twenty years. New commitments stop after year 16 so that every project finishes inside the window.
+    Homes in projects the mechanism has assured, added up from the year each project is committed.
 
 run:
   heading: >-
     How it would be run
   points:
     - >-
-      **Aimed at investors, not developers.** The assurance is arranged with blue-ribbon institutional investors, of the kind represented by Principal, Nuveen, Blackstone, Brookfield and QuadReal. A developer does not know whether a given deal benefits from it. That stays with the investor's fund manager and investment committee, in conversation with the administrator, which limits selection bias.
+      **Aimed at capital sources, not project developments.** The assurance is arranged with blue-ribbon institutional capital sources, of the kind represented by Principal, Nuveen, Blackstone, Brookfield, QuadReal and BGO. A project development does not know whether it benefits from the assurance. That stays with the capital source's fund management and investment committee, in conversation with the administrator, which limits selection bias.
     - >-
-      **An administrator the industry already trusts.** The program needs an administrator with a proven record in both the institutional developer's world and the institutional investor's world. It reviews the lender's and the investor's underwriting, confirms that the forecast is reasonable, and that forecast becomes the baseline the assurance is measured against.
+      **An administrator the industry already trusts.** The program needs an administrator with a proven record in both institutional development and institutional capital. It reviews the lender's and the capital source's underwriting, confirms that the forecast is reasonable, and that forecast becomes the baseline the assurance is measured against.
     - >-
-      **Normal priorities are respected.** Proceeds go first to the lender, then to the investors' preferred return, then to the return of their equity, then to repay the Cashflow Assurance Mechanism. Anything beyond that goes back to the investors and sponsor under the deal's own waterfall.
+      **Real estate development norms are respected.** Proceeds go first to the lender, then to the equity's preferred return, then to the return of equity, then to repay the Cashflow Assurance Mechanism. Anything beyond that is shared between the general and limited partners under the project's own waterfall.
     - >-
       **The pledge sits in Treasuries.** It is held at a money-center bank, earning the 10-year U.S. Treasury yield, taken here as 5%. The bank provides liquidity when a top-up is due, secured against the holding.
   note: >-
-    The firms named are examples of the kind of investor intended. None has reviewed or endorsed this mechanism.
+    The firms named are examples of the kind of capital source intended. None has reviewed or endorsed this mechanism.
 
 assumptions:
   heading: >-
     What the tool assumes
   points:
     - >-
-      Each project takes four years from the fund's commitment: two of construction, one of lease-up and one stabilized, then a sale or refinance.
+      Each project runs five to seven years from commitment: two of construction, then three to five assured years (one of lease-up, one of stabilization and one to three of normal operations), then a sale or refinance, when top-ups are repaid.
     - >-
       Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a year-one unleveraged yield of about 6%. These can be changed under "Project baseline".
     - >-
-      The middle project returns about 14% a year to its investors, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes.
+      The middle project returns about 14% a year on equity, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes. Both start at 20% and can be set to 10% or 30%.
     - >-
-      The fund commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise. The smallest pledge offered is the amount that keeps new projects starting through the first four years, before any proceeds return.
+      The mechanism commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise. The smallest pledge offered is the amount that keeps new projects starting until the first one repays.
     - >-
       A building that leases below forecast tends to stay below, and projects finishing in the same year share some of their fortunes through the market.
+    - >-
+      New commitments are made for twenty years. After that, money not held against an active project is returned to the funder.
+    - >-
+      The comparison is a subsidy that pays 5% of a project's cost and is not repaid. That share is a placeholder and can be changed under "The comparison".
     - >-
       The spread of outcomes is a placeholder. It is the reader's to make more or less conservative until it is calibrated against published REIT results and open-end core fund (ODCE) data.
   note: >-
@@ -103,7 +113,7 @@ partnerships:
     Partnerships for further development and deployment
   text:
     - >-
-      This is a first version of the tool. The next steps are to calibrate it against market data, test the terms with institutional investors, lenders and sureties, and pilot it on a small set of blue-ribbon developments.
+      This is a first version of the tool. The next steps are to calibrate it against market data, test the terms with institutional capital sources, lenders and sureties, and pilot it on a small set of blue-ribbon developments.
   button: >-
     Discuss a partnership →
 
@@ -123,6 +133,6 @@ rights: >-
 
 home_tile:
   text: >-
-    Assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest fund can stand behind larger market-rate mass timber developments. An interactive tool to test it.
+    Assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest pledge can stand behind larger market-rate mass timber developments. An interactive tool to test it.
   status: >-
     Tool released for public review
