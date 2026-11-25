@@ -53,7 +53,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | Hero image (timber interior) | `assets/img/hero-timber-interior.jpg` | AI-generated image | *to confirm tool and terms* |
 | Home tile images | `assets/img/tile-*.{avif,jpg,webp}` | *to confirm* (Webflow template stock, project photography, author diagrams) | *to confirm* |
 | Construction photographs (home page fillers) | `assets/img/photo-timber-*.jpg` | Photographs by Noel Johnson, who owns the rights (confirmed Nov. 24 2026) | Author's own; used with permission |
-| Wood-ceiling living room photograph (home page filler) | `assets/img/photo-wood-ceiling-living.jpg` | Supplied by Noel Johnson, Nov. 24 2026. *To confirm: photographer and rights* | *to confirm* |
+| Wilson Forest Park Homes interior photographs (living room in use on the home page; bedroom kept for later use) | `assets/img/photo-wood-ceiling-living.jpg`, `assets/img/tile-wood-bedroom.jpg` | Photographs of Noel Johnson's own project, owned by Royal Oak Homes, LLC, which gives full permission for their use (confirmed Nov. 24 2026) | Used with owner's permission |
 | Ascent MKE | `assets/img/illus-ascent-mke.jpg` | *to confirm photographer / owner* | *to confirm* |
 | HAUT Amsterdam | `assets/img/illus-haut-amsterdam.jpg` | *to confirm* | *to confirm* |
 | International House Sydney | `assets/img/illus-international-house.jpg` | *to confirm* | *to confirm* |
