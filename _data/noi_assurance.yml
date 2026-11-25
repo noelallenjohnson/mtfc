@@ -22,6 +22,8 @@ why:
     - >-
       Institutional investors and their lenders are not against mass timber. They are unsure of it. That uncertainty sits in one place in the proforma: the forecast of net operating income (NOI).
     - >-
+      The uncertainty is greatest when a new product goes into an asset with a very long economic life that is costly to correct. A $100 million apartment building is expected to hold economic value for a century or more, where a phone is expected to hold it for three to five years, and a remodel is expensive.
+    - >-
       NOI is also where a dollar matters most. A building is valued by dividing its NOI by a capitalization rate, so at a 6% cap rate each dollar of annual NOI is worth about $16.67 of value. A dollar of cost is worth a dollar.
     - >-
       Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, can reach larger and more visible developments, the kind that change what developers and investors believe is normal.
@@ -31,49 +33,51 @@ how:
     How the mechanism works
   steps:
     - title: >-
-        A funder places a deposit
+        A funder makes a pledge
       text: >-
-        For example $10 million, in an interest-bearing account held by a third-party surety.
+        For example $10 million, placed in an interest-bearing account held by a third-party surety.
     - title: >-
         Projects are assured
       text: >-
-        For each selected development the fund stands behind the top slice of forecast NOI for the first years after lease-up, up to a yearly limit.
+        One at a time, every several months. For each, the fund stands behind the top slice of forecast NOI through lease-up and the first stabilized year.
     - title: >-
         Shortfalls are topped up
       text: >-
-        If a building's NOI falls short of forecast, the fund pays the difference, up to the limit. The investor and the bank see steadier cash flow.
+        If NOI falls short of forecast, the fund pays the difference, up to the limit. The investor and the bank see steadier cash flow.
     - title: >-
-        Winners replenish the fund
+        Proceeds replenish the fund
       text: >-
-        Once a project has paid its investors their preferred return, a share of the profit above it goes back to the fund. Projects that beat forecast cover those that fell short.
+        At sale or refinance, once investors have their preferred return, profit above it repays the top-ups. The fund gets back no more than it paid, and the money goes on to the next project.
 
 tool:
   heading: >-
-    Test it
+    Test the flywheel
   text:
     - >-
-      Set the fund, the assurance and the spread of outcomes. The tool simulates 3,000 possible futures for the set of projects and shows what the fund would be expected to pay out, get back and be left with.
+      A pledge that is repaid and reused is a flywheel. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures over fifteen years and shows how many projects the pledge backs, what it is expected to pay out and get back, and whether the flywheel holds its size or tapers.
   project_caption: >-
-    One project. The dark line is forecast NOI. The gold band is the slice the fund assures. The grey band shows where four in five simulated outcomes fall. Dots show one outcome, with gold bars where the fund tops it up.
+    The two income years of one project, drawn as a share of forecast so the top slice is visible. The dark line is forecast NOI and the gold cap is the slice the fund assures. The whisker beside each bar spans four in five simulated outcomes. The dot is one outcome, with a gold bar where the fund tops it up.
   portfolio_caption: >-
-    One simulated set of projects. Gold bars are top-ups paid out of the fund. Green bars are profit shares paid back in after the preferred return.
+    One simulated run of the program. Gold bars are top-ups paid to a project. Green bars are what that project repays after its investors' preferred return. A project never repays more than it received.
   fund_caption: >-
-    The fund's balance over time. The line is the middle outcome; the band covers four in five. The last step is the year projects are sold or refinanced and profit shares are paid.
+    The fund's balance over fifteen years. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active.
 
 assumptions:
   heading: >-
     What the tool assumes
   points:
     - >-
-      Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a forecast yield on cost of about 6.4%. These can be changed under "Project baseline".
+      Each project takes four years from the fund's commitment: two of construction, one of lease-up and one stabilized, then a sale or refinance.
     - >-
-      A building that leases below forecast tends to stay below, so most of each project's miss persists from year to year, with a smaller random part each year.
+      Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a year-one unleveraged yield of about 6%. These can be changed under "Project baseline".
     - >-
-      Projects share some of their fortunes through the market they are in. The "shared market risk" setting controls how much. The more they share, the less diversification helps.
+      The middle project returns about 14% a year to its investors, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes.
     - >-
-      All projects start together and are sold or refinanced at the end of the assured period. A real program would stagger them.
+      The fund commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise.
     - >-
-      The spread of outcomes is the reader's to set. The starting values are placeholders, to be calibrated against published REIT same-store NOI results and open-end core fund (ODCE) data.
+      A building that leases below forecast tends to stay below, and projects finishing in the same year share some of their fortunes through the market.
+    - >-
+      The spread of outcomes is a placeholder. It is the reader's to make more or less conservative until it is calibrated against published REIT results and open-end core fund (ODCE) data.
   note: >-
     An illustration for discussion, not an offer, a commitment or advice on any financing.
 
