@@ -3,21 +3,49 @@ layout: "default"
 permalink: "/business-case-studies"
 title: "Business Case Studies"
 og_title: "Business Case Studies"
+styles: ["/assets/css/bc.css"]
 redirect_from:
   - /business-case-studies-v1-0
   - /business-case-studies-v2-0
 ---
-<div class="initiative-detail">
+<div class="initiative-detail bc-page">
 <a href="/" class="initiative-back">← Back to Homepage</a>
 <p class="initiative-category">Demand-Side · Consumer Focused</p>
 <p class="initiative-theme">Alternative themes: <span class="init-tag t-c">Consumer</span><span class="init-tag t-f">Finance</span></p>
 <h1 class="initiative-title">Business Case Studies</h1>
-<div class="initiative-status">Status: V1 published; V2 updates underway</div>
-<p class="initiative-meta"><strong>Author(s):</strong> Johnson, Lorda et al. by Conrad / Old i, LLC<br><strong>Presented by:</strong> WoodWorks (V1.0); ThinkWood (V2.0, underway)</p>
-<p class="initiative-section-label">V1.0 · Completed</p>
-<p class="initiative-body-text">Built market-rate mass timber developments studied from a business school business case perspective; completed in 2022. Presented by WoodWorks. <a href="https://www.woodworks.org/resources/mass-timber-business-case-studies/" target="_blank" rel="noopener">Read the V1.0 case studies at WoodWorks →</a></p>
-<p class="initiative-section-label">V2.0 · Underway</p>
-<p class="initiative-body-text">An extension of Conrad's series looking at how market-rate, market-bound mass timber developments have performed over time. To be presented by ThinkWood.</p>
+{% assign d = site.data.business_cases %}<div class="initiative-status">Status: {{ d.status }}</div>
+<p class="initiative-meta"><strong>Author(s):</strong> Johnson, Lorda et al. by Conrad / Old i, LLC<br><strong>Presented by:</strong> WoodWorks (V1.0); ThinkWood (V2.0)</p>
+<p class="initiative-body-text">{{ d.intro }}</p>
+<p class="initiative-body-text">{{ d.how_to_read }} <a href="https://www.woodworks.org/resources/mass-timber-business-case-studies/" target="_blank" rel="noopener">Read the V1.0 case studies at WoodWorks →</a></p>
+
+<div class="bc-tiles" id="top-tiles">
+{% for g in d.groups %}{% for id in g.ids %}{% assign x = d.projects | where: "id", id | first %}<a class="bc-tile" href="#{{ x.id }}">
+<span class="bc-img">{% include bc-glyph.html kind=x.kind %}</span>
+<b>{{ x.name }}</b>
+<span class="bc-type">{{ x.type }}</span>
+<span class="bc-place">{{ x.place }}</span>
+{% if x.v2 %}<span class="bc-badge v2">V2.0 reviewed</span>{% else %}<span class="bc-badge">V1.0</span>{% endif %}
+</a>
+{% endfor %}{% endfor %}</div>
+<p class="bc-key"><span class="bc-v supported">Supported</span><span class="bc-v not_supported">Not supported</span><span class="bc-v mixed">Mixed</span><span class="bc-v new">New finding</span> {{ d.v2_note }}</p>
+
+{% for g in d.groups %}<h2 class="bc-group">{{ g.name }}</h2>
+{% for id in g.ids %}{% assign x = d.projects | where: "id", id | first %}<section class="bc-card" id="{{ x.id }}">
+<div class="bc-head"><span class="bc-img">{% include bc-glyph.html kind=x.kind %}</span><div>
+<h3>{{ x.name }}</h3>
+<p class="bc-sub">{{ x.type }} · {{ x.place }}{% if x.delivered != "" %} · Delivered {{ x.delivered }}{% endif %}</p></div></div>
+<p class="bc-facts">{{ x.facts }}</p>
+<p class="initiative-section-label">V1.0 indications</p>
+<p class="bc-headline">{{ x.headline }}</p>
+<ul>{% for t in x.points %}<li>{{ t }}</li>{% endfor %}</ul>
+{% if x.v2 %}<div class="bc-v2">
+<p class="initiative-section-label">V2.0 review · {{ x.v2.date }}</p>
+<p class="bc-basis">{{ x.v2.basis }}</p>
+<table><tbody>{% for r in x.v2.rows %}<tr><th>{{ r.claim }}</th><td><span class="bc-v {{ r.verdict }}">{% case r.verdict %}{% when 'supported' %}Supported{% when 'not_supported' %}Not supported{% when 'mixed' %}Mixed{% else %}New finding{% endcase %}</span></td><td>{{ r.text }}</td></tr>{% endfor %}</tbody></table>
+</div>{% else %}<p class="bc-none">No V2.0 review yet.</p>{% endif %}
+<p class="bc-top"><a href="#top-tiles">↑ All ten projects</a></p>
+</section>
+{% endfor %}{% endfor %}
 <div class="initiative-links">
 <p class="initiative-links-label">Related Research</p>
 <p class="initiative-body-text"><a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=63292" target="_blank" rel="noopener">Crow Holdings Development: Mass Timber Construction</a>. John D. Macomber, Robert Hernandez and Kyle MertensMeyer, Harvard Business School Case 223-058, January 2023. The only other business school case on mass timber development we have found. It is listed in the HBS Case Collection, but HBS Publishing is not making it available to the public.</p>

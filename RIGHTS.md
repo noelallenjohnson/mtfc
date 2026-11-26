@@ -81,3 +81,5 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 
 People named on the Mission & Vision page appear with their LinkedIn profiles; *to confirm each has agreed to be listed.*
 Links to external reports (Systemiq / Built by Nature, WoodWorks, project pages) are links only; nothing is reproduced.
+
+**Business Case Studies page (Nov. 25 2026):** project summaries are distillations written for MTFC and editable in `_data/business_cases.yml`. The V1.0 package PDF carries a Wood Products Council copyright notice and a no-redistribution clause, so it is linked at WoodWorks and not hosted here. Project photographs belong to their photographers and are not used; tiles use original line drawings. V2.0 review summaries (The Canyons, Clay Creative) are headline findings only: no interview quotations, no content from the confidential sponsor memorandum, no unnamed-tenant details. The V2.0 memos themselves are client drafts and are not in the repo.

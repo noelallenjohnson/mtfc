@@ -1,0 +1,211 @@
+# Mass Timber Business Case Series: copy for /business-case-studies
+# Edit the text after each "key:" freely. Keep the indentation. Text after ">-" may run over several lines.
+# verdict must be one of: supported, not_supported, mixed, new
+
+status: "V1.0 published for ten projects; V2.0 reviews completed for two"
+intro: >-
+  Ten built mass timber developments, each studied the way a business school studies a business case:
+  what was built, what it cost, how it leased or sold, and what the people who paid for it learned.
+  The V1.0 series was completed in 2021 and 2022. V2.0 returns to a project some years later to test
+  whether the first findings held.
+how_to_read: >-
+  Each summary below is a short distillation by the authors. The full V1.0 case studies, with costs, rents
+  and returns, are presented by WoodWorks.
+v2_note: >-
+  A V2.0 review takes the V1.0 study as a fixed baseline and asks what the passage of time has revealed.
+  Each V1.0 indication is marked as supported, not supported or mixed, and new findings are listed separately.
+  Not every project will receive a V2.0 review.
+
+groups:
+  - name: For-rent housing
+    ids: [ascent, intro, canyons]
+  - name: For-sale housing
+    ids: [barracuda]
+  - name: Redevelopment and additions
+    ids: [timberlofts]
+  - name: Purpose-built, owner-occupied
+    ids: [adohi]
+  - name: Office
+    ids: [deharo, clay, district, iceblocks]
+
+projects:
+  - id: ascent
+    name: Ascent
+    kind: tower
+    type: Apartments, high-rise
+    place: Milwaukee, WI
+    delivered: "2022"
+    facts: 25 storeys and 259 apartments, with 19 storeys of mass timber over a six-storey parking podium. The tallest timber structure in the world when built.
+    headline: Good design is a good investment for all stakeholders.
+    points:
+      - About 45% pre-leased at completion, at best-in-market rents.
+      - All-in construction cost at market rates, with a slight premium for the timber system.
+      - About four months saved on the schedule, setting pandemic and shipping delays aside.
+      - Insurance cost about three times the standard rate, and lenders needed convincing.
+
+  - id: intro
+    name: INTRO
+    kind: midrise
+    type: Apartments, mixed-use
+    place: Cleveland, OH
+    delivered: "2022"
+    facts: Nine storeys with 297 apartments, ground-floor retail and a public event space; eight storeys of mass timber over a concrete podium.
+    headline: Exceptional leasing velocity and premiums.
+    points:
+      - The highest apartment rents in Cleveland, resetting local expectations.
+      - 60% pre-leased, and stabilized four months after opening; refinancing began within three months.
+      - The expected schedule savings were not fully achieved, as trades were new to the system and the cladding could not keep pace with the structure.
+      - Repairs were needed where moisture was not managed well during construction.
+
+  - id: canyons
+    name: The Canyons
+    kind: midrise
+    type: Apartments with retail
+    place: Portland, OR
+    delivered: "2020"
+    facts: Six storeys with 70 larger-than-usual apartments, first aimed at active adults aged 55 and over; five levels of cross-laminated timber over ground-floor retail.
+    headline: Premium rents; more stable tenants.
+    points:
+      - Rents materially higher than nearby market-rate apartments.
+      - Cost at market rates and construction about 10% faster, setting pandemic effects aside.
+      - Slower lease-up, but tenants who stayed.
+      - Insurance rates were high, and hard to separate from a rising insurance market.
+    v2:
+      date: August 2026
+      basis: The building sold in August 2025 for $23.5 million, which gave the review an arm's-length price, a new owner and a new manager to learn from.
+      rows:
+        - claim: Premium rents
+          verdict: not_supported
+          text: The rent premium was not sustained. The cause is unclear; the 55-and-over focus was dropped, the Portland rental market weakened and the property manager changed.
+        - claim: More stable tenants
+          verdict: supported
+          text: Occupancy held above 85% through a soft market while nearby properties struggled to hold 80%.
+        - claim: Insurance and lender caution
+          verdict: not_supported
+          text: No adverse pricing from lenders, insurers or the broker was detected at the sale.
+        - claim: Buyer interest
+          verdict: new
+          text: Mass timber widened the pool of interested buyers, though it was not seen to raise the price paid.
+        - claim: Awareness
+          verdict: new
+          text: Awareness of the mass timber fades with distance from the development decision. Residents find the homes distinctive without knowing why, and no one in operations was carrying the story forward.
+
+  - id: barracuda
+    name: Barracuda Condos
+    kind: condo
+    type: Condominiums
+    place: Madison, WI
+    delivered: "2020"
+    facts: Seven storeys with 19 two-bedroom condominiums over offices and parking; a hybrid of steel framing with glue-laminated timber floors and roof.
+    headline: Exceptional pre-sales; zero walk-aways.
+    points:
+      - 75% sold at the start of construction and 95% before completion.
+      - No buyer cancelled; those who wavered during the pandemic closed after seeing the nearly finished homes.
+      - Local lenders provided market-rate leverage and were not concerned by the mass timber.
+      - Locally made timber panels avoided the shipping delays that affected appliances and finishes.
+
+  - id: timberlofts
+    name: Timber Lofts
+    kind: reuse
+    type: Apartments, reuse and addition
+    place: Milwaukee, WI
+    delivered: "2020"
+    facts: 60 apartments; 33 in a five-storey 1890s warehouse and 27 in a new cross-laminated timber addition beside it.
+    headline: Notable aesthetic and economic impacts.
+    points:
+      - Leased faster than comparable buildings, at top-of-market rents.
+      - Built faster, at a cost only slightly above conventional methods.
+      - Relied on $2 million of historic tax credits, which came with design constraints.
+      - Insurance ran above the proforma, and surveys suggested sustainability was not a priority for tenants.
+
+  - id: adohi
+    name: Adohi Hall
+    kind: dorm
+    type: Student housing
+    place: Fayetteville, AR
+    delivered: "2019"
+    facts: A 708-bed living and learning community at the University of Arkansas, about 202,000 square feet.
+    headline: A flagship university sets the stage for the private sector.
+    points:
+      - On a fixed budget, mass timber had to win on cost and value against a steel and concrete design carried to the same stage.
+      - Delivered on time and on budget, recovering four months lost to a delayed start.
+      - The use of cross-laminated timber raised no concerns for the lender.
+      - Eased the path through code review for later private projects in the state.
+
+  - id: deharo
+    name: 1 De Haro
+    kind: officeind
+    type: Office and light industrial
+    place: San Francisco, CA
+    delivered: "2021"
+    facts: Three storeys of cross-laminated timber over a concrete podium, about 134,000 square feet. The first building of its kind in San Francisco.
+    headline: Desirable, distinct, contextual development.
+    points:
+      - Leased at the start of construction, with back-up offers.
+      - A minor cost premium for the timber, offset in part by foundation savings on poor soils.
+      - Insurance carried a premium, with few insurers willing to quote.
+      - The structure showed 51% less embodied carbon than a concrete equivalent.
+
+  - id: clay
+    name: Clay Creative
+    kind: office
+    type: Office
+    place: Portland, OR
+    delivered: "2015"
+    facts: Five storeys and about 95,000 square feet, built speculatively. The first large, unsubsidized commercial mass timber office delivered in the United States.
+    headline: Mindset and diligence outweigh experience.
+    points:
+      - Fast lease-up to creditworthy tenants at top-of-market rents.
+      - Fast construction let tenant fit-out run alongside the base building, bringing occupancy sooner.
+      - Insurance cost more, and fewer lenders were willing.
+      - The timber structure can cost more; savings in underfloor systems and ceiling finishes were expected to offset part of it.
+    v2:
+      date: July 2026
+      basis: Ten years of operation, through the strongest and then the weakest office markets in Portland's modern history.
+      rows:
+        - claim: Leasing strength
+          verdict: supported
+          text: The building keeps making tenants' shortlists, has held occupancy and credit quality, and has avoided the deep concessions competitors accepted. The value shows up as steadier cash flow more than as higher rent.
+        - claim: Faster delivery
+          verdict: supported
+          text: Supported, with a different emphasis. Speed mattered most as a way to deliver into a strong market, more than for the cost savings usually cited.
+        - claim: Higher insurance cost
+          verdict: not_supported
+          text: Insurance effects have been minimal, reversing the expectation at the start.
+        - claim: Fewer willing lenders
+          verdict: not_supported
+          text: The building was refinanced with a conservative national life insurance lender, with no discount or premium for timber.
+        - claim: Savings from underfloor systems
+          verdict: not_supported
+          text: Owners and leasing brokers see no faster or cheaper tenant fit-out from these systems.
+        - claim: A condition
+          verdict: new
+          text: Timber multiplies strong fundamentals such as location, parking and streetscape. It does not substitute for them.
+
+  - id: district
+    name: District Office
+    kind: office
+    type: Office with retail
+    place: Portland, OR
+    delivered: "2020"
+    facts: Six storeys and about 106,000 square feet, with a third of the office space pre-leased to the architecture firm that designed it.
+    headline: Viable creative office design targeting loyal tenants.
+    points:
+      - 70% pre-leased before the pandemic; leasing of the remainder slowed after delivery.
+      - Thinner timber panels, a repeatable connection and an industrial finish grade kept cost down.
+      - Timber spans removed the perimeter beam, so windows reach the ceiling.
+      - Routing building services through an exposed structure took a purpose-made solution.
+
+  - id: iceblocks
+    name: The ICE Blocks
+    kind: officeretail
+    type: Office and retail
+    place: Sacramento, CA
+    delivered: ""
+    facts: A new mass timber building of about 132,000 rentable square feet, replacing a historic warehouse lost to fire within a larger reuse project.
+    headline: Distinctive interiors attract quality tenants at competitive rents.
+    points:
+      - Leased quickly while under construction, despite weak market vacancy data.
+      - Only slightly more expensive to deliver a differentiated space, though the contingency was used in full.
+      - Did not achieve above-market rents.
+      - With everything exposed, detailing and capable subcontractors mattered a great deal.
