@@ -1,6 +1,6 @@
 # Mass Timber Business Case Series: copy for /business-case-studies
 # Edit the text after each "key:" freely. Keep the indentation. Text after ">-" may run over several lines.
-# verdict must be one of: supported, not_supported, mixed, new
+# verdict must be one of: supported, not_supported, mixed, eased, new
 
 status: "V1.0 published for ten projects; V2.0 reviews completed for two"
 intro: >-
@@ -12,8 +12,8 @@ how_to_read: >-
   Each summary below is a short distillation by the authors. The full V1.0 case studies, with costs, rents
   and returns, are presented by WoodWorks.
 v2_note: >-
-  A V2.0 review takes the V1.0 study as a fixed baseline and asks what the passage of time has revealed.
-  Each V1.0 indication is marked as supported, not supported or mixed, and new findings are listed separately.
+  A V2.0 review takes the V1.0 study as a fixed baseline and asks what the passage of time has revealed:
+  which effects of mass timber appear lasting, and which were temporary or owed to market timing.
   Not every project will receive a V2.0 review.
 
 groups:
@@ -30,6 +30,7 @@ groups:
 
 projects:
   - id: ascent
+    photo_credit: "C.D. Smith Construction"
     name: Ascent
     kind: tower
     type: Apartments, high-rise
@@ -44,6 +45,7 @@ projects:
       - Insurance cost about three times the standard rate, and lenders needed convincing.
 
   - id: intro
+    photo_credit: "Nick Johnson, Tour D Space"
     name: INTRO
     kind: midrise
     type: Apartments, mixed-use
@@ -58,6 +60,7 @@ projects:
       - Repairs were needed where moisture was not managed well during construction.
 
   - id: canyons
+    photo_credit: "Jeremy Bittermann"
     name: The Canyons
     kind: midrise
     type: Apartments with retail
@@ -72,25 +75,76 @@ projects:
       - Insurance rates were high, and hard to separate from a rising insurance market.
     v2:
       date: August 2026
-      basis: The building sold in August 2025 for $23.5 million, which gave the review an arm's-length price, a new owner and a new manager to learn from.
-      rows:
-        - claim: Premium rents
-          verdict: not_supported
-          text: The rent premium was not sustained. The cause is unclear; the 55-and-over focus was dropped, the Portland rental market weakened and the property manager changed.
+      basis: >-
+        The building sold in August 2025 for $23.5 million to a new owner, with a new lender and a new property
+        manager. An arm's-length sale turns opinion into observation, and the buyer's offering memorandum shows
+        what a sophisticated sponsor believes moves investors' money.
+      summary: >-
+        What lasted was resilience: occupancy, differentiation and breadth of buyer interest. What faded was the
+        rent premium and any awareness of the timber among those running and renting the building.
+      lasting:
         - claim: More stable tenants
           verdict: supported
-          text: Occupancy held above 85% through a soft market while nearby properties struggled to hold 80%.
+          text: Occupancy held above 85% through a soft market while nearby properties struggled to hold 80%. Mass timber may help cash flows survive downturns comparatively better.
+        - claim: Differentiation
+          verdict: new
+          text: The building's distinct look and feel survived changes of owner, manager and target market. The buyer's memorandum leads with the timber atrium and the "condo quality" homes.
+        - claim: Wider pool of buyers
+          verdict: new
+          text: Mass timber drew more interested buyers than a conventional 70-unit building would have, in a risk-off market for apartments. It was not seen to raise the price paid.
         - claim: Insurance and lender caution
-          verdict: not_supported
+          verdict: eased
           text: No adverse pricing from lenders, insurers or the broker was detected at the sale.
-        - claim: Buyer interest
+      fleeting:
+        - claim: Premium rents
+          verdict: not_supported
+          text: The rent premium was not sustained. Attribution is murky; the 55-and-over focus was dropped, the Portland rental market weakened and the property manager changed. In hindsight the 2022 premium may have been earned by the product and its service more than by the timber.
+        - claim: Awareness and values signalling
           verdict: new
-          text: Mass timber widened the pool of interested buyers, though it was not seen to raise the price paid.
-        - claim: Awareness
+          text: Awareness of the mass timber decays with distance from the development decision. Residents find the homes unique without knowing why, the on-site manager did not market it, and no carbon or values signalling to tenants was detected.
+      unclear:
+        - claim: Price paid
           verdict: new
-          text: Awareness of the mass timber fades with distance from the development decision. Residents find the homes distinctive without knowing why, and no one in operations was carrying the story forward.
+          text: Indeterminate. The buyer's residential basis of about $310 per net square foot sits within the range of conventional comparables nearby, but recent Portland sales are few, distressed, and include no other mass timber building to compare with.
+      details:
+        - title: "A natural experiment: inside the offering memorandum"
+          kind: bars
+          intro: >-
+            To raise capital for the purchase, the buyer's sponsor had to decide how much of a finite, persuasive
+            document to give to each attribute of the building. That is a revealed preference. Seven standard
+            appraisal attributes were coded across the memorandum's first 20 pages through three channels:
+            share of page space (weighted 45%), keyword mentions (20%) and photographs (35%).
+          unit: Combined score
+          bars:
+            - { label: "Unit design and layout", value: 23.2, page: 24.2, mention: 32.6, image: 22.1 }
+            - { label: "Location and site", value: 22.6, page: 23.2, mention: 19.0, image: 29.4 }
+            - { label: "Common area amenities", value: 17.6, page: 18.1, mention: 10.9, image: 25.0 }
+            - { label: "Mass timber / wood", value: 14.2, page: 11.9, mention: 9.2, image: 23.5, mark: true }
+            - { label: "Building program and scale", value: 9.3, page: 10.9, mention: 8.2, image: "n/a" }
+            - { label: "Cost / value basis", value: 8.5, page: 7.2, mention: 13.6, image: "n/a" }
+            - { label: "Construction quality (general)", value: 4.7, page: 4.4, mention: 6.5, image: "n/a" }
+          takeaway: >-
+            Mass timber ranks fourth of seven, about level with gyms and roof decks. It is shown far more than
+            it is written about: its image score is among the highest while its page and mention scores are thin.
+            Wood is seen but not yet counted in the asset arithmetic; a branding device not yet translated into a
+            priced or risk-adjusted underwriting variable.
+        - title: Underwriting notes
+          kind: table
+          head: [Mechanism, Direction, Scale and nature]
+          rows:
+            - ["Breadth of buyer interest", "Positive", "Small; may act on the cap rate or on a buyer's growth assumptions"]
+            - ["Price paid / cap rate", "Indeterminate", "Too few comparable transactions"]
+            - ["Rent premium", "Not sustained", "Small; may help lease-up and value at stabilization or refinance"]
+            - ["Occupancy resilience", "Positive", "Lowers NOI volatility; improves leverage and cap rate potential"]
+            - ["Stigma from lenders and insurers", "None detected", "No change to the proforma"]
+            - ["Tenant values signalling (carbon / ESG)", "None detected; fades", "Helps lease-up and return to stabilization"]
+      method: >-
+        A before-and-after comparison against the April 2022 case study, drawing on interviews with the
+        developer, the selling broker, the new owner's asset managers and the property manager, resident
+        surveys, the buyer's information memorandum, public records and published market data.
 
   - id: barracuda
+    photo_credit: "Populance"
     name: Barracuda Condos
     kind: condo
     type: Condominiums
@@ -105,6 +159,7 @@ projects:
       - Locally made timber panels avoided the shipping delays that affected appliances and finishes.
 
   - id: timberlofts
+    photo_credit: "ADX Creative and Engberg Anderson Architects"
     name: Timber Lofts
     kind: reuse
     type: Apartments, reuse and addition
@@ -119,6 +174,7 @@ projects:
       - Insurance ran above the proforma, and surveys suggested sustainability was not a priority for tenants.
 
   - id: adohi
+    photo_credit: "Timothy Hursley"
     name: Adohi Hall
     kind: dorm
     type: Student housing
@@ -133,6 +189,7 @@ projects:
       - Eased the path through code review for later private projects in the state.
 
   - id: deharo
+    photo_credit: "David Wakely"
     name: 1 De Haro
     kind: officeind
     type: Office and light industrial
@@ -147,6 +204,7 @@ projects:
       - The structure showed 51% less embodied carbon than a concrete equivalent.
 
   - id: clay
+    photo_credit: "Mackenzie; Christian Columbres Photography"
     name: Clay Creative
     kind: office
     type: Office
@@ -161,28 +219,77 @@ projects:
       - The timber structure can cost more; savings in underfloor systems and ceiling finishes were expected to offset part of it.
     v2:
       date: July 2026
-      basis: Ten years of operation, through the strongest and then the weakest office markets in Portland's modern history.
-      rows:
-        - claim: Leasing strength
+      basis: >-
+        Ten years of operation, through the strongest office market in Portland's modern history (2016 to 2019),
+        a demand shock, the wind-down of an anchor tenant, and the deepest office repricing in the market's
+        modern history (2022 to the present).
+      summary: >-
+        What lasted was protection of cash flow: the building keeps winning creditworthy tenants when the market
+        is at its worst. What proved temporary was the peak-market pricing of its first years, and the benefit
+        of speed turned out to be mostly one of timing.
+      lasting:
+        - claim: Leasing strength and credit quality
           verdict: supported
-          text: The building keeps making tenants' shortlists, has held occupancy and credit quality, and has avoided the deep concessions competitors accepted. The value shows up as steadier cash flow more than as higher rent.
+          text: A persistent advantage in turning tours into shortlists, pricing that avoided the deep concessions competitors accepted, and repeated capture of the market's scarce larger, creditworthy tenants. The value shows up as steadier cash flow more than as higher rent.
+        - claim: Broad tenant appeal in a downturn
+          verdict: new
+          text: The wood workspace has no close substitute among competing buildings, which holds a floor under lease terms when others capitulate. It acts like a put option for the owner, paying when it is most needed, and it is not yet priced.
+        - claim: Second-generation space
+          verdict: new
+          text: Unusually for offices, previously occupied space is seen as a better fit and finish than new space elsewhere, so the owner's earlier fit-out investment survives tenant turnover.
+        - claim: Lenders and insurers
+          verdict: eased
+          text: The building was refinanced from a regional bank to a conservative national life insurance lender with no discount or premium for timber, and insurance effects have been minimal. Capital markets price the numbers, so any timber benefit must arrive through the cash flows.
+      fleeting:
+        - claim: Top-of-market rents at stabilization
+          verdict: mixed
+          text: It is not reasonable to separate the early outperformance from ideal timing in the office cycle. New leases are at the top of today's market, but below the rents of earlier years.
         - claim: Faster delivery
           verdict: supported
-          text: Supported, with a different emphasis. Speed mattered most as a way to deliver into a strong market, more than for the cost savings usually cited.
-        - claim: Higher insurance cost
-          verdict: not_supported
-          text: Insurance effects have been minimal, reversing the expectation at the start.
-        - claim: Fewer willing lenders
-          verdict: not_supported
-          text: The building was refinanced with a conservative national life insurance lender, with no discount or premium for timber.
+          text: Supported, with a different emphasis. Speed mattered most as a way to deliver into peak demand and to reduce risk, more than for the cost and interest savings usually cited.
+        - claim: Marketing salience
+          verdict: new
+          text: The building was rebranded and the new positioning mentions mass timber rarely, leading with location and other fundamentals. The experiential effect on leasing persists without it.
+      unclear:
         - claim: Savings from underfloor systems
           verdict: not_supported
-          text: Owners and leasing brokers see no faster or cheaper tenant fit-out from these systems.
+          text: Owners and leasing brokers see no faster or cheaper tenant fit-out from the raised floor and underfloor services that the first study expected to pair well with timber.
         - claim: A condition
           verdict: new
-          text: Timber multiplies strong fundamentals such as location, parking and streetscape. It does not substitute for them.
+          text: Timber multiplies strong fundamentals such as location, parking, nearby amenities and streetscape. It does not substitute for them; comparable timber buildings without those fundamentals do not show the same effects.
+      details:
+        - title: "A natural experiment on Clay Street"
+          kind: buildings
+          intro: >-
+            Same market, same location, same quality, same owner, same leasing team, same four years. Different
+            outcomes. With Portland office absorption persistently negative and vacancy near 22%, three adjacent
+            buildings developed by the same group were offered to the same thin pool of tenants.
+          buildings:
+            - { name: "Clay Creative", sub: "Mass timber office, 2015", kind: office, result: "Leased", good: true, text: "New high-credit tenants at the top of current market rents." }
+            - { name: "120 Clay", sub: "Mass timber office, next door", kind: office, result: "Leased", good: true, text: "New high-credit tenants at the top of current market rents." }
+            - { name: "1510 Tech Center", sub: "Historic concrete reuse, adjacent", kind: reuse, result: "No replacement tenant", good: false, text: "Equal leasing effort; some features superior, including very low energy use and private protected parking." }
+          takeaway: >-
+            Between them the two mass timber buildings secured a grocery company's lease, a credit tenant of about
+            20,000 square feet and a further 16,000 square feet under letter of intent. The comparison suggests the
+            outperformance is not only a general flight to quality; it shows up at the level of the individual property.
+        - title: Underwriting illustrations
+          kind: table
+          head: [Mechanism, Direction, Scale and nature]
+          rows:
+            - ["Lower-volatility cash flows", "Positive", "Improves cap rates (value) and leveraged returns"]
+            - ["Broader tenant appeal", "Positive", "Improves occupancy and turnover; avoids expenses and new capital spending"]
+            - ["Option value", "Positive", "Helpful for owners with flexibility on timing"]
+            - ["Dovetailed building systems", "Not observed", "Avoid extra cost to maximize return"]
+            - ["Faster erection", "Positive", "More for market timing than for a shorter total duration"]
+            - ["Marketing", "Positive", "Sustained appeal without effort or annual expense"]
+      quote: "When prospects set foot in the building, it always makes their short list."
+      quote_by: President of the firm that asset-manages the building
+      method: >-
+        A before-and-after comparison against the original case study, drawing on interviews with the building's
+        ownership and its leasing broker in July 2026 and on published market data from JLL, Nareit, NCREIF and others.
 
   - id: district
+    photo_credit: "Hacker"
     name: District Office
     kind: office
     type: Office with retail
@@ -197,11 +304,12 @@ projects:
       - Routing building services through an exposed structure took a purpose-made solution.
 
   - id: iceblocks
+    photo_credit: "RMW Architecture & Interiors; Bernard André Photography"
     name: The ICE Blocks
     kind: officeretail
     type: Office and retail
     place: Sacramento, CA
-    delivered: ""
+    delivered: "Summer 2018"
     facts: A new mass timber building of about 132,000 rentable square feet, replacing a historic warehouse lost to fire within a larger reuse project.
     headline: Distinctive interiors attract quality tenants at competitive rents.
     points:
