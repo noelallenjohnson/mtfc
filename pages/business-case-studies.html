@@ -35,9 +35,11 @@ redirect_from:
 <h3>{{ x.name }}</h3>
 <p class="bc-sub">{{ x.type }} · {{ x.place }}{% if x.delivered != "" %} · Delivered {{ x.delivered }}{% endif %}</p>
 <p class="bc-facts">{{ x.facts }}</p>
-<p class="initiative-section-label">V1.0 indications</p>
-<p class="bc-headline">{{ x.headline }}</p>
-<ul>{% for t in x.points %}<li>{{ t }}</li>{% endfor %}</ul>
+<p class="initiative-section-label">V1.0 findings</p>
+<div class="bc-sc"><div><h4 class="bc-nature lasting">Successes</h4>
+<ul>{% for t in x.successes %}{% assign q = t | split: ": " %}<li>{% if q.size > 1 %}<strong>{{ q[0] }}:</strong> {{ t | remove_first: q[0] | remove_first: ": " }}{% else %}{{ t }}{% endif %}</li>{% endfor %}</ul></div>
+<div><h4 class="bc-nature fleeting">Challenges</h4>
+<ul>{% for t in x.challenges %}{% assign q = t | split: ": " %}<li>{% if q.size > 1 %}<strong>{{ q[0] }}:</strong> {{ t | remove_first: q[0] | remove_first: ": " }}{% else %}{{ t }}{% endif %}</li>{% endfor %}</ul></div></div>
 {% if x.v2 %}<div class="bc-v2">
 <p class="initiative-section-label">V2.0 review · {{ x.v2.date }}</p>
 <p class="bc-basis">{{ x.v2.basis }}</p>

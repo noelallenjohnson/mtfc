@@ -79,3 +79,7 @@
 .bc-bldg .x { font-size: 13.5px; line-height: 1.5; color: rgb(51,51,51); }
 .bc-method { font-size: 13px; line-height: 1.55; color: rgb(107,107,102); margin: 14px 0 8px; }
 @media (max-width: 560px) { .bc-bar { grid-template-columns: 1fr 40px; } .bc-bar .l { grid-column: 1 / -1; } .bc-bldgs { grid-template-columns: 1fr; } .bc-data { display: block; overflow-x: auto; } .bc-data tbody, .bc-data thead { display: table-row-group; } .bc-data tr { display: table-row !important; } .bc-data th, .bc-data td { display: table-cell !important; } }
+
+.bc-sc { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; margin-bottom: 8px; }
+.bc-sc .bc-nature { margin-top: 8px; margin-bottom: 8px; }
+@media (max-width: 700px) { .bc-sc { grid-template-columns: 1fr; } }
