@@ -42,21 +42,21 @@ how:
     - title: >-
         Projects are assured
       text: >-
-        One at a time, every several months. For each, the mechanism stands behind the top slice of forecast NOI for the first three to five years after delivery: lease-up, stabilization, and one to three years of normal operations.
+        One at a time, every several months. For each, the mechanism stands behind the top slice of forecast NOI for the first three to five years after delivery: lease-up, stabilization, and one to three years of normal operations. This sizing would be at the deal level, per the LP investor's and the administrator's underwriting.
     - title: >-
         Shortfalls are topped up
       text: >-
-        If NOI falls short of forecast, the mechanism pays the difference, up to the limit. The capital source and the lender see steadier cash flow.
+        If actual NOI falls short of forecast, the mechanism pays the difference in arrears, up to the limit. The investors and the lender realize forecast cash flow; IRRs are improved by superior near-term cash flows, and discount rates are relaxed by lower deal-level risk.
     - title: >-
         Surplus proceeds replenish the mechanism
       text: >-
-        At sale or permanent refinance, top-ups can be repaid if excess proceeds remain after the return of the loan and the equity and payment of market-rate preferred returns, before the waterfall splits surplus profits. Any funds returned support the next project. After twenty years of market support, unused or remaining capital returns to the funder.
+        At sale or permanent refinance, top-ups can be repaid if excess proceeds are generated, which is to say if money remains after the return of the loan and the equity and the payment of market-rate preferred returns, but before the GP / LP / sponsor excess-proceeds waterfall splits per industry norms. Any funds returned support the next project. After twenty years of market support, unused or remaining capital returns to the funder, up to the amount pledged, as the mechanism is retired.
 
 measures:
   heading: >-
     Three ways to judge the mechanism
   text: >-
-    The mechanism can be judged on three separate measures. Leverage: how much private capital each pledged dollar stands behind. Efficiency: how small the implied subsidy is as a share of a project's cost. Impact: how many projects and new homes result.
+    The mechanism can be judged on three separate measures. Charitable leverage: how much private capital each pledged dollar stands behind. Efficiency without distortion: how small the implied subsidy is as a share of a project's cost. Visible impact: how many projects and new homes result.
 
 tool:
   heading: >-
@@ -69,9 +69,9 @@ tool:
   portfolio_caption: >-
     The average across all simulated futures. In the early years money only goes out. Repayments begin when the first projects are sold or refinanced, recover part of what was paid, and are recycled into new projects. After year 20 no new projects are added and the last ones run off.
   fund_caption: >-
-    The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20, money is returned to the funder as each remaining project finishes. The aim is to return the pledge and nothing more; the note above the chart gives the spread of bad outcomes at which that happens.
+    The balance on deposit. The solid line is the middle outcome and the band covers four in five. The dotted line is the part held against projects that are still active. After year 20 the program tapers off and money is returned to the funder as each remaining project finishes, up to the amount pledged and never more.
   deals_caption: >-
-    Every project the mechanism assures across all simulated futures, placed by the NOI it achieved over the assured years. The spread of this shape is the deal-level performance being assumed. Projects left of the forecast line draw on the mechanism; colour shows whether sale or refinance proceeds were enough to repay it. Move the spread of bad outcomes to see how wide the shape can become before the pledge no longer comes back in full.
+    Every project the mechanism assures across all simulated futures, placed by the NOI it achieved over the assured years. The spread of this shape is the deal-level performance being assumed. Projects left of the forecast line draw on the mechanism; colour shows whether sale or refinance proceeds were enough to repay it. Move the spread of bad outcomes to see how the shape, and what comes back to the funder, change.
   homes_caption: >-
     Homes in projects the mechanism has assured, added up from the year each project is committed.
 
@@ -88,7 +88,7 @@ run:
     - >-
       **The pledge sits in Treasuries.** It is held at a money-center bank, earning the 10-year U.S. Treasury yield, taken here as 5%. The bank provides liquidity when a top-up is due, secured against the holding. The interest is not a return to the funder. It is one way of measuring the money as it moves and is used: the mechanism spends it on top-ups.
     - >-
-      **The funder's goal is its pledge back, and no more.** The starting values are sized to the widest spread of bad outcomes the mechanism can absorb while still returning the pledge in full.
+      **The funder's goal is impact.** This is philanthropy, not an investment. The funder may or may not see the funds pledged returned, and will never see more than its pledge returned. The program is managed to that end: when surplus builds beyond the pledge, it is committed to assuring additional projects, and the program tapers off after its twenty-year intervention period.
   note: >-
     The firms named are examples of the kind of capital source intended. None has reviewed or endorsed this mechanism.
 
@@ -99,15 +99,17 @@ assumptions:
     - >-
       Each project runs five to seven years from commitment: two of construction, then three to five assured years (one of lease-up, one of stabilization and one to three of normal operations), then a sale or refinance, when top-ups are repaid.
     - >-
-      Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a bank loan, with a year-one unleveraged yield of about 6%. These can be changed under "Project baseline".
+      Each project resembles a roughly 200-unit, $77 million market-rate apartment building, 55% financed by a commercial bank loan amortizing over 20 years, with a year-one unleveraged yield of about 6%. These can be changed under "Project baseline".
     - >-
-      The middle project returns about 14% a year on equity, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes. Good outcomes start at 20%. Bad outcomes start at 50%, the break-even: the widest spread at which the starting pledge is still expected back in full.
+      The middle project returns about 14% a year on equity, leveraged and net of transaction costs. How far results spread below and above that is set separately for bad and good outcomes. Both start at 20% and can be widened, bad outcomes as far as 60%.
     - >-
       The mechanism commits to a new project only when it can cover that project's largest possible claim on top of those already active, so it can never run short on a promise. The smallest pledge offered is the amount that keeps new projects starting until the first one repays.
     - >-
       A building that leases below forecast tends to stay below, and projects finishing in the same year share some of their fortunes through the market.
     - >-
-      New commitments are made for twenty years. After that, money not held against an active project is returned to the funder.
+      New commitments are made for twenty years. After that, money not held against an active project is returned to the funder, up to the amount pledged.
+    - >-
+      Surplus is recycled. When the balance exceeds the pledge, after holding back for active projects at the loss rate the mechanism has incurred so far, by at least one project's largest possible claim, an additional project is assured. Any balance beyond the pledge at wind-down is not returned to the funder.
     - >-
       The spread of outcomes is a placeholder. It is the reader's to make more or less conservative until it is calibrated against published REIT results and open-end core fund (ODCE) data.
   note: >-

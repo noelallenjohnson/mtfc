@@ -4,9 +4,9 @@
   var root = document.getElementById('nam');
   if (!root) return;
 
-  var K = 2000, COMMIT_Q = 80, BUILD = 2, JMAX = 82, YMAX = 30, NMAX = 5, INTEREST = 5, GROWTH = 0.03;
+  var K = 2000, COMMIT_Q = 80, BUILD = 2, JMAX = 82, YMAX = 30, NMAX = 5, INTEREST = 5, GROWTH = 0.03, AMORT = 20;
 
-  var DEF = { fund: 10, limit: 0.5, limpct: 10, years: 3, pace: 9, irr: 14, down: 50, up: 20, rho: 30,
+  var DEF = { fund: 10, limit: 0.5, limpct: 10, years: 3, pace: 9, irr: 14, down: 20, up: 20, rho: 30,
               pref: 9, cost: 77, units: 200, yoc: 6, ltc: 55, rate: 6.25, price: 6, lease: 50 };
   var CTL = [
     ['The mechanism', [
@@ -58,7 +58,7 @@
   function run(dn) {
     var T = terms(), N = T.N, fc = T.fc, lim = T.lim, expo = T.expo, LIFE = T.life, step = T.step, L = BUILD + N;
     var F = P.fund, rho = P.rho / 100, sd = (dn === undefined ? P.down : dn) / 100, su = P.up / 100, sv = P.price / 100, pref = P.pref / 100, irr = P.irr / 100, iq = INTEREST / 100 / 4;
-    var loan = P.cost * P.ltc / 100, eq = P.cost - loan, lr = P.rate / 100, ds = loan * lr / (1 - Math.pow(1 + lr, -30));
+    var loan = P.cost * P.ltc / 100, eq = P.cost - loan, lr = P.rate / 100, ds = loan * lr / (1 - Math.pow(1 + lr, -AMORT));
     var np = N - 1, balExit = loan * Math.pow(1 + lr, np) - ds * (Math.pow(1 + lr, np) - 1) / lr, i, pv = 0;
     for (i = 1; i < N; i++) pv += (fc[i] - ds) * Math.pow(1 + irr, -(BUILD + 1 + i));
     var v0 = balExit + (eq - pv) * Math.pow(1 + irr, L), hurdle = eq * Math.pow(1 + pref, L);
@@ -67,13 +67,13 @@
 
     var path = [], resv = []; for (y = 0; y <= NY; y++) { path[y] = new Float32Array(K); resv[y] = new Float32Array(K); }
     var outY = new Float64Array(NY + 2), inY = new Float64Array(NY + 2), retY = new Float64Array(NY + 2), started = new Float64Array(NY + 2);
-    var deals = 0, drew = 0, below = 0, sumTop = 0, sumRec = 0, sumInt = 0, sumRet = 0, stops = 0, stopYear = new Float32Array(K), retK = new Float32Array(K);
+    var deals = 0, drew = 0, below = 0, sumTop = 0, sumRec = 0, sumInt = 0, sumRet = 0, stops = 0, stopYear = new Float32Array(K), retK = new Float32Array(K), extras = 0, sumOver = 0, fullRet = 0;
     var proj = []; for (i = 0; i < N; i++) proj[i] = [];
     var smp = null, HB = 32, hist = [0, 1, 2, 3].map(function () { return new Float64Array(HB); }), catN = [0, 0, 0, 0], catLoss = [0, 0, 0, 0], sumFc = 0;
     for (i = 0; i < N; i++) sumFc += fc[i];
 
     for (var k = 0; k < K; k++) {
-      var bal = F, reserved = 0, act = [], j = 0, stopped = -1;
+      var bal = F, reserved = 0, act = [], j = 0, stopped = -1, lossK = 0, expoK = 0;
       for (var q = 0; q <= QT; q++) {
         var yr = Math.max(1, Math.ceil(q / 4));
         if (q > 0) { var it = bal * iq; bal += it; sumInt += it; }
@@ -89,7 +89,7 @@
               bal += rec; sumRec += rec; inY[yr] += rec;
               if (d.top > 0.0005) drew++;
               var cat = d.top <= 0.0005 ? 0 : (rec >= d.top - 1e-6 ? 1 : (rec > 0 ? 2 : 3)), hb = Math.floor(d.sx / sumFc * 20); hb = hb < 0 ? 0 : (hb >= HB ? HB - 1 : hb);
-              hist[cat][hb]++; catN[cat]++; catLoss[cat] += d.top - rec;
+              hist[cat][hb]++; catN[cat]++; catLoss[cat] += d.top - rec; lossK += d.top - rec; expoK += expo;
               if (ex <= 0) below++;
               if (d.j === 0 && k === sample % K) smp = { xs: d.xs, ts: d.ts };
               act.splice(a, 1);
@@ -104,13 +104,19 @@
             reserved += expo; deals++; started[Math.floor(q / 4) + 1] += 1; j++;
           } else if (stopped < 0) { stopped = q / 4; }
         }
-        if (q >= COMMIT_Q) { var free = bal - reserved; if (free > 0) { bal -= free; sumRet += free; retK[k] += free; retY[yr] += free; } }
+        /* managed so the funder is not returned more than its pledge: surplus beyond the pledge, after holding back for active projects at the loss rate incurred so far, is committed to an additional project */
+        if (q > 0 && q < COMMIT_Q && j < JMAX && q % step !== 0 && bal - reserved >= 2 * expo && bal - F - reserved * (lossK + 2 * expo) / (expoK + 4 * expo) >= expo) {
+          var yi2 = Math.min(YMAX - 1, Math.floor((q + LIFE) / 4)), z2 = sr * ZM[k * YMAX + yi2] + si * E1[k * JMAX + j];
+          act.push({ s: q, j: j, m: z2 < 0 ? sd * z2 : su * z2, v: sv * (sr * ZV[k * YMAX + yi2] + si * E2[k * JMAX + j]), top: 0, fv: 0, sx: 0, xs: [], ts: [] });
+          reserved += expo; deals++; extras++; started[Math.floor(q / 4) + 1] += 1; j++;
+        }
+        if (q >= COMMIT_Q) { var free = bal - reserved; if (free > 0) { bal -= free; var give = Math.min(free, F - retK[k]); if (give < 0) give = 0; sumRet += give; sumOver += free - give; retK[k] += give; retY[yr] += give; } }
         if (q % 4 === 0) { path[q / 4][k] = bal; resv[q / 4][k] = reserved; }
       }
-      stopYear[k] = stopped < 0 ? 99 : stopped; if (stopped >= 0) stops++;
+      stopYear[k] = stopped < 0 ? 99 : stopped; if (stopped >= 0) stops++; if (retK[k] >= F - 0.005) fullRet++;
     }
     for (y = 0; y <= NY + 1; y++) { outY[y] /= K; inY[y] /= K; retY[y] /= K; started[y] /= K; }
-    return { T: T, F: F, NY: NY, ds: ds, deals: deals / K, top: sumTop / K, rec: sumRec / K, interest: sumInt / K, returned: sumRet / K, retK: retK,
+    return { T: T, F: F, NY: NY, ds: ds, deals: deals / K, top: sumTop / K, rec: sumRec / K, interest: sumInt / K, returned: sumRet / K, retK: retK, extras: extras / K, over: sumOver / K, fullShare: fullRet / K,
       shareDraw: drew / deals, shareBelow: below / deals, stopShare: stops / K, stopMed: pct(stopYear, 0.5),
       hist: hist, catN: catN, catLoss: catLoss, nDeals: deals, path: path, resv: resv, outY: outY, inY: inY, retY: retY, started: started, proj: proj, smp: smp };
   }
@@ -226,9 +232,9 @@
     var backed = R.deals * P.cost, homes = R.deals * P.units, net = Math.max(0, R.top - R.rec), perHome = net * 1e6 / homes;
     var costPerHome = P.cost * 1e6 / P.units, share = net / backed * 100, lev = backed / R.F;
     return '<div class="nam-lead-top">'
-      + '<div><span>1 · Leverage</span><b>$' + Math.round(lev) + ' : $1</b><p>' + 'A ' + money(R.F, 0) + ' pledge stands behind ' + money(backed, 0) + ' of privately financed development over 20 years of commitments.</p></div>'
-      + '<div><span>2 · Efficiency</span><b>' + share.toFixed(2) + '%</b><p>The implied subsidy as a share of project cost: about $' + num(net / R.deals * 1000) + 'k on a ' + money(P.cost, 0) + ' project, or $' + num(perHome) + ' on a $' + num(costPerHome) + ' home.</p></div>'
-      + '<div><span>3 · Impact</span><b>' + num(homes) + ' homes</b><p>' + R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' assured projects over 20 years. Expected back to the funder afterwards: ' + money(R.returned) + ' of its ' + money(R.F, 0) + ' pledge.</p></div></div>'
+      + '<div><span>1 · Charitable leverage</span><b>$' + Math.round(lev) + ' : $1</b><p>' + 'A ' + money(R.F, 0) + ' pledge stands behind ' + money(backed, 0) + ' of privately funded development over a 20-year commitment.</p></div>'
+      + '<div><span>2 · Efficient, non-distortive</span><b>' + share.toFixed(2) + '%</b><p>The implied subsidy as a share of project cost: about $' + num(net / R.deals * 1000) + 'k on a ' + money(P.cost, 0) + ' project, or $' + num(perHome) + ' on a $' + num(costPerHome) + ' home.</p></div>'
+      + '<div><span>3 · Visible impact</span><b>' + num(homes) + ' homes</b><p>' + R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' assured projects over 20 years' + (R.extras >= 0.5 ? ', ' + R.extras.toFixed(0) + ' of them funded from surplus' : '') + '. Expected back to the funder: ' + money(R.returned) + ' of its ' + money(R.F, 0) + ' pledge, and never more.</p></div></div>'
       + '<div class="nam-vs"><small>The implied subsidy is what the mechanism is expected to pay out and not recover, back-calculated across every assured project. The buildings themselves are paid for by private capital. These figures move with the settings below.</small></div>';
   }
 
@@ -239,7 +245,7 @@
     return [
       'Most the mechanism can pay one project: <b>' + money(T.expo, 2) + '</b> over ' + T.N + ' years. Expected use: <b>$' + Math.round(rate * 1000) + 'k per project, per assured year</b>, which is ' + (rate / T.noi * 100).toFixed(1) + '% of stabilized NOI. ' + Math.round(R.shareDraw * 100) + '% of projects draw something.',
       '<b>' + (R.top > 0 ? Math.round(R.rec / R.top * 100) : 0) + ' cents</b> of each top-up dollar is expected back. ' + Math.round(R.shareBelow * 100) + '% of projects finish below the ' + P.pref + '% preferred return and repay nothing. Expected net cost: <b>$' + Math.round(net / R.deals * 1000) + 'k a project</b>.',
-      'Smallest pledge that launches the flywheel: <b>' + money(T.need) + '</b>, enough for the ' + T.ramp + ' projects committed before the first one repays. ' + lasts + ' Expected back to the funder after year 20: <b>' + money(R.returned) + '</b> against a ' + money(R.F, 0) + ' pledge. <span id="nam-be">Finding the break-even…</span>',
+      'Smallest pledge that launches the flywheel: <b>' + money(T.need) + '</b>, enough for the ' + T.ramp + ' projects committed before the first one repays. ' + lasts + ' Surplus beyond the pledge is recycled: it funds <b>' + R.extras.toFixed(R.extras < 10 ? 1 : 0) + ' additional projects</b> on average. Expected back to the funder as the program winds down: <b>' + money(R.returned) + '</b> of a ' + money(R.F, 0) + ' pledge. The pledge comes back in full in ' + Math.round(R.fullShare * 100) + '% of simulated futures, and never more than the pledge is returned.',
       '<b>' + R.deals.toFixed(R.deals < 10 ? 1 : 0) + ' projects</b>, <b>' + num(R.deals * P.units) + ' homes</b> and <b>' + money(R.deals * P.cost, 0) + '</b> of development over 20 years of commitments.'
     ];
   }
@@ -274,23 +280,9 @@
     cs[0].innerHTML = chartProject(R); cs[1].innerHTML = chartFlows(R); cs[2].innerHTML = chartFund(R); cs[3].innerHTML = chartHomes(R);
     var c5 = root.querySelector('#nam-c5'), n5 = root.querySelector('#nam-n5'); if (c5) c5.innerHTML = chartDeals(R); if (n5) n5.innerHTML = noteDeals(R);
     ns.forEach(function (e, i) { if (e) e.innerHTML = n[i]; });
-    if (beTimer) clearTimeout(beTimer); beTimer = setTimeout(breakEven, 250);
-    window.NAM_LAST = { fund: P.fund, deals: R.deals, top: R.top, rec: R.rec, interest: R.interest, returned: R.returned, draw: R.shareDraw, below: R.shareBelow, stop: R.stopShare, need: R.T.need, expo: R.T.expo };
+    window.NAM_LAST = { fund: P.fund, deals: R.deals, top: R.top, rec: R.rec, interest: R.interest, returned: R.returned, extras: R.extras, over: R.over, full: R.fullShare, draw: R.shareDraw, below: R.shareBelow, stop: R.stopShare, need: R.T.need, expo: R.T.expo };
   }
   /* the spread of bad outcomes at which the funder gets its pledge back and no more */
-  var beTimer = null;
-  function breakEven() {
-    var el = document.getElementById('nam-be'); if (!el) return;
-    var F = P.fund, lo = 0, hi = 100, flo = run(lo).returned - F, fhi = run(hi).returned - F, msg;
-    if (fhi > 0) msg = 'Even with bad outcomes spread as wide as −100%, more than the pledge comes back.';
-    else if (flo < 0) msg = 'At these settings less than the pledge comes back however narrow the spread of bad outcomes.';
-    else {
-      for (var i = 0; i < 8; i++) { var mid = (lo + hi) / 2; if (run(mid).returned - F > 0) lo = mid; else hi = mid; }
-      var be = Math.round((lo + hi) / 10) * 5, R = run(be), loss = Math.max(0, R.top - R.rec) / R.deals;
-      msg = 'Break-even: the pledge comes back in full, and no more, when bad outcomes spread to about <b>−' + be + '%</b>. That is an expected loss of <b>$' + Math.round(loss * 1000) + 'k a project</b>, ' + Math.round(loss / R.T.expo * 100) + '% of the most the mechanism could pay.';
-      window.NAM_LAST.breakeven = be;
-    }
-    el.innerHTML = msg;
-  }
+  window.NAM_RUN = run;
   draw();
 })();
