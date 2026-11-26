@@ -49,6 +49,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 | Work | Version DOI | All-versions DOI | Registered |
 |---|---|---|---|
 | Listening to Institutional Investors (discussion draft, Nov. 20 2026) | 10.5281/zenodo.24544952 | 10.5281/zenodo.24544951 | Nov. 25 2026 |
+| Market Rate Development Risk Mitigation Method: Mass Timber Cashflow Assurance Mechanism (methods note v1.0) | 10.5281/zenodo.24545417 | 10.5281/zenodo.24545416 | Nov. 25 2026 |
 
 | MTFC work | File |
 |---|---|
