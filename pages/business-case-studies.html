@@ -14,9 +14,11 @@ redirect_from:
 <p class="initiative-theme">Alternative themes: <span class="init-tag t-c">Consumer</span><span class="init-tag t-f">Finance</span></p>
 <h1 class="initiative-title">Business Case Studies</h1>
 {% assign d = site.data.business_cases %}<div class="initiative-status">Status: {{ d.status }}</div>
-<p class="initiative-meta"><strong>Author(s):</strong> Johnson, Lorda et al. by Conrad / Old i, LLC<br><strong>Presented by:</strong> WoodWorks (V1.0); ThinkWood (V2.0)</p>
+<p class="initiative-meta"><strong>Author(s):</strong> Noel A. Johnson and Dillon Lorda, Conrad / Old i, LLC<br><strong>Presented by:</strong> WoodWorks (V1.0, by license); ThinkWood (V2.0)<br><strong>DOI (V1.0):</strong> <a href="https://doi.org/10.5281/zenodo.24567622" target="_blank" rel="noopener">10.5281/zenodo.24567622</a></p>
 <p class="initiative-body-text">{{ d.intro }}</p>
-<p class="initiative-body-text">{{ d.how_to_read }} <a href="https://www.woodworks.org/resources/mass-timber-business-case-studies/" target="_blank" rel="noopener">Read the V1.0 case studies at WoodWorks →</a></p>
+<p class="initiative-body-text">{{ d.how_to_read }}</p>
+<p class="initiative-body-text"><a href="https://doi.org/10.5281/zenodo.24567622" target="_blank" rel="noopener">Read the full V1.0 series, authors' edition of record (PDF, 88 pages) →</a><br><a href="https://www.woodworks.org/resources/mass-timber-business-case-studies/" target="_blank" rel="noopener">V1.0 case studies as presented by WoodWorks →</a></p>
+<p class="initiative-filenote"><strong>Cite as:</strong> Johnson &amp; Lorda. (2022). <em>Mass Timber Business Case Series</em>. Conrad Investment Management / Old i, LLC. <a href="https://doi.org/10.5281/zenodo.24567622" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.24567622</a>. Author ORCID (Johnson): <a href="https://orcid.org/0009-0001-1422-7113" target="_blank" rel="noopener">0009-0001-1422-7113</a>.<br>The series may be read, shared unchanged and cited with credit to the authors; other uses require the authors' written permission. Photographs remain the property of the photographers credited.</p>
 
 <div class="bc-tiles" id="top-tiles">
 {% for g in d.groups %}{% for id in g.ids %}{% assign x = d.projects | where: "id", id | first %}<a class="bc-tile" href="#{{ x.id }}">
@@ -65,6 +67,6 @@ redirect_from:
 <p class="initiative-links-label">Related Research</p>
 <p class="initiative-body-text"><a href="https://www.hbs.edu/faculty/Pages/item.aspx?num=63292" target="_blank" rel="noopener">Crow Holdings Development: Mass Timber Construction</a>. John D. Macomber, Robert Hernandez and Kyle MertensMeyer, Harvard Business School Case 223-058, January 2023. The only other business school case on mass timber development we have found. It is listed in the HBS Case Collection, but HBS Publishing is not making it available to the public.</p>
 </div>
-<p class="initiative-body-text" style="font-size:13px;line-height:1.6;color:rgb(107,107,102);border-top:1px solid rgb(226,222,214);margin-top:40px;padding-top:22px">The Mass Timber Business Case series content is authored by Conrad. It is licensed for presentation by WoodWorks and/or ThinkWood; wider use is welcomed, please contact the content creators with interest.</p>
+<p class="initiative-body-text" style="font-size:13px;line-height:1.6;color:rgb(107,107,102);border-top:1px solid rgb(226,222,214);margin-top:40px;padding-top:22px">The Mass Timber Business Case Series is authored and owned by Conrad (© 2022 Conrad Investment Management / Old i, LLC). It is licensed for presentation by WoodWorks and/or ThinkWood; wider use is welcomed, please contact the authors with interest.</p>
 </div>
 </div>

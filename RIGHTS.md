@@ -50,6 +50,7 @@ Under a Personal Services Contract with Oregon State University (TallWood Design
 |---|---|---|---|
 | Listening to Institutional Investors (discussion draft, Nov. 20 2026) | 10.5281/zenodo.24544952 | 10.5281/zenodo.24544951 | Nov. 25 2026 |
 | Market Rate Development Risk Mitigation Method: Mass Timber Cashflow Assurance Mechanism (methods note v1.0) | 10.5281/zenodo.24545417 | 10.5281/zenodo.24545416 | Nov. 25 2026 |
+| Mass Timber Business Case Series (V1.0, authors' edition; Johnson & Lorda, 2022) | 10.5281/zenodo.24567622 | 10.5281/zenodo.24567621 | Nov. 26 2026 |
 
 | MTFC work | File |
 |---|---|
@@ -83,3 +84,5 @@ People named on the Mission & Vision page appear with their LinkedIn profiles; *
 Links to external reports (Systemiq / Built by Nature, WoodWorks, project pages) are links only; nothing is reproduced.
 
 **Business Case Studies page (Nov. 25 2026):** project summaries are distillations written for MTFC and editable in `_data/business_cases.yml`. Project photographs (`assets/img/bc/`) are from the V1.0 series, used with photographer credits; the author confirms the rights to use them for this series were cleared when the series was produced. V2.0 review content (The Canyons, Clay Creative) is drawn from the author's findings memos at his direction, including his coded analysis of the buyer's offering memorandum and the Clay Street comparison; interviewees are described by role, and the unnamed tenant stays unnamed. The V1.0 package PDF and the V2.0 memos are not in the repo.
+
+**Business Case Series DOI (Nov. 26 2026):** V1.0 registered on Zenodo as the authors' edition of record (Johnson & Lorda), no Creative Commons licence because of third-party photographs; publisher-inserted pages removed at the author's direction. The 21 MB PDF is linked by DOI and not hosted in the repo. Each V2.0 project review is to be registered separately and linked to this record.
