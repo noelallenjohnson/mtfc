@@ -22,7 +22,7 @@
 status: >-
   Tool released for public review
 byline: >-
-  Industry and firm growth requires capital. Tools that evaluate and build finance acumen can help mass timber compete for capital.
+  Firm growth requires capital, and capital is competed for. This page offers a first version of tools to evaluate and build a firm's finance acumen.
 author: >-
   Noel A. Johnson, Conrad / Old i, LLC
 sponsors_line: >-
@@ -38,16 +38,16 @@ why:
     - >-
       An [Industry Structure](/industry-structure) analysis helps contextualize the setting these firms compete in: strong substitutes, powerful suppliers and an industry whose attractiveness to capital can be improved. Even so, a firm’s difficulty raising money is often its own: explaining the market opportunity and the financial plan in the language capital providers use.
     - >-
-      The observation underlying this work is that mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. But less acumen at world-class levels is found across capital markets and consumer considerations. Fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
+      The author’s observation underlying this work is that mass timber benefits from world-class engineering, forestry, manufacturing and construction expertise. But less acumen at world-class levels is found across capital markets and consumer considerations. Fewer firms have staff trained in finance, strategy and marketing to the level capital providers are used to meeting.
     - >-
-      In response, this work demonstrates practical tools aimed at closing this gap: a first version, for public use and comment, of mechanisms that improve financial fitness at the firm level across the mass timber industry. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
+      In response, this work demonstrates practical tools: a first version, for public use and comment, of mechanisms intended to improve financial fitness at the firm level. It is built to be used, with a self-evaluation to score and a guide to follow. It is not a paper to read.
 
 # ───── THE CEMEX OBSERVATION ─────
 observation:
   label: >-
-    An observation
+    An observation from the author
   text: >-
-    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one can see an illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. Mass timber is trying to take market share from that industry and probably needs similar acumen. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
+    The 600-seat main auditorium at Stanford Graduate School of Business is the CEMEX Auditorium, in Zambrano Hall. The school lists Lorenzo Zambrano, a 1968 MBA graduate who led CEMEX, and the company itself among the lead donors to its campus. From this, one can see an illustration of how the cement and concrete industry has for years invested in its people across business and finance, and not only in engineering, manufacturing and construction. Mass timber competes with that industry for market share and may benefit from similar acumen. [Stanford GSB, 2011](https://www.gsb.stanford.edu/experience/news-history/stanford-graduate-school-business-opens-its-new-home)
 
 # ───── WHAT CAPITAL ASKS IN RETURN FOR ITS USE ─────
 exchange:
@@ -589,7 +589,7 @@ partnerships:
     Partnerships for further development and deployment
   text:
     - >-
-      This is a first version. Developing it further and putting it to use takes partners. Building the industry’s capacity in finance and business benefits every firm; a classic collective action opportunity.
+      This is a first version. Developing it further and putting it to use takes partners. Building capacity in finance and business may benefit every firm, which makes it a classic collective action question.
   three:
     - title: >-
         Industry groups
@@ -629,6 +629,6 @@ credit:
 # ───── THE CARD ON THE HOME PAGE ─────
 home_tile:
   text: >-
-    Industry and firm growth requires capital. Tools that evaluate and build finance acumen can help mass timber compete for capital. A first version, with a self-evaluation and a wayfinding guide across six channels of capital.
+    Growing companies compete for growth capital. A V1 tool to evaluate and build a firm's finance acumen, including a wayfinding guide across common channels of capital.
   status: >-
     Tool released for public review

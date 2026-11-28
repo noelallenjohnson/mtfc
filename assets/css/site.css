@@ -357,3 +357,7 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 .lang-eyebrow { margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgb(107,107,102); }
 .init-photo.is-wide { grid-column: span 2; min-height: 320px; }
 .init-photo.is-wide img { object-position: 50% 12%; }
+.init-tag.t-k { color: #555550; border-color: #cfccc4; background: #fff; }
+.init-filter:has(+ .init-filter) { margin-bottom: 12px; }
+.framework-list { color: rgb(51, 51, 51); margin: 0 0 16px; padding-left: 22px; font-size: 16px; line-height: 1.75; }
+.framework-list li { margin-bottom: 6px; }

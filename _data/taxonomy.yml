@@ -12,7 +12,7 @@ byline: >-
   Noel Johnson, Conrad / Old i, LLC
 
 summary: >-
-  Effective marketing sorts the claims made by an industry or product relative to their consumer's willingness to pay. Data-driven attribute assessment, coupled with a shared language for marketing, sales and product decisions, can drive growth.
+  A proposed way to sort the claims made for mass timber by who can verify them and who has reason to pay for them, offering a shared language for marketing, sales and product decisions.
 
 why:
   - >-
@@ -238,7 +238,7 @@ attributes:
 baseline: >-
   Non-mass timber related attributes are held outside of this taxonomy. For example, with apartments, location, floor plan and price remain the standard search attributes for any home. For industrial assets, proximity to nodes (ports, industry clusters) along with column spacing, clear height, etc. are tier one attributes. Mass timber's attributes are weighed afterwards, not instead of them.
 discussion_heading: >-
-  Points for discussion
+  The author’s points for discussion
 discussion:
   - title: >-
       Match the attribute to the party who can value it

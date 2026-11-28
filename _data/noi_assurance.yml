@@ -9,18 +9,18 @@
 status: >-
   Tool released for public review
 byline: >-
-  Mass timber's supporters have subsidized cost. This tool tests assuring cash flow instead, where each dollar pledged can stand behind many times more development.
+  Support for mass timber development has mostly taken the form of cost subsidy. This page presents the author's proposed alternative, assuring cash flow, with a tool to test how far each pledged dollar might reach.
 author: >-
   Noel A. Johnson, Conrad / Old i, LLC
 partners_line: >-
   Partnerships for development & deployment being sought.
 
 intro: >-
-  This method is a market intervention, not advocacy. It is a technical financial tool that responds to technical factors, chiefly risk, that are headwinds for the industry. Its mechanism for impact is the **Mass Timber Cashflow Assurance Mechanism**, created and proposed here for action to help the mass timber industry grow.
+  The method is proposed by its author as a market intervention, not advocacy. It is a technical financial tool that responds to technical factors, chiefly risk. Its mechanism is the **Mass Timber Cashflow Assurance Mechanism**, created and proposed here by the author. MTFC publishes it for public review and comment; publication is not an endorsement.
 
 why:
   heading: >-
-    Why assure income and not subsidize cost
+    The author's reasoning: why assure income and not subsidize cost
   text:
     - >-
       Institutional capital sources and their lenders are not against mass timber. They are unsure of the outcomes enabled. Capital markets hold no prejudice against the material, but uncertainty alone leads them to assign it higher risk. That uncertainty sits in one place in the proforma: the forecast of net operating income (NOI).
@@ -29,7 +29,7 @@ why:
     - >-
       NOI is also where a dollar matters most. A building is valued by dividing its NOI by a capitalization rate, so at a 6% cap rate each dollar of annual NOI is worth about $16.67 of value. A dollar of cost is worth a dollar.
     - >-
-      Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, can reach larger and more visible developments, the kind that change what the market believes is normal.
+      Advocacy, funding and industry groups that want mass timber housing adopted by market-rate institutional capital have mostly paid down cost. The same $5 or $10 million, placed behind forecast income, could reach larger and more visible developments, the kind that may inform what the market regards as normal.
 
 how:
   heading: >-
@@ -63,7 +63,7 @@ tool:
     Test the Mechanism
   text:
     - >-
-      A pledge that is repaid and reused is a flywheel. The aim is not to make money. It is to use the money to bring about the most new mass timber homes. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures: twenty years of new commitments, then the return of the money to the funder. The three measures above and the four charts below adjust as the sliders move.
+      A pledge that is repaid and reused is a flywheel. The mechanism's aim is not to make money. It is to use the pledge to bring about the most new mass timber homes. Set the pledge, the assurance and the spread of outcomes. The tool simulates 2,000 possible futures: twenty years of new commitments, then the return of the money to the funder. The three measures above and the four charts below adjust as the sliders move.
   project_caption: >-
     The assured years of one project, drawn as a share of each year's forecast so the top slice is visible. The dark line is forecast NOI and the gold cap is the slice the mechanism assures. The whisker beside each bar spans four in five simulated outcomes. The dot is one outcome, with a gold bar where the mechanism tops it up.
   portfolio_caption: >-
@@ -140,6 +140,6 @@ rights: >-
 
 home_tile:
   text: >-
-    Assuring a slice of forecast net operating income, instead of subsidizing cost, so that a modest pledge can stand behind larger market-rate mass timber developments. An interactive tool to test it.
+    A method using NOI assurance as an efficient intervention to hasten mainstream capital flows; with an interactive tool to detail the mechanism, and demonstrate the nature and scale of impact.
   status: >-
     Tool released for public review
