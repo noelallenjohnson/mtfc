@@ -361,3 +361,4 @@ a[href^="mailto:"] { overflow-wrap: anywhere; }
 .init-filter:has(+ .init-filter) { margin-bottom: 12px; }
 .framework-list { color: rgb(51, 51, 51); margin: 0 0 16px; padding-left: 22px; font-size: 16px; line-height: 1.75; }
 .framework-list li { margin-bottom: 6px; }
+.hero-intro-bold p { font-weight: 700; }
