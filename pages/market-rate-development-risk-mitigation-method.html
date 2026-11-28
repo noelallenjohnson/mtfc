@@ -19,7 +19,7 @@ scripts: ["/assets/js/nam.js"]
 <h1 class="initiative-title">Market Rate Development Risk Mitigation Method</h1>
 <div class="initiative-status">Status: {{ d.status }}</div>
 <p class="lede">{{ d.byline }}</p>
-<p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Partners:</strong> {{ d.partners_line }}</p>
+<p class="initiative-meta"><strong>Author:</strong> {{ d.author }}<br><strong>Partners:</strong> {{ d.partners_line }}<br><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.24545417" target="_blank" rel="noopener">10.5281/zenodo.24545417</a><br><strong>Rights:</strong> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>. May be read, shared unchanged and cited with credit; no commercial use or derivative works. The mechanism and all commercialization rights are retained by Old i, LLC.</p>
 {% if d.intro %}<p class="initiative-body-text">{{ d.intro | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
 
 <h2>{{ d.why.heading }}</h2>
